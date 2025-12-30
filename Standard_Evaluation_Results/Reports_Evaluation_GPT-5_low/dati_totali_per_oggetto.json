@@ -1,0 +1,67 @@
+{
+  "identity": {
+    "TP": 15,
+    "FP": 39,
+    "FN": 2
+  },
+  "indicator": {
+    "TP": 284,
+    "FP": 363,
+    "FN": 340
+  },
+  "attack-pattern": {
+    "TP": 133,
+    "FP": 39,
+    "FN": 215
+  },
+  "ipv4-addr": {
+    "TP": 0,
+    "FP": 35,
+    "FN": 0
+  },
+  "directory": {
+    "TP": 0,
+    "FP": 7,
+    "FN": 0
+  },
+  "malware": {
+    "TP": 3,
+    "FP": 23,
+    "FN": 14
+  },
+  "relationship": {
+    "TP": 41,
+    "FP": 2536,
+    "FN": 3131
+  },
+  "domain-name": {
+    "TP": 0,
+    "FP": 41,
+    "FN": 0
+  },
+  "url": {
+    "TP": 0,
+    "FP": 62,
+    "FN": 0
+  },
+  "windows-registry-key": {
+    "TP": 0,
+    "FP": 17,
+    "FN": 0
+  },
+  "vulnerability": {
+    "TP": 0,
+    "FP": 1,
+    "FN": 0
+  },
+  "mutex": {
+    "TP": 0,
+    "FP": 5,
+    "FN": 0
+  },
+  "threat-actor": {
+    "TP": 0,
+    "FP": 2,
+    "FN": 0
+  }
+}
