@@ -1,0 +1,708 @@
+{
+    "type": "bundle",
+    "id": "bundle--f749a844-02eb-462f-9a4b-60d0a385fa55",
+    "objects": [
+        {
+            "id": "location--34eb3578-582c-4ad9-8ebc-b7e90fb3a3df",
+            "spec_version": "2.1",
+            "type": "location",
+            "country": "US",
+            "administrative_area": "US-DC",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+            "created": "2023-03-02T16:48:57.959Z",
+            "extensions": {
+                "extension-definition--3a65884d-005a-4290-8335-cb2d778a83ce": {
+                    "extension_type": "property-extension",
+                    "identifier": "isa:guide.19001.ACS3-9e0cd50e-6efc-45b3-8a3d-b6376541c9c5",
+                    "create_date_time": "2023-03-02T16:48:57.959Z",
+                    "responsible_entity_custodian": "USA.DHS.NCCIC",
+                    "responsible_entity_originator": "USA.DHS.NCCIC",
+                    "policy_reference": "urn:isa:policy:acs:ns:v3.0?privdefault=deny&sharedefault=permit",
+                    "control_set": {
+                        "classification": "U",
+                        "formal_determination": [
+                            "INFORMATION-DIRECTLY-RELATED-TO-CYBERSECURITY-THREAT",
+                            "PUBREL"
+                        ]
+                    },
+                    "authority_reference": [
+                        "urn:isa:authority:ais"
+                    ],
+                    "access_privilege": [
+                        {
+                            "privilege_action": "CISAUSES",
+                            "rule_effect": "permit",
+                            "privilege_scope": {
+                                "entity": [
+                                    "ALL"
+                                ],
+                                "permitted_nationalities": [
+                                    "ALL"
+                                ],
+                                "permitted_organizations": [
+                                    "ALL"
+                                ],
+                                "shareability": [
+                                    "ALL"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "attack-pattern--ad98f0b3-bdf3-4d55-906a-ce5b68072a08",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Execution - Command and Scripting Interpreter [T1059]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--1629ed05-b3d2-475e-9ead-217621e5d796",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Execution - Command and Scripting Interpreter: PowerShell [T1059.001]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--d1d814b3-5928-441e-8e8e-89dd863bc9c9",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Execution - Command and Scripting Interpreter: Windows Command Shell [T1059.003]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--bffc0b12-55e4-4596-b562-23eb4cbe8936",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Execution - Windows Management Instrumentation [T1047]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--ece0456e-b15f-40ea-a1b3-3638c3509379",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Persistence - Server Software Component [T1505]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--2f8855c6-a15a-4775-841b-62da88f96cf4",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Persistence - Server Software Component: Web Shell [T1505.003]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--ea05dfdd-dff5-4bd8-89c0-e76123829d49",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Defense Evasion - Obfuscated Files or Information [T1027]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--f6f8ed5c-e0f8-4227-bf3a-e32fa283ad78",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Credential Access - Credentials from Password Stores [T1555]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--cb680dcf-8595-455c-a413-5bf00eb55b43",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Credential Access - Credentials from Password Stores: Password Managers [T1555.005]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--7cfa0a88-0bda-4496-ba35-83f91c13d4c8",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Collection - Data from Local System [T1005]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--7c83343f-27ce-49d8-8800-54188efb89bb",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Command and Control - Protocol Tunneling [T1572]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--89f38a99-de70-400b-970a-0d662ded7a03",
+            "type": "attack-pattern",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Impact - Data Encrypted for Impact [T1486]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--cd5eff56-a412-4343-bd1e-c2693908d907",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[file:hashes.'SHA-256' = '48DD7D519DBB67B7A2BB2747729FC46E5832C30CAFE15F76C1DBE3A249E5E731']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--bf7304b0-ed17-4b3a-9a5f-4197e58d400f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[file:hashes.'SHA-256' = 'AD5FD10AA2DC82731F3885553763DFD4548651EF3E28C69F77AD035166D63DB7']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--70be9de4-7e22-4c57-83b6-119bd62bbf8c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "E-mail Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[email-message:from_ref.value = 'keishagrey994@outlook.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--de08a136-152c-4fed-8b7e-c1921f14a93e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_bzoicrns.kat.ps1') AND file:hashes.MD5 = 'C82D7BE7AFDC9F3A0E474F019FB7B0F7']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--6868c84c-8b61-4230-a72b-eaa6210025e2",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_0bybivfe.x1t.ps1') AND file:hashes.MD5 = '122EA6581A36F14AB5AB65475370107E']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b509344c-cdb4-4216-875f-dcab88406cc6",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_grjck50v.nyg.ps1') AND file:hashes.MD5 = '5CB3F10DB11E1795C49EC6273C52B5F1']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--0298d521-98da-4cfa-8466-3aa61964f0fb",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_satzbifj.oli.ps1') AND file:hashes.MD5 = '44A3561FB9E877A2841DE36A3698ABC0']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--2a46db82-42c4-4f18-8050-9cf0546e2dbe",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_xnjvzu5o.fta.ps1') AND file:hashes.MD5 = '90CE10D9ACA909A8D2524BC265EF2FA4']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5bd4b84f-a46c-43eb-bd06-3765543938ca",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_s1mgcgdk.25n.ps1') AND file:hashes.MD5 = '3222C60B10E5A7C3158FD1CB3F513640']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8ec3591f-23b8-4c6b-9597-3be927023aee",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_endvm2zz.qlp.ps1') AND file:hashes.MD5 = 'C6A667619FFF6CF44F447868D8EDD681']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5e092e4f-04f1-4462-aa94-935165cf87a2",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_rdm5qyy1.phg.ps1') AND file:hashes.MD5 = '609A925FD253E82C80262BAD31637F19']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--c97a2d4b-81bc-42bc-86a9-f34929f8f38a",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_jzjombgn.sol.ps1') AND file:hashes.MD5 = '646DC0B7335CFFB671AE3DFD1EBEFE47']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--309d79c9-cdc7-4ec0-bfc3-4340daa3b732",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_fqa24ixq.dtc.ps1') AND file:hashes.MD5 = 'CC68EAF36CB90C08308AD0CA3ABC17C1']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d1784971-c07c-4d5b-bf1e-a5e84e6e2748",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_v3etgbxw.bmm.ps1') AND file:hashes.MD5 = '1892BD45671F17E9F7F63D3ED15E348E']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--487eed8a-652e-4d78-81d2-518941368319",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_te5sbsfv.new.ps1') AND file:hashes.MD5 = 'AF31B5A572B3208F81DBF42F6C143F99']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--4709387e-590b-4feb-90a7-884eee1f60db",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_2by2p21u.4ej.ps1') AND file:hashes.MD5 = '9D0B3796D1D174080CDFDBD4064BEA3A']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--3055d543-3e5f-44a9-9fce-c2ed32c8c3cf",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_nvuxllhd.fs4.ps1') AND file:hashes.MD5 = '8227AF68552198A2D42DE51CDED2CE60']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--65a1e192-e567-4277-b73a-c6e9099b2d7d",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_1bokrh3l.2nw.ps1') AND file:hashes.MD5 = '10EF090D2F4C8001FAADB0A833D60089']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--17e9c2a9-ab48-425c-aa91-5a731cbb89f4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_lysyd03n.o10.ps1') AND file:hashes.MD5 = '6EBD7D7473F0ACE3F52C483389CAB93F']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--48a0a3a8-1387-4599-8a07-4a6306aa60d8",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[(file:name = 'psscriptpolicytest_im2hdxqi.g0k.ps1') AND file:hashes.MD5 = '829F2233A1CD77E9EC7DE98596CD8165']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--21c07f3b-0111-4fc4-ac75-2d46e8f96be1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-05-01T00:00:00Z",
+            "pattern": "[]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--6a2d14c7-7b89-4d8c-b2d1-9ec6ca6cf7e1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-03-04T00:00:00Z",
+            "pattern": "[(file:name = 'BEACON.PS1') AND file:hashes.MD5 = 'D06F32BBFA0CF5939045896D5232D025' AND file:hashes.'SHA-256' = 'E68F9C3314BEEE640CC32F08A8532AA8DCDA613543C54A83680C21D7CD49CA0F']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--0d801acc-4748-4def-8a32-2c6d7fbd3d14",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "source_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "relationship_type": "located-at",
+            "target_ref": "location--34eb3578-582c-4ad9-8ebc-b7e90fb3a3df",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "report--885878df-2f0d-4f25-8ecd-632f4c3e04fe",
+            "type": "report",
+            "spec_version": "2.1",
+            "created": "2023-10-10T17:54:24.000Z",
+            "modified": "2023-10-10T17:54:24.000Z",
+            "name": "AA23-284A StopRansomware: AvosLocker Ransomware (Update)",
+            "description": "The Federal Bureau of Investigation (FBI) and the Cybersecurity and Infrastructure Security Agency (CISA) are releasing this joint Cybersecurity Advisory (CSA) to disseminate known IOCs, TTPs, and detection methods associated with the AvosLocker variant identified through FBI investigations as recently as May 2023. AvosLocker operates under a ransomware-as-a-service (RaaS) model. AvosLocker affiliates have compromised organizations across multiple critical infrastructure sectors in the United States, affecting Windows, Linux, and VMware ESXi environments. AvosLocker affiliates compromise organizations\\u2019 networks by using legitimate software and open-source remote system administration tools. AvosLocker affiliates then use exfiltration-based data extortion tactics with threats of leaking and/or publishing stolen data.\r\n\r\nThis joint CSA updates the March 17, 2022, AvosLocker ransomware joint CSA, Indicators of Compromise Associated with AvosLocker ransomware, released by FBI and the Department of the Treasury\\u2019s Financial Crimes Enforcement Network (FinCEN). This update includes IOCs and TTPs not included in the previous advisory and a YARA rule FBI developed after analyzing a tool associated with an AvosLocker compromise.\r\n\r\nFBI and CISA encourage critical infrastructure organizations to implement the recommendations in the Mitigations section of this CSA to reduce the likelihood and impact of AvosLocker ransomware and other ransomware incidents.",
+            "published": "2023-10-12T00:00:00Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "attack-pattern--ad98f0b3-bdf3-4d55-906a-ce5b68072a08",
+                "attack-pattern--1629ed05-b3d2-475e-9ead-217621e5d796",
+                "attack-pattern--d1d814b3-5928-441e-8e8e-89dd863bc9c9",
+                "attack-pattern--bffc0b12-55e4-4596-b562-23eb4cbe8936",
+                "attack-pattern--ece0456e-b15f-40ea-a1b3-3638c3509379",
+                "attack-pattern--2f8855c6-a15a-4775-841b-62da88f96cf4",
+                "attack-pattern--ea05dfdd-dff5-4bd8-89c0-e76123829d49",
+                "attack-pattern--f6f8ed5c-e0f8-4227-bf3a-e32fa283ad78",
+                "attack-pattern--cb680dcf-8595-455c-a413-5bf00eb55b43",
+                "attack-pattern--7cfa0a88-0bda-4496-ba35-83f91c13d4c8",
+                "attack-pattern--7c83343f-27ce-49d8-8800-54188efb89bb",
+                "attack-pattern--89f38a99-de70-400b-970a-0d662ded7a03",
+                "indicator--cd5eff56-a412-4343-bd1e-c2693908d907",
+                "indicator--bf7304b0-ed17-4b3a-9a5f-4197e58d400f",
+                "indicator--70be9de4-7e22-4c57-83b6-119bd62bbf8c",
+                "indicator--de08a136-152c-4fed-8b7e-c1921f14a93e",
+                "indicator--6868c84c-8b61-4230-a72b-eaa6210025e2",
+                "indicator--b509344c-cdb4-4216-875f-dcab88406cc6",
+                "indicator--0298d521-98da-4cfa-8466-3aa61964f0fb",
+                "indicator--2a46db82-42c4-4f18-8050-9cf0546e2dbe",
+                "indicator--5bd4b84f-a46c-43eb-bd06-3765543938ca",
+                "indicator--8ec3591f-23b8-4c6b-9597-3be927023aee",
+                "indicator--5e092e4f-04f1-4462-aa94-935165cf87a2",
+                "indicator--c97a2d4b-81bc-42bc-86a9-f34929f8f38a",
+                "indicator--309d79c9-cdc7-4ec0-bfc3-4340daa3b732",
+                "indicator--d1784971-c07c-4d5b-bf1e-a5e84e6e2748",
+                "indicator--487eed8a-652e-4d78-81d2-518941368319",
+                "indicator--4709387e-590b-4feb-90a7-884eee1f60db",
+                "indicator--3055d543-3e5f-44a9-9fce-c2ed32c8c3cf",
+                "indicator--65a1e192-e567-4277-b73a-c6e9099b2d7d",
+                "indicator--17e9c2a9-ab48-425c-aa91-5a731cbb89f4",
+                "indicator--48a0a3a8-1387-4599-8a07-4a6306aa60d8",
+                "indicator--21c07f3b-0111-4fc4-ac75-2d46e8f96be1",
+                "indicator--6a2d14c7-7b89-4d8c-b2d1-9ec6ca6cf7e1",
+                "relationship--0d801acc-4748-4def-8a32-2c6d7fbd3d14"
+            ],
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}

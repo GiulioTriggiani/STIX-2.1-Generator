@@ -1,0 +1,1413 @@
+{
+    "type": "bundle",
+    "id": "bundle--f1dfd952-43a3-4f1c-b01c-1839099a8071",
+    "objects": [
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Discovery - System Network Configuration Discovery [T1016]",
+                "Discovery / System Network Configuration Discovery [T1016] (ENT)",
+                "Network Adapter",
+                "System Network Configuration Discovery",
+                "System Network Configuration Discovery [T1016] (ENT)",
+                "T1016",
+                "arp",
+                "attack-pattern--707399d6-ab3e-4963-9315-d9d3818cd6a0",
+                "current network connections",
+                "ipconfig",
+                "netsh interface show",
+                "network computers",
+                "network information"
+            ],
+            "id": "attack-pattern--069a68af-86bd-48f1-99e8-d6fc33df24c7",
+            "created": "2020-02-01T17:43:51.276Z",
+            "modified": "2025-02-06T19:24:50.013Z",
+            "name": "Discovery / System Network Configuration Discovery [T1016] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Data Encrypted for Impact",
+                "Data Encrypted for Impact [T1486] (ENT)",
+                "Impact - Data Encrypted for Impact [T1486]",
+                "Impact / Data Encrypted for Impact [T1486] (ENT)",
+                "T1486",
+                "attack-pattern--b80d107d-fa0d-4b60-9684-b0433e8bdba0",
+                "ransomware"
+            ],
+            "id": "attack-pattern--069cea35-ecd9-4aba-9679-4c8358c19b24",
+            "created": "2020-01-21T14:32:27.115Z",
+            "modified": "2025-02-06T19:43:32.285Z",
+            "name": "Impact / Data Encrypted for Impact [T1486] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Base64",
+                "Defense Evasion - Obfuscated Files or Information [T1027]",
+                "Defense Evasion / Obfuscated Files or Information [T1027] (ENT)",
+                "Obfuscated Files or Information",
+                "Obfuscated Files or Information [T1027] (ENT)",
+                "T1027",
+                "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+                "deobfuscated",
+                "deobfuscation",
+                "obfuscated",
+                "obfuscation"
+            ],
+            "id": "attack-pattern--0caa013f-e168-4c2d-99d0-3ea4f2c6cb20",
+            "created": "2021-04-27T01:11:55.826Z",
+            "modified": "2025-02-06T19:24:50.060Z",
+            "name": "Defense Evasion / Obfuscated Files or Information [T1027] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Execution - System Services: Service Execution [T1569.002]",
+                "Execution / Service Execution [T1035] (ENT)",
+                "Execution / System Services: Service Execution [T1569.002] (ENT)",
+                "Service Execution",
+                "Service Execution [T1035] (ENT)",
+                "System Services: Service Execution",
+                "System Services: Service Execution [T1569.002] (ENT)",
+                "T1035",
+                "T1569.002",
+                "attack-pattern--f1951e8a-500e-4a26-8803-76d95c4554b4",
+                "attack-pattern--f44731de-ea9f-406d-9b83-30ecbb9b4392"
+            ],
+            "id": "attack-pattern--0e946a55-1395-4fa3-af87-4ef560173b4f",
+            "created": "2020-02-01T17:43:46.928Z",
+            "modified": "2025-02-25T15:30:39.162Z",
+            "name": "Execution / System Services: Service Execution [T1569.002] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Discovery - Permission Groups Discovery: Domain Groups [T1069.002]",
+                "Discovery / Permission Groups Discovery: Domain Groups [T1069.002] (ENT)",
+                "Domain Groups",
+                "Permission Groups Discovery: Domain Groups",
+                "Permission Groups Discovery: Domain Groups [T1069.002] (ENT)",
+                "T1069.002",
+                "attack-pattern--2aed01ad-3df3-4410-a8cb-11ea4ded587c"
+            ],
+            "id": "attack-pattern--16943282-ae72-4439-87e1-07d14d1aec27",
+            "created": "2021-04-24T02:16:13.654Z",
+            "modified": "2025-03-03T17:05:54.520Z",
+            "name": "Discovery / Permission Groups Discovery: Domain Groups [T1069.002] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Initial Access",
+                "Initial Access [TA0001]",
+                "Initial Access [TA0001] (ENT)",
+                "TA0001",
+                "x-mitre-tactic--ffd5bcee-6e16-4dd2-8eca-7b3beedf33ca"
+            ],
+            "id": "attack-pattern--233061da-54fd-4981-a913-199fff22a1a2",
+            "created": "2019-05-16T18:27:40.302Z",
+            "modified": "2025-02-10T17:31:20.319Z",
+            "name": "Initial Access [TA0001] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Credential Access",
+                "Credential Access [TA0006]",
+                "Credential Access [TA0006] (ENT)",
+                "TA0006",
+                "x-mitre-tactic--2558fd61-8c75-4730-94c4-11926db2a263"
+            ],
+            "id": "attack-pattern--25fa7eed-ed0f-4c4d-b100-432a04c50197",
+            "created": "2019-05-16T18:30:12.300Z",
+            "modified": "2025-02-06T14:48:45.266Z",
+            "name": "Credential Access [TA0006] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Impact - Service Stop [T1489]",
+                "Impact / Service Stop [T1489] (ENT)",
+                "Service Stop",
+                "Service Stop [T1489] (ENT)",
+                "T1489",
+                "attack-pattern--20fb2507-d71c-455d-9b6d-6104461cf26b"
+            ],
+            "id": "attack-pattern--27a78c89-95a0-4300-939f-61b23b9926b3",
+            "created": "2020-01-21T14:37:24.756Z",
+            "modified": "2025-02-07T19:40:23.652Z",
+            "name": "Impact / Service Stop [T1489] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Financial Theft",
+                "Financial Theft [T1657] (ENT)",
+                "Impact / Financial Theft [T1657] (ENT)",
+                "T1657",
+                "attack-pattern--851e071f-208d-4c79-adc6-5974c85c78f3"
+            ],
+            "id": "attack-pattern--311e39ee-712c-4419-90f1-47a947585916",
+            "created": "2025-02-04T12:12:48.029Z",
+            "modified": "2025-02-07T19:59:10.346Z",
+            "name": "Impact / Financial Theft [T1657] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Lateral Movement",
+                "Lateral Movement [TA0008]",
+                "Lateral Movement [TA0008] (ENT)",
+                "TA0008",
+                "x-mitre-tactic--7141578b-e50b-4dcc-bfa4-08a8dd689e9e"
+            ],
+            "id": "attack-pattern--34de98ce-da53-438c-84fc-530f03967639",
+            "created": "2020-02-01T16:49:34.773Z",
+            "modified": "2025-02-06T19:52:20.930Z",
+            "name": "Lateral Movement [TA0008] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Defense Evasion - Impair Defenses: Disable or Modify Tools [T1562.001]",
+                "Defense Evasion / Disabling Security Tools [T1089] (ENT)",
+                "Defense Evasion / Impair Defenses: Disable or Modify Tools [T1562.001] (ENT)",
+                "Disable or Modify Tools",
+                "Disabling Security Tools",
+                "Disabling Security Tools [T1089] (ENT)",
+                "Impair Defenses: Disable or Modify Tools",
+                "Impair Defenses: Disable or Modify Tools [T1562.001] (ENT)",
+                "Lower security settings",
+                "T1089",
+                "T1562.001",
+                "attack-pattern--2e0dd10b-676d-4964-acd0-8a404c92b044",
+                "attack-pattern--ac08589e-ee59-4935-8667-d845e38fe579",
+                "netsh firewall"
+            ],
+            "id": "attack-pattern--3555d3a2-aa4b-48eb-8cf9-594fd2f6af70",
+            "created": "2020-02-01T17:41:59.199Z",
+            "modified": "2025-02-06T19:24:50.024Z",
+            "name": "Defense Evasion / Impair Defenses: Disable or Modify Tools [T1562.001] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Impact - Inhibit System Recovery [T1490]",
+                "Impact / Inhibit System Recovery [T1490] (ENT)",
+                "Inhibit System Recovery",
+                "Inhibit System Recovery [T1490] (ENT)",
+                "T1490",
+                "attack-pattern--f5d8eed6-48a9-4cdf-a3d7-d1ffa99c3d2a"
+            ],
+            "id": "attack-pattern--3b864656-ce5f-4d9a-a6ce-ce97e6a55765",
+            "created": "2020-01-21T14:35:29.690Z",
+            "modified": "2025-02-06T19:43:32.289Z",
+            "name": "Impact / Inhibit System Recovery [T1490] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Command and Scripting Interpreter: PowerShell",
+                "Command and Scripting Interpreter: PowerShell [T1059.001] (ENT)",
+                "Execution - Command and Scripting Interpreter: PowerShell [T1059.001]",
+                "Execution / Command and Scripting Interpreter: PowerShell [T1059.001] (ENT)",
+                "Execution / PowerShell [T1086] (ENT)",
+                "PowerShell",
+                "PowerShell [T1086] (ENT)",
+                "T1059.001",
+                "T1086",
+                "attack-pattern--970a3432-3237-47ad-bcca-7d8cbb217736",
+                "attack-pattern--f4882e23-8aa7-4b12-b28a-b349c12ee9e0",
+                "cmdlet",
+                "vbscript"
+            ],
+            "id": "attack-pattern--4e1e81ff-2ed2-40f1-b316-ff98fc03f39d",
+            "created": "2020-02-01T17:42:12.608Z",
+            "modified": "2025-02-06T19:24:50.020Z",
+            "name": "Execution / Command and Scripting Interpreter: PowerShell [T1059.001] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Credential Access - OS Credential Dumping: LSASS Memory [T1003.001]",
+                "Credential Access / OS Credential Dumping: LSASS Memory [T1003.001] (ENT)",
+                "LSASS Memory",
+                "OS Credential Dumping: LSASS Memory",
+                "OS Credential Dumping: LSASS Memory [T1003.001] (ENT)",
+                "T1003.001",
+                "attack-pattern--65f2d882-3f41-4d48-8a06-29af77ec9f90"
+            ],
+            "id": "attack-pattern--5152c42b-0f15-4fe6-a402-c8ab8401453a",
+            "created": "2021-04-24T02:19:58.109Z",
+            "modified": "2025-03-03T17:05:54.537Z",
+            "name": "Credential Access / OS Credential Dumping: LSASS Memory [T1003.001] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Discovery - File and Directory Discovery [T1083]",
+                "Discovery / File and Directory Discovery [T1083] (ENT)",
+                "File and Directory Discovery",
+                "File and Directory Discovery [T1083] (ENT)",
+                "File listing",
+                "KEYLOGGER",
+                "T1083",
+                "attack-pattern--7bc57495-ea59-4380-be31-a64af124ef18",
+                "directory listing",
+                "enumerate files",
+                "searches for files"
+            ],
+            "id": "attack-pattern--52c9813b-894d-466a-99cf-4a1ffd645d18",
+            "created": "2020-02-01T17:42:07.282Z",
+            "modified": "2025-02-06T19:24:50.062Z",
+            "name": "Discovery / File and Directory Discovery [T1083] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Command and Control - Ingress Tool Transfer [T1105]",
+                "Command and Control / Ingress Tool Transfer [T1105] (ENT)",
+                "Ingress Tool Transfer",
+                "Ingress Tool Transfer [T1105] (ENT)",
+                "T1105",
+                "attack-pattern--e6919abc-99f9-4c6c-95a5-14761e7b2add"
+            ],
+            "id": "attack-pattern--5aa9dbdd-23a2-41ac-a22c-30d993c7140e",
+            "created": "2024-12-10T13:20:03.038Z",
+            "modified": "2025-02-06T19:24:50.062Z",
+            "name": "Command and Control / Ingress Tool Transfer [T1105] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Exfiltration - Exfiltration Over Web Service: Exfiltration to Cloud Storage [T1567.002]",
+                "Exfiltration / Exfiltration Over Web Service: Exfiltration to Cloud Storage [T1567.002] (ENT)",
+                "Exfiltration Over Web Service: Exfiltration to Cloud Storage",
+                "Exfiltration Over Web Service: Exfiltration to Cloud Storage [T1567.002] (ENT)",
+                "Exfiltration to Cloud Storage",
+                "T1567.002",
+                "attack-pattern--bf1b6176-597c-4600-bfcd-ac989670f96b"
+            ],
+            "id": "attack-pattern--5b066059-58d8-48f9-9ee8-df90bf3d2b6b",
+            "created": "2021-04-24T02:17:34.892Z",
+            "modified": "2025-02-18T19:04:28.155Z",
+            "name": "Exfiltration / Exfiltration Over Web Service: Exfiltration to Cloud Storage [T1567.002] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Execution - Windows Management Instrumentation [T1047]",
+                "Execution / Windows Management Instrumentation [T1047] (ENT)",
+                "Server Message Block",
+                "T1047",
+                "Windows Management Instrumentation",
+                "Windows Management Instrumentation [T1047] (ENT)",
+                "attack-pattern--01a5a209-b94c-450b-b7f9-946497d91055",
+                "wmic.exe",
+                "wmiexec"
+            ],
+            "id": "attack-pattern--5d5a8308-998e-4db1-915c-9e009ecf8610",
+            "created": "2020-02-01T17:43:56.090Z",
+            "modified": "2025-02-06T19:43:32.291Z",
+            "name": "Execution / Windows Management Instrumentation [T1047] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Application Layer Protocol: Web Protocols",
+                "Application Layer Protocol: Web Protocols [T1071.001] (ENT)",
+                "Command and Control - Application Layer Protocol: Web Protocols [T1071.001]",
+                "Command and Control / Application Layer Protocol: Web Protocols [T1071.001] (ENT)",
+                "HTTP POST",
+                "T1071.001",
+                "Web Protocols",
+                "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161"
+            ],
+            "id": "attack-pattern--6c74d0ee-b401-4daf-83b0-17eaa103cefb",
+            "created": "2021-04-24T02:29:37.447Z",
+            "modified": "2025-02-06T19:24:50.063Z",
+            "name": "Command and Control / Application Layer Protocol: Web Protocols [T1071.001] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Defense Evasion / Obfuscated Files or Information: Encrypted/Encoded File [T1027.013] (ENT)",
+                "Encrypted/Encoded File",
+                "Obfuscated Files or Information: Encrypted/Encoded File",
+                "Obfuscated Files or Information: Encrypted/Encoded File [T1027.013] (ENT)",
+                "T1027.013",
+                "attack-pattern--0d91b3c0-5e50-47c3-949a-2a796f04d144"
+            ],
+            "id": "attack-pattern--7f24b560-5d73-4610-8947-94aa8e63ebf4",
+            "created": "2025-02-04T12:12:48.029Z",
+            "modified": "2025-03-03T17:05:54.541Z",
+            "name": "Defense Evasion / Obfuscated Files or Information: Encrypted/Encoded File [T1027.013] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "CLI",
+                "Lateral Movement - Remote Services: Remote Desktop Protocol [T1021.001]",
+                "Lateral Movement / Remote Desktop Protocol [T1076] (ENT)",
+                "Lateral Movement / Remote Services: Remote Desktop Protocol [T1021.001] (ENT)",
+                "Remote Desktop Protocol",
+                "Remote Desktop Protocol [T1076] (ENT)",
+                "Remote Services: Remote Desktop Protocol",
+                "Remote Services: Remote Desktop Protocol [T1021.001] (ENT)",
+                "T1021.001",
+                "T1076",
+                "attack-pattern--51dea151-0898-4a45-967c-3ebee0420484",
+                "attack-pattern--eb062747-2193-45de-8fa2-e62549c37ddf"
+            ],
+            "id": "attack-pattern--8de665fb-f59c-4b9b-b8f9-da87ea940273",
+            "created": "2020-02-01T17:42:07.401Z",
+            "modified": "2025-02-10T14:31:01.485Z",
+            "name": "Lateral Movement / Remote Services: Remote Desktop Protocol [T1021.001] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Exfiltration",
+                "Exfiltration [TA0010]",
+                "Exfiltration [TA0010] (ENT)",
+                "TA0010",
+                "x-mitre-tactic--9a4e74ab-5008-408c-84bf-a10dfbc53462"
+            ],
+            "id": "attack-pattern--9dd985e0-1e45-4e00-95c0-aa843155bb63",
+            "created": "2019-05-16T18:32:47.916Z",
+            "modified": "2025-02-06T19:24:50.064Z",
+            "name": "Exfiltration [TA0010] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Impact - System Shutdown/Reboot [T1529]",
+                "Impact / System Shutdown/Reboot [T1529] (ENT)",
+                "System Shutdown/Reboot",
+                "System Shutdown/Reboot [T1529] (ENT)",
+                "T1529",
+                "attack-pattern--ff73aa03-0090-4464-83ac-f89e233c02bc"
+            ],
+            "id": "attack-pattern--a1a3cb53-c9da-4cb3-96fa-e1919334af85",
+            "created": "2020-01-21T14:38:16.986Z",
+            "modified": "2025-03-03T17:05:54.531Z",
+            "name": "Impact / System Shutdown/Reboot [T1529] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Defense Evasion - Indicator Removal [T1070]",
+                "Defense Evasion / Indicator Removal [T1070] (ENT)",
+                "Indicator Removal",
+                "Indicator Removal [T1070] (ENT)",
+                "T1070",
+                "attack-pattern--799ace7f-e227-4411-baa0-8868704f2a69"
+            ],
+            "id": "attack-pattern--a3b953dd-674b-4d88-911a-0ff68b118185",
+            "created": "2020-08-04T20:12:27.914Z",
+            "modified": "2025-02-18T20:42:37.524Z",
+            "name": "Defense Evasion / Indicator Removal [T1070] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Discovery - Network Service Discovery[T1046]",
+                "Discovery / Network Service Discovery [T1046] (ENT)",
+                "Network Service Discovery",
+                "Network Service Discovery [T1046] (ENT)",
+                "T1046",
+                "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88",
+                "osql.exe"
+            ],
+            "id": "attack-pattern--ae0805b7-b3eb-4242-b868-3db2f31d5a67",
+            "created": "2020-02-01T17:03:52.695Z",
+            "modified": "2025-02-24T20:58:40.348Z",
+            "name": "Discovery / Network Service Discovery [T1046] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Command and Scripting Interpreter: Windows Command Shell",
+                "Command and Scripting Interpreter: Windows Command Shell [T1059.003] (ENT)",
+                "Execution - Command and Scripting Interpreter: Windows Command Shell [T1059.003]",
+                "Execution / Command and Scripting Interpreter: Windows Command Shell [T1059.003] (ENT)",
+                "T1059.003",
+                "Windows Command Shell",
+                "attack-pattern--d1fcf083-a721-4223-aedf-bf8960798d62",
+                "cmd",
+                "cmd /c",
+                "command shell"
+            ],
+            "id": "attack-pattern--b05eac92-6a9d-4269-b8d8-0ff9fa6fe153",
+            "created": "2021-04-24T02:29:50.190Z",
+            "modified": "2025-02-06T19:52:20.942Z",
+            "name": "Execution / Command and Scripting Interpreter: Windows Command Shell [T1059.003] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Initial Access - Phishing [T1566]",
+                "Initial Access / Phishing [T1566] (ENT)",
+                "Phishing",
+                "Phishing [T1566] (ENT)",
+                "T1566",
+                "attack-pattern--a62a8db3-f23a-4d8f-afd6-9dbc77e7813b"
+            ],
+            "id": "attack-pattern--c6ba5e30-228f-467d-beb5-3a98d5c13d64",
+            "created": "2021-04-24T02:22:59.493Z",
+            "modified": "2025-02-07T20:39:26.471Z",
+            "name": "Initial Access / Phishing [T1566] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Discovery - Network Share Discovery [T1135]",
+                "Discovery / Network Share Discovery [T1135] (ENT)",
+                "Network Share Discovery",
+                "Network Share Discovery [T1135] (ENT)",
+                "T1135",
+                "\\\\remotesystem",
+                "attack-pattern--3489cfc5-640f-4bb3-a103-9137b97de79f",
+                "findstr",
+                "remotesystem"
+            ],
+            "id": "attack-pattern--e6048be7-0ea0-47e8-a421-ffe366096669",
+            "created": "2020-08-04T20:08:01.993Z",
+            "modified": "2025-02-18T15:15:34.858Z",
+            "name": "Discovery / Network Share Discovery [T1135] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Exploit Public-Facing Application",
+                "Exploit Public-Facing Application [T1190] (ENT)",
+                "Initial Access - Exploit Public-Facing Application [T1190]",
+                "Initial Access / Exploit Public-Facing Application [T1190] (ENT)",
+                "SQL Injection",
+                "T1190",
+                "attack-pattern--3f886f2a-874f-4333-b794-aa6075009b1c",
+                "sqlmap"
+            ],
+            "id": "attack-pattern--e90788ba-5870-435a-a6e8-d9a1da7070e6",
+            "created": "2020-01-21T14:19:21.971Z",
+            "modified": "2025-02-06T19:43:32.303Z",
+            "name": "Initial Access / Exploit Public-Facing Application [T1190] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Ammy",
+                "AmmyAdmin",
+                "Command and Control - Remote Access Software [T1219]",
+                "Command and Control / Remote Access Software [T1219] (ENT)",
+                "Remote Access Software",
+                "Remote Access Software [T1219] (ENT)",
+                "T1219",
+                "Team Viewer",
+                "attack-pattern--4061e78c-1284-44b4-9116-73e4ac3912f7"
+            ],
+            "id": "attack-pattern--ed077615-7892-4a97-85a5-082df0d8574f",
+            "created": "2020-08-04T20:02:09.329Z",
+            "modified": "2025-02-06T19:52:20.913Z",
+            "name": "Command and Control / Remote Access Software [T1219] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Clear Command History",
+                "Clear Command History [T1146] (ENT)",
+                "Defense Evasion - Indicator Removal: Clear Command History [T1070.003]",
+                "Defense Evasion / Clear Command History [T1146] (ENT)",
+                "Defense Evasion / Indicator Removal: Clear Command History [T1070.003] (ENT)",
+                "Indicator Removal: Clear Command History",
+                "Indicator Removal: Clear Command History [T1070.003] (ENT)",
+                "T1070.003",
+                "T1146",
+                "attack-pattern--3aef9463-9a7a-43ba-8957-a867e07c1e6a",
+                "attack-pattern--d3046a90-580c-4004-8208-66915bc29830"
+            ],
+            "id": "attack-pattern--f0ddac40-e240-4dcb-aff6-a3408cc9c029",
+            "created": "2020-02-01T17:41:57.182Z",
+            "modified": "2025-03-03T17:05:54.521Z",
+            "name": "Defense Evasion / Indicator Removal: Clear Command History [T1070.003] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Application Deployment Software",
+                "Application Deployment Software [T1017] (ENT)",
+                "Execution - Software Deployment Tools [T1072]",
+                "Execution / Software Deployment Tools [T1072] (ENT)",
+                "Lateral Movement / Application Deployment Software [T1017] (ENT)",
+                "Software Deployment Tools",
+                "Software Deployment Tools [T1072] (ENT)",
+                "T1017",
+                "T1072",
+                "attack-pattern--327f3cc5-eea1-42d4-a6cd-ed34b7ce8f61",
+                "attack-pattern--92a78814-b191-47ca-909c-1ccfe3777414"
+            ],
+            "id": "attack-pattern--f24beefb-330d-4cb5-9034-e11bcccb461d",
+            "created": "2020-02-01T17:43:52.423Z",
+            "modified": "2025-02-06T19:52:20.916Z",
+            "name": "Execution / Software Deployment Tools [T1072] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                "Create Account: Domain Account",
+                "Create Account: Domain Account [T1136.002] (ENT)",
+                "Persistence - Create Account: Domain Account [T1136.002]",
+                "Persistence / Create Account: Domain Account [T1136.002] (ENT)",
+                "T1136.002",
+                "attack-pattern--7610cada-1499-41a4-b3dd-46467b68d177"
+            ],
+            "id": "attack-pattern--f25dbb16-f0cd-4ac8-b3bf-4e4904ed7aa9",
+            "created": "2021-04-24T02:15:55.154Z",
+            "modified": "2025-02-18T19:04:28.152Z",
+            "name": "Persistence / Create Account: Domain Account [T1136.002] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "attack-pattern",
+            "aliases": [
+                ">dir",
+                ">ver",
+                "Discovery - System Information Discovery [T1082]",
+                "Discovery / System Information Discovery [T1082] (ENT)",
+                "OS Version",
+                "Startup",
+                "System Information Discovery",
+                "System Information Discovery [T1082] (ENT)",
+                "System name",
+                "T1082",
+                "attack-pattern--354a7f88-63fb-41b5-a801-ce3b377b36f1",
+                "computer name",
+                "current working directory",
+                "get system info",
+                "hostname",
+                "list directories",
+                "list files",
+                "netsh",
+                "service packs",
+                "start-up",
+                "system information",
+                "systeminfo",
+                "uname"
+            ],
+            "id": "attack-pattern--ff4cb5f9-a1fc-4127-bc37-ca3f0686cc9f",
+            "created": "2020-08-04T19:47:06.352Z",
+            "modified": "2025-02-06T19:24:50.066Z",
+            "name": "Discovery / System Information Discovery [T1082] (ENT)",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "indicator",
+            "id": "indicator--26f0c1a8-9c28-42c7-a3e5-1a818132b297",
+            "created": "2023-03-12T17:24:09.823Z",
+            "modified": "2025-03-03T17:05:54.619Z",
+            "external_references": [
+                {
+                    "source_name": "BleepingComputer",
+                    "url": "https://www.bleepingcomputer.com/news/security/medusa-ransomware-gang-picks-up-steam-as-it-targets-companies-worldwide/"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "granular_markings": [
+                {
+                    "marking_ref": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                    "selectors": [
+                        "external_references.[0]"
+                    ]
+                }
+            ],
+            "pattern": "[email-addr:value = 'key.medusa.serviceteam@protonmail.com']",
+            "valid_from": "2023-03-12T17:24:09.823Z",
+            "pattern_type": "stix",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "indicator",
+            "id": "indicator--2e90d3b5-b955-46c5-9b82-2ca2f40db0d6",
+            "created": "2025-02-28T14:27:51.710Z",
+            "modified": "2025-03-03T17:05:54.581Z",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "pattern": "[email-addr:value = 'mds.svt.breach@protonmail.com']",
+            "valid_from": "2025-02-28T14:27:51.710Z",
+            "pattern_type": "stix",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "indicator",
+            "id": "indicator--64104226-3e03-4f8e-9941-a233e125a3f7",
+            "created": "2024-01-31T13:22:23.076Z",
+            "modified": "2025-03-03T17:05:54.591Z",
+            "external_references": [
+                {
+                    "source_name": "AlienVault (user_AlienVault)",
+                    "url": "https://thedfirreport.com/2024/01/29/buzzing-on-christmas-eve-trigona-ransomware-in-3-hours/#100035"
+                }
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "granular_markings": [
+                {
+                    "marking_ref": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                    "selectors": [
+                        "external_references.[0]"
+                    ]
+                }
+            ],
+            "pattern": "[file:hashes.'SHA-1' = 'AC0DCE3B0F5B8D187A2E3F29EFC358538FD4AA45' OR file:hashes.'SHA-256' = '56B08AA03BD8C0EA094CFEB03D5954FFD857BAC42DF929DC835EEA62F32B09E0' OR file:hashes.MD5 = '44370F5C977E415981FEBF7DBB87A85C' OR file:hashes.SSDEEP = '6:6IsxYToXhLPxFmGSS3HBd1zOxAWpTPm/k/KnqbKADUQapLj/662:wQotxnxM/BbTDpapLj//2']",
+            "valid_from": "2024-01-31T13:22:23.076Z",
+            "pattern_type": "stix",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "indicator",
+            "id": "indicator--6af77fbb-2dea-48eb-95f9-18dc68aedf2a",
+            "created": "2024-10-09T10:54:32.859Z",
+            "modified": "2025-03-03T17:05:54.610Z",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "pattern": "[email-addr:value = 'medusa.support@onionmail.org']",
+            "valid_from": "2024-10-09T10:54:32.859Z",
+            "pattern_type": "stix",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "indicator",
+            "id": "indicator--6d880598-6c4e-4618-b025-5065e9371a59",
+            "created": "2025-02-28T14:27:51.773Z",
+            "modified": "2025-03-03T17:05:54.641Z",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "pattern": "[email-addr:value = 'mds.svt.mir2@protonmail.com']",
+            "valid_from": "2025-02-28T14:27:51.773Z",
+            "pattern_type": "stix",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "indicator",
+            "id": "indicator--84e43960-3552-4031-acdf-c0f4d867527f",
+            "created": "2025-02-28T14:27:50.740Z",
+            "modified": "2025-03-03T17:05:54.601Z",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "pattern": "[file:hashes.'SHA-1' = '45D89FE2C554D1DD2AC3A8879965B35ED7E3421F' OR file:hashes.'SHA-256' = 'BAA980AE253101066AE7E551A354116454E8697FF2154A907C9885770CDAE4AE' OR file:hashes.MD5 = '80D852CD199AC923205B61658A9EC5BC']",
+            "valid_from": "2025-02-28T14:27:50.740Z",
+            "pattern_type": "stix",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "indicator",
+            "id": "indicator--8a5dbb9b-665a-4783-9684-1515264b684f",
+            "created": "2025-02-28T14:27:51.791Z",
+            "modified": "2025-03-03T17:05:54.572Z",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "pattern": "[email-addr:value = 'medusasupport@cock.li']",
+            "valid_from": "2025-02-28T14:27:51.791Z",
+            "pattern_type": "stix",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--116e81af-1549-4381-b3de-389b2ab52b79",
+            "created": "2025-03-03T15:12:36.642Z",
+            "modified": "2025-03-03T17:05:55.005Z",
+            "name": "PDQ Inventory",
+            "is_family": true,
+            "aliases": [
+                "PDQ Inventory"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--23ab7c26-35d0-4740-af5a-02c81e0388be",
+            "created": "2018-08-14T13:27:29.282Z",
+            "modified": "2025-03-03T17:05:54.998Z",
+            "name": "Matrix",
+            "is_family": true,
+            "aliases": [
+                "Matrix"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--2cf61894-5607-4472-98e1-82cbf652aad8",
+            "created": "2023-06-22T17:50:53.391Z",
+            "modified": "2025-02-24T20:50:12.906Z",
+            "name": "Advanced IP Scanner",
+            "is_family": true,
+            "aliases": [
+                "Advanced IP Scanner"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--44d71cdc-e0da-442e-b7c1-c23e318446ee",
+            "created": "2022-07-20T22:52:20.539Z",
+            "modified": "2025-02-06T19:52:22.715Z",
+            "name": "SimpleHelp",
+            "malware_types": [
+                "remote-access-trojan"
+            ],
+            "is_family": true,
+            "aliases": [
+                "SimpleHelp"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--45a7fc92-f5e4-4067-ba43-e2281af9d3ed",
+            "created": "2022-12-21T08:03:59.877Z",
+            "modified": "2025-03-03T17:05:55.013Z",
+            "name": "SPLASHTOP",
+            "is_family": true,
+            "aliases": [
+                "SPLASHTOP"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--461f6db9-df26-46f1-a504-8ae2cfe34ca7",
+            "created": "2024-04-18T12:44:50.855Z",
+            "modified": "2025-03-03T17:05:55.000Z",
+            "name": "EHORUS",
+            "is_family": true,
+            "aliases": [
+                "EHORUS"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--519d75b5-844d-440f-8fd0-a3d398743933",
+            "created": "2021-11-20T03:17:03.125Z",
+            "modified": "2025-03-03T17:05:54.999Z",
+            "name": "Ligolo",
+            "malware_types": [
+                "proxy-tool"
+            ],
+            "is_family": true,
+            "aliases": [
+                "Ligolo"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--53d32f01-29e5-4276-a89a-af17a9281b99",
+            "created": "2022-06-02T13:45:47.989Z",
+            "modified": "2025-03-03T17:05:55.006Z",
+            "name": "AnyDesk",
+            "is_family": true,
+            "aliases": [
+                "AnyDesk"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--6244180c-0a63-472e-9690-28d3041752a6",
+            "created": "2022-10-14T06:11:35.874Z",
+            "modified": "2025-03-03T17:05:54.994Z",
+            "name": "ConnectWise",
+            "is_family": true,
+            "aliases": [
+                "ConnectWise"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--627b5fc8-c6b9-4eea-88ce-161d06acd2bc",
+            "created": "2023-03-09T00:35:52.381Z",
+            "modified": "2025-03-03T17:05:54.995Z",
+            "name": "CLOUDFLARED",
+            "is_family": true,
+            "aliases": [
+                "CLOUDFLARED"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--7ece3d7a-11a4-4fe1-9b4c-4ed9beaf472c",
+            "created": "2016-02-02T00:52:48.366Z",
+            "modified": "2025-02-10T21:49:59.272Z",
+            "name": "Mimikatz",
+            "malware_types": [
+                "password-dump"
+            ],
+            "is_family": true,
+            "aliases": [
+                "MIKATZ",
+                "Mimikatz"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--856e5e92-fc0a-436a-98c1-257ce7c88c78",
+            "created": "2017-11-28T04:53:12.562Z",
+            "modified": "2025-03-03T17:05:55.001Z",
+            "name": "PsExec",
+            "malware_types": [
+                "lateral-movement"
+            ],
+            "is_family": true,
+            "aliases": [
+                "PsExec"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--980f5778-a46b-402c-bec1-29961145849b",
+            "created": "2022-06-01T19:55:05.862Z",
+            "modified": "2025-03-03T17:05:54.648Z",
+            "name": "Rclone",
+            "malware_types": [
+                "exfiltration"
+            ],
+            "is_family": true,
+            "aliases": [
+                "Rclone",
+                "cpe:/a:rclone:rclone",
+                "cpe:2.3:a:rclone:rclone:*:*:*:*:*:*:*:*"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--cc092745-936b-44be-bf3d-af88b7e1b738",
+            "created": "2025-03-03T15:12:00.633Z",
+            "modified": "2025-03-03T17:05:54.660Z",
+            "name": "N-able",
+            "is_family": true,
+            "aliases": [
+                "N-able"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--e04195ae-ae23-44be-b85d-2fb50b50b752",
+            "created": "2024-04-02T18:58:08.328Z",
+            "modified": "2025-03-03T17:05:55.007Z",
+            "name": "ATERA",
+            "is_family": true,
+            "aliases": [
+                "ATERA"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--e6ea3d0a-dca4-4b7f-85aa-b29e86210b92",
+            "created": "2019-06-05T18:03:11.511Z",
+            "modified": "2025-03-03T17:05:54.996Z",
+            "name": "Certutil",
+            "malware_types": [
+                "utility"
+            ],
+            "is_family": true,
+            "aliases": [
+                "Certutil"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--e84d714e-4891-48fa-8243-f4cd8a012ad2",
+            "created": "2025-03-03T15:10:22.807Z",
+            "modified": "2025-03-03T17:05:54.992Z",
+            "name": "BigFix",
+            "is_family": true,
+            "aliases": [
+                "BigFix"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--f659c087-6810-4939-9b30-c6b40ce82ee3",
+            "created": "2022-05-25T17:53:27.308Z",
+            "modified": "2025-03-03T17:05:55.009Z",
+            "name": "PDQ Deploy",
+            "malware_types": [
+                "utility"
+            ],
+            "is_family": true,
+            "aliases": [
+                "PDQ Deploy"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "malware",
+            "id": "malware--fb6ba198-6c24-4001-a88d-779648dc752f",
+            "created": "2018-08-14T13:27:29.282Z",
+            "modified": "2025-03-03T17:05:55.011Z",
+            "name": "MedusaLocker",
+            "is_family": true,
+            "aliases": [
+                "Ako",
+                "Doxware",
+                "Medusa",
+                "Medusa Ransomware",
+                "MedusaLocker",
+                "MedusaLocker Ransomware",
+                "MedusaReborn"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "relationship",
+            "id": "relationship--9d7637b1-a548-412b-9b9e-caf12df5add2",
+            "created": "2025-03-03T17:05:54.623Z",
+            "modified": "2025-03-03T17:05:54.623Z",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "relationship_type": "indicates",
+            "source_ref": "indicator--26f0c1a8-9c28-42c7-a3e5-1a818132b297",
+            "target_ref": "threat-actor--8cf9f23e-5fe7-4e4d-97c2-a1faa73f372c",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "report",
+            "id": "report--c58af056-4ff9-43ff-95e3-0b57c6abe90e",
+            "created": "2025-03-03T14:56:07.649Z",
+            "modified": "2025-03-03T17:05:55.014Z",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "name": "AA25-071A Stop Ransomware: Medusa Ransomware",
+            "description": "The Federal Bureau of Investigation (FBI), Cybersecurity and Infrastructure Security Agency (CISA), and the Multi-State Information Sharing and Analysis Center (MS-ISAC) are releasing this joint advisory to disseminate known Medusa ransomware TTPs and IOCs, identified through FBI investigations as recently as February 2025.\r\n\r\nMedusa is a Ransomware-as-a-Service (RaaS) variant first identified in June 2021. As of February 2025, Medusa developers and affiliates have impacted over 300 victims from a variety of critical infrastructure sectors with affected industries including medical, education, legal, insurance, technology, and manufacturing. The Medusa ransomware variant is unrelated to the MedusaLocker variant and the Medusa mobile malware variant per the FBI’s investigation. FBI, CISA, and MS-ISAC encourage organizations to implement the recommendations in the Mitigations section of this advisory to reduce the likelihood and impact of Medusa ransomware incidents.",
+            "published": "2025-03-06T00:00:00.000Z",
+            "object_refs": [
+                "attack-pattern--069a68af-86bd-48f1-99e8-d6fc33df24c7",
+                "attack-pattern--069cea35-ecd9-4aba-9679-4c8358c19b24",
+                "attack-pattern--0caa013f-e168-4c2d-99d0-3ea4f2c6cb20",
+                "attack-pattern--0e946a55-1395-4fa3-af87-4ef560173b4f",
+                "attack-pattern--16943282-ae72-4439-87e1-07d14d1aec27",
+                "attack-pattern--233061da-54fd-4981-a913-199fff22a1a2",
+                "attack-pattern--25fa7eed-ed0f-4c4d-b100-432a04c50197",
+                "attack-pattern--27a78c89-95a0-4300-939f-61b23b9926b3",
+                "attack-pattern--311e39ee-712c-4419-90f1-47a947585916",
+                "attack-pattern--34de98ce-da53-438c-84fc-530f03967639",
+                "attack-pattern--3555d3a2-aa4b-48eb-8cf9-594fd2f6af70",
+                "attack-pattern--3b864656-ce5f-4d9a-a6ce-ce97e6a55765",
+                "attack-pattern--4e1e81ff-2ed2-40f1-b316-ff98fc03f39d",
+                "attack-pattern--5152c42b-0f15-4fe6-a402-c8ab8401453a",
+                "attack-pattern--52c9813b-894d-466a-99cf-4a1ffd645d18",
+                "attack-pattern--5aa9dbdd-23a2-41ac-a22c-30d993c7140e",
+                "attack-pattern--5b066059-58d8-48f9-9ee8-df90bf3d2b6b",
+                "attack-pattern--5d5a8308-998e-4db1-915c-9e009ecf8610",
+                "attack-pattern--6c74d0ee-b401-4daf-83b0-17eaa103cefb",
+                "attack-pattern--7f24b560-5d73-4610-8947-94aa8e63ebf4",
+                "attack-pattern--8de665fb-f59c-4b9b-b8f9-da87ea940273",
+                "attack-pattern--9dd985e0-1e45-4e00-95c0-aa843155bb63",
+                "attack-pattern--a1a3cb53-c9da-4cb3-96fa-e1919334af85",
+                "attack-pattern--a3b953dd-674b-4d88-911a-0ff68b118185",
+                "attack-pattern--ae0805b7-b3eb-4242-b868-3db2f31d5a67",
+                "attack-pattern--b05eac92-6a9d-4269-b8d8-0ff9fa6fe153",
+                "attack-pattern--c6ba5e30-228f-467d-beb5-3a98d5c13d64",
+                "attack-pattern--e6048be7-0ea0-47e8-a421-ffe366096669",
+                "attack-pattern--e90788ba-5870-435a-a6e8-d9a1da7070e6",
+                "attack-pattern--ed077615-7892-4a97-85a5-082df0d8574f",
+                "attack-pattern--f0ddac40-e240-4dcb-aff6-a3408cc9c029",
+                "attack-pattern--f24beefb-330d-4cb5-9034-e11bcccb461d",
+                "attack-pattern--f25dbb16-f0cd-4ac8-b3bf-4e4904ed7aa9",
+                "attack-pattern--ff4cb5f9-a1fc-4127-bc37-ca3f0686cc9f",
+                "indicator--26f0c1a8-9c28-42c7-a3e5-1a818132b297",
+                "indicator--2e90d3b5-b955-46c5-9b82-2ca2f40db0d6",
+                "indicator--64104226-3e03-4f8e-9941-a233e125a3f7",
+                "indicator--6af77fbb-2dea-48eb-95f9-18dc68aedf2a",
+                "indicator--6d880598-6c4e-4618-b025-5065e9371a59",
+                "indicator--84e43960-3552-4031-acdf-c0f4d867527f",
+                "indicator--8a5dbb9b-665a-4783-9684-1515264b684f",
+                "malware--116e81af-1549-4381-b3de-389b2ab52b79",
+                "malware--23ab7c26-35d0-4740-af5a-02c81e0388be",
+                "malware--2cf61894-5607-4472-98e1-82cbf652aad8",
+                "malware--44d71cdc-e0da-442e-b7c1-c23e318446ee",
+                "malware--45a7fc92-f5e4-4067-ba43-e2281af9d3ed",
+                "malware--461f6db9-df26-46f1-a504-8ae2cfe34ca7",
+                "malware--519d75b5-844d-440f-8fd0-a3d398743933",
+                "malware--53d32f01-29e5-4276-a89a-af17a9281b99",
+                "malware--6244180c-0a63-472e-9690-28d3041752a6",
+                "malware--627b5fc8-c6b9-4eea-88ce-161d06acd2bc",
+                "malware--7ece3d7a-11a4-4fe1-9b4c-4ed9beaf472c",
+                "malware--856e5e92-fc0a-436a-98c1-257ce7c88c78",
+                "malware--980f5778-a46b-402c-bec1-29961145849b",
+                "malware--cc092745-936b-44be-bf3d-af88b7e1b738",
+                "malware--e04195ae-ae23-44be-b85d-2fb50b50b752",
+                "malware--e6ea3d0a-dca4-4b7f-85aa-b29e86210b92",
+                "malware--e84d714e-4891-48fa-8243-f4cd8a012ad2",
+                "malware--f659c087-6810-4939-9b30-c6b40ce82ee3",
+                "malware--fb6ba198-6c24-4001-a88d-779648dc752f",
+                "vulnerability--140ac936-70df-44e5-8c79-2f8d0190b43a",
+                "vulnerability--6aa04a10-1551-4d74-adf8-146f5d6738d9",
+                "relationship--9d7637b1-a548-412b-9b9e-caf12df5add2",
+                "threat-actor--8cf9f23e-5fe7-4e4d-97c2-a1faa73f372c",
+                "location--78a7f0f3-ea60-4ca2-894e-9e825b94b592",
+                "relationship--b6fe158f-fa95-4a40-ac68-78e480a54c69",
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ],
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "spec_version": "2.1",
+            "type": "threat-actor",
+            "id": "threat-actor--8cf9f23e-5fe7-4e4d-97c2-a1faa73f372c",
+            "created": "2021-08-25T01:35:52.866Z",
+            "modified": "2025-03-03T17:05:54.623Z",
+            "name": "Vice Society",
+            "aliases": [
+                "Vice Society"
+            ],
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "vulnerability",
+            "id": "vulnerability--140ac936-70df-44e5-8c79-2f8d0190b43a",
+            "created": "2024-03-14T17:46:39.254Z",
+            "modified": "2025-01-29T23:08:55.064Z",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2023-48788"
+                }
+            ],
+            "name": "CVE-2023-48788",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "spec_version": "2.1",
+            "type": "vulnerability",
+            "id": "vulnerability--6aa04a10-1551-4d74-adf8-146f5d6738d9",
+            "created": "2024-02-21T18:01:04.406Z",
+            "modified": "2025-03-03T17:05:54.564Z",
+            "external_references": [
+                {
+                    "source_name": "cve",
+                    "external_id": "CVE-2024-1709"
+                }
+            ],
+            "name": "CVE-2024-1709",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af",
+            "created": "2025-03-03T17:05:46.232Z",
+            "extensions": {
+                "extension-definition--3a65884d-005a-4290-8335-cb2d778a83ce": {
+                    "extension_type": "property-extension",
+                    "identifier": "isa:guide.19001.DFTA-a9bdb603-7f4f-44c6-acb0-d47f614e64b2",
+                    "create_date_time": "2025-03-03T17:05:46.232Z",
+                    "responsible_entity_custodian": "USA.DHS.CISA.CSD.TH",
+                    "responsible_entity_originator": "USA.DHS.CISA.CSD.TH",
+                    "policy_reference": "urn:isa:policy:acs:ns:v3.0?privdefault=permit&sharedefault=permit",
+                    "control_set": {
+                        "classification": "U",
+                        "formal_determination": [
+                            "INFORMATION-DIRECTLY-RELATED-TO-CYBERSECURITY-THREAT",
+                            "PUBREL"
+                        ]
+                    },
+                    "authority_reference": [
+                        "urn:isa:authority:ais"
+                    ]
+                }
+            }
+        },
+        {
+            "administrative_area": "US-DC",
+            "country": "US",
+            "created": "2021-03-13T20:09:21.286293Z",
+            "created_by_ref": "identity--8ce3f695-d5a4-4dc8-9e93-a65af453a31a",
+            "id": "location--78a7f0f3-ea60-4ca2-894e-9e825b94b592",
+            "modified": "2021-12-01T16:19:51.601791Z",
+            "name": "District of Columbia",
+            "spec_version": "2.1",
+            "type": "location",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--b6fe158f-fa95-4a40-ac68-78e480a54c69",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "created": "2024-08-07T16:30:26.628Z",
+            "modified": "2024-08-07T16:30:26.628Z",
+            "source_ref": "identity--b1160532-b8f3-4cfa-9b7d-423e253fbc59",
+            "relationship_type": "located-at",
+            "target_ref": "location--78a7f0f3-ea60-4ca2-894e-9e825b94b592",
+            "object_marking_refs": [
+                "marking-definition--d191de9a-2ba6-4afb-be36-53a9260119af"
+            ]
+        }
+    ]
+}

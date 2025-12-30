@@ -1,0 +1,3048 @@
+{
+  "type": "bundle",
+  "spec_version": "2.1",
+  "id": "bundle--7b93f402-eafd-4fcb-a203-2cf62761638a",
+  "created": "2025-06-18T09:27:59.009Z",
+  "modified": "2025-06-18T09:27:59.009Z",
+  "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+  ],
+  "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+  "objects": [
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "created": "2025-06-18T09:27:59.002Z",
+      "modified": "2025-06-18T09:27:59.002Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Umbrella Stand",
+      "description": "UMBRELLA STAND beacons to its C2 server using fake TLS on port 443.\nUMBRELLA STAND has functionality to run shell commands.\nUMBRELLA STAND has been observed targeting FortiGate 100D series firewalls produced by Fortinet.\nUMBRELLA STAND has command configurable C2 and beacon frequency.\nUMBRELLA STAND has been observed deployed in conjunction with a set of publicly available tooling including: BusyBox, nbtscan, tcpdump and openLDAP.\nUMBRELLA STAND is able to hook the reboot functionality of the device. \n",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": false,
+      "capabilities": [
+        "accesses-remote-machines",
+        "anti-disassembly",
+        "captures-system-state-data",
+        "communicates-with-c2",
+        "exfiltrates-data",
+        "hides-artifacts",
+        "violates-system-operational-integrity"
+      ],
+      "architecture_execution_envs": [
+        "x86"
+      ],
+      "implementation_languages": [
+        "c"
+      ],
+      "x_operating_systems": [
+        "linux"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3c48d49c-29a8-44b6-bed6-2c8c3a326dfd",
+      "created": "2025-06-18T09:27:59.002Z",
+      "modified": "2025-06-18T09:27:59.002Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Command and Scripting Interpreter: Unix Shell as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "description": "UMBRELLA STAND contains functionality to receive and run Shell commands."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ac92bd8e-fb55-4c84-a2d3-03d99dbdc72d",
+      "created": "2025-06-18T09:27:59.002Z",
+      "modified": "2025-06-18T09:27:59.002Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--3c48d49c-29a8-44b6-bed6-2c8c3a326dfd",
+      "target_ref": "attack-pattern--a9d4b653-6915-42af-98b2-5758c4ceee56"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4a7fb741-55a2-4f63-84a8-11cc120d18bf",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--3c48d49c-29a8-44b6-bed6-2c8c3a326dfd"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--35ca7caf-bc9b-40ec-8e5f-380a0574163e",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Deobfuscate/Decode Files or Information as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "UMBRELLA STAND contains AES-encrypted strings. "
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--735661bb-7980-4498-b898-e73b4c867bad",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--35ca7caf-bc9b-40ec-8e5f-380a0574163e",
+      "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--272ed36d-8fb2-4c76-b03b-dce29feb4185",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--35ca7caf-bc9b-40ec-8e5f-380a0574163e"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--881f247f-3f89-4b48-bb47-0f72a6b9817a",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Process Injection as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "UMBRELLA STAND uses tooling to perform process injection."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6e131ab9-6516-4a0d-a084-074e7dd1f036",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--881f247f-3f89-4b48-bb47-0f72a6b9817a",
+      "target_ref": "attack-pattern--43e7dc91-05b2-474c-b9ac-2ed4fe101f4d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--355e17db-3709-42cc-ad6a-f22d4ad91ff7",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--881f247f-3f89-4b48-bb47-0f72a6b9817a"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5ed6a9ac-e1f7-45e8-bb7d-f889348d8599",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Indicator Removal: File Deletion as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "UMBRELLA STAND binaries had been deleted from the device. "
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--160c6e33-a431-44f5-8aad-4b4a9664e590",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--5ed6a9ac-e1f7-45e8-bb7d-f889348d8599",
+      "target_ref": "attack-pattern--d63a3fb8-9452-4e9d-a60a-54be68d5998c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e419ef43-f996-416c-ab32-c6319dd225dc",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--5ed6a9ac-e1f7-45e8-bb7d-f889348d8599"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bf856889-6cf4-4816-aeaa-40d00441638f",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Hide Artifacts: Process Argument Spoofing as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "UMBRELLA STAND modifies it's process name "
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b2215ed7-6c1e-46a5-a3bd-a90938b571de",
+      "created": "2025-06-18T09:27:59.003Z",
+      "modified": "2025-06-18T09:27:59.003Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--bf856889-6cf4-4816-aeaa-40d00441638f",
+      "target_ref": "attack-pattern--ffe59ad3-ad9b-4b9f-b74f-5beb3c309dc1"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d39c4406-1f4e-408e-aa25-748885160a13",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--bf856889-6cf4-4816-aeaa-40d00441638f"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--45ba4683-2836-4d78-af1d-5ec3ff4ceea8",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Hide Artifacts: Hidden Files and Directories as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "UMBRELLA STAND and associated tooling use hidden directories. "
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--de1228ae-d48e-4b14-b603-9bf48b453f18",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--45ba4683-2836-4d78-af1d-5ec3ff4ceea8",
+      "target_ref": "attack-pattern--ec8fc7e2-b356-455c-8db5-2e37be158e7d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a40c1a80-48c4-4d8d-a631-8e4e7b1b44d2",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--45ba4683-2836-4d78-af1d-5ec3ff4ceea8"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b1001fb4-5cd7-41e7-8fdf-dae65622e72e",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Boot or Logon Autostart Execution: Kernel Modules and Extensions as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "description": "UMBRELLA STAND has functionality to modify reboot to achieve persistence."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0fbb259b-7a0b-4d0f-a61e-cf1c79a75c3a",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--b1001fb4-5cd7-41e7-8fdf-dae65622e72e",
+      "target_ref": "attack-pattern--a1b52199-c8c5-438a-9ded-656f1d0888c6"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--010acad3-8a8a-4fdb-b88d-a27d65cabc0c",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--b1001fb4-5cd7-41e7-8fdf-dae65622e72e"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a41cefc3-03d7-4815-be0b-87ae8b89d341",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Hijack Execution Flow: Dynamic Linker Hijacking as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "description": "UMBRELLA STAND has functionality to load via ldpreload."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--80b68e13-cd3a-40ac-be32-32094eebf84a",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--a41cefc3-03d7-4815-be0b-87ae8b89d341",
+      "target_ref": "attack-pattern--633a100c-b2c9-41bf-9be5-905c1b16c825"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b7b341ed-2626-4820-9a0a-c5d4b16cb40b",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--a41cefc3-03d7-4815-be0b-87ae8b89d341"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e2949263-f2c4-4b36-9838-5c67d7e6bced",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Process Discovery as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "description": "UMBRELLA STAND performs process discovery to check that its main process is still executing."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--285985bb-fda4-4cdb-94c9-297febf8c1c1",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--e2949263-f2c4-4b36-9838-5c67d7e6bced",
+      "target_ref": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--469e2b9e-5547-4f23-8db3-b90d2f292f0c",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--e2949263-f2c4-4b36-9838-5c67d7e6bced"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--baeaf01d-8da1-492c-9eb0-7b1674251125",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Network Service Discovery as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "description": "UMBRELLA STAND was in use with nbtscan which can list NetBIOS computer names."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f44b86b5-0677-4234-9753-f53b510a91ad",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--baeaf01d-8da1-492c-9eb0-7b1674251125",
+      "target_ref": "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e45b95c8-9f60-4225-b1bd-f2b09917bf03",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--baeaf01d-8da1-492c-9eb0-7b1674251125"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--cb254de4-c831-496f-9ac8-a0fca31fff98",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Network Sniffing as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "description": "UMBRELLA STAND was in use with tcpdump which can be, and was, used to perform packet captures."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0b8ea51d-377e-4443-99d0-3f76c0a0f14f",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--cb254de4-c831-496f-9ac8-a0fca31fff98",
+      "target_ref": "attack-pattern--3257eb21-f9a7-4430-8de1-d8b6e288f529"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0061a14f-21e0-41e8-9695-7ae40eee08aa",
+      "created": "2025-06-18T09:27:59.004Z",
+      "modified": "2025-06-18T09:27:59.004Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--cb254de4-c831-496f-9ac8-a0fca31fff98"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bc9df8d6-309d-4a87-b0c5-bdd1ac4fe55f",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Data Obfuscation: Protocol Impersonation as used by Umbrella Stand",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "description": "UMBRELLA STAND uses fake TLS traffic for communication with the C2 server."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b5ba8bd9-945f-4e8d-b8b8-8d61881fc6cf",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--bc9df8d6-309d-4a87-b0c5-bdd1ac4fe55f",
+      "target_ref": "attack-pattern--c325b232-d5bc-4dde-a3ec-71f3db9e8adc"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3f7402e4-1088-4c7a-a11b-4d741fe6a8bd",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+      "target_ref": "attack-pattern--bc9df8d6-309d-4a87-b0c5-bdd1ac4fe55f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--700de81b-7ca6-45f5-a161-6e44783d8642",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--82b37beb-79ce-4d6f-af98-c324af87c585",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--00ae4d18-27cb-435d-aa3c-a956355fcc0c",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0160c9a2-4cb8-4687-b853-2638a04bc4db",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--20053f82-6024-452c-bdbc-6d43cd778a6d",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--15121a6f-efc8-462a-a1e2-d1f9bebd5677",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--514b3eb2-df86-4c5b-bfab-18037e715313",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974",
+      "target_ref": "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5d1c6d5c-0fe6-482f-af94-0e3c1a05159d",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974",
+      "target_ref": "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c2005294-8eef-40b8-8f0d-8911fcbc5dbe",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706",
+      "target_ref": "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--620601de-371a-4427-ad8f-cb59af9d56c4",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706",
+      "target_ref": "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--78bf68c6-4de9-43fc-9ee3-22f87319390c",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed",
+      "target_ref": "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--eacde7c8-23c4-42fd-80a9-22a6a6662f8a",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed",
+      "target_ref": "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f23d4997-6f74-4d94-ae9c-13d6a7424d1d",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--6fcf2b29-51d6-402f-9804-bf53713dab23",
+      "target_ref": "indicator--569e7c22-d451-4b8b-ab8e-70571e6c7d3b"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e5d92b12-17b4-4674-91b5-b0d579cc84e4",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--6fcf2b29-51d6-402f-9804-bf53713dab23",
+      "target_ref": "indicator--12d735c1-3103-4043-a411-77321b5cacc7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--41381446-5a55-4f3e-96ad-de827a16f247",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--569e7c22-d451-4b8b-ab8e-70571e6c7d3b",
+      "target_ref": "indicator--6fcf2b29-51d6-402f-9804-bf53713dab23"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--68384cbb-fa78-4b1e-959e-97187eb4b2d5",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--569e7c22-d451-4b8b-ab8e-70571e6c7d3b",
+      "target_ref": "indicator--12d735c1-3103-4043-a411-77321b5cacc7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--29f01925-4f95-4db5-9b63-95e49fdd6b62",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--12d735c1-3103-4043-a411-77321b5cacc7",
+      "target_ref": "indicator--6fcf2b29-51d6-402f-9804-bf53713dab23"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c596d398-46e6-412a-ae60-51f7c98e25f9",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--12d735c1-3103-4043-a411-77321b5cacc7",
+      "target_ref": "indicator--569e7c22-d451-4b8b-ab8e-70571e6c7d3b"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '79c8db07491b9049921b060ee059877a']",
+      "description": "UMBRELLA STAND networking binary.",
+      "valid_from": "2025-06-18T09:27:59.005Z",
+      "name": "Umbrella Stand sample (MD5: 79c8db07491b9049921b060ee059877a Filename: 'blghtd')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e65aa2e5-0b24-4dfa-80be-487c3f2209ca",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '8632487a9f19223b20d34c082a3077ca6ac6eac4']",
+      "description": "UMBRELLA STAND networking binary.",
+      "valid_from": "2025-06-18T09:27:59.005Z",
+      "name": "Umbrella Stand sample (SHA-1: 79c8db07491b9049921b060ee059877a Filename: 'blghtd')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4b3e34ba-20bf-4bfb-af8f-550cb05ace9a",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '8bacd5df99476328321a7e8e2fc0124c20f7a7ebf3e8f151c050387038515b70']",
+      "description": "UMBRELLA STAND networking binary.",
+      "valid_from": "2025-06-18T09:27:59.005Z",
+      "name": "Umbrella Stand sample (SHA-256: 79c8db07491b9049921b060ee059877a Filename: 'blghtd')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3a1bfd4e-5ed5-4dc5-94f6-739e20db1883",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974",
+      "created": "2025-06-18T09:27:59.005Z",
+      "modified": "2025-06-18T09:27:59.005Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '821b1158aa87a055030c99b93026485a']",
+      "description": "Tool used to inject libraries into other processes - used by the actors. ",
+      "valid_from": "2025-06-18T09:27:59.005Z",
+      "name": "Umbrella Stand sample (MD5: 821B1158AA87A055030C99B93026485A Filename: 'dskz')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a045f805-0ac1-475e-8678-645d5b91b815",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = 'c8183d12c2070cf04cd03f080904ed1312a56911']",
+      "description": "Tool used to inject libraries into other processes - used by the actors. ",
+      "valid_from": "2025-06-18T09:27:59.006Z",
+      "name": "Umbrella Stand sample (SHA-1: 821B1158AA87A055030C99B93026485A Filename: 'dskz')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--05e6a56b-25b1-4080-8371-d73308bce41d",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '65f1e17f7fa2e2fd9c57265f390484a7428c192f59ee41fc7c0d8386ea3b811a']",
+      "description": "Tool used to inject libraries into other processes - used by the actors. ",
+      "valid_from": "2025-06-18T09:27:59.006Z",
+      "name": "Umbrella Stand sample (SHA-256: 821B1158AA87A055030C99B93026485A Filename: 'dskz')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4c8f4ee1-2927-462b-933f-651b4a6ca75c",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6fcf2b29-51d6-402f-9804-bf53713dab23",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '43f398bfe3eecd5584ebf3321000c3cd']",
+      "description": "UMBRELLA STAND - used to hook the reboot of the device.",
+      "valid_from": "2025-06-18T09:27:59.006Z",
+      "name": "Umbrella Stand sample (MD5: 43f398bfe3eecd5584ebf3321000c3cd)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--85339bd7-2403-456d-b492-f1a944cfb678",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6fcf2b29-51d6-402f-9804-bf53713dab23",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--569e7c22-d451-4b8b-ab8e-70571e6c7d3b",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '73e2ae5b03e20eaa4e2cafb2000d57321bfa0b5f']",
+      "description": "UMBRELLA STAND - used to hook the reboot of the device.",
+      "valid_from": "2025-06-18T09:27:59.006Z",
+      "name": "Umbrella Stand sample (SHA-1: 43f398bfe3eecd5584ebf3321000c3cd)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1332298c-eb61-4c4e-9d66-fb2b7b1c3bdc",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--569e7c22-d451-4b8b-ab8e-70571e6c7d3b",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--12d735c1-3103-4043-a411-77321b5cacc7",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = 'a64b41e98e3e1066f41fbff5d4f99f6d34b792d35fe2be7e5d9fa8f3f8b93739']",
+      "description": "UMBRELLA STAND - used to hook the reboot of the device.",
+      "valid_from": "2025-06-18T09:27:59.006Z",
+      "name": "Umbrella Stand sample (SHA-256: 43f398bfe3eecd5584ebf3321000c3cd)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f981733d-6092-4235-863d-b0fa0f53b0a9",
+      "created": "2025-06-18T09:27:59.006Z",
+      "modified": "2025-06-18T09:27:59.006Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--12d735c1-3103-4043-a411-77321b5cacc7",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3992aeb9-3b3e-4fc1-b6bc-3db457db7f25",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule UMBRELLA_STAND_stack_constants_used_for_crypt\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Identifies UMBRELLA STAND sample based on encrypted stack strings.\"\r\n        date = \"2025-06-18\"\r\n    strings:\r\n        $ = {C6 45 D0 92 C6 45 D1 48 C6 45 D2 D6 C6 45 D3 E3 C6 45 D4 39 C6 45 D5 EE C6 45 D6 CE C6 45 D7 E4 C6 45 D8 59 C6 45 D9 58 C6 45 DA 97 C6 45 DB E5 C6 45 DC 2E C6 45 DD 27 C6 45 DE 98 C6 45 DF DE C6 45 E0 93 C6 45 E1 A8 C6 45 E2 77 C6 45 E3 9B C6 45 E4 4A C6 45 E5 F0 C6 45 E6 EF C6 45 E7 74 C6 45 E8 80 C6 45 E9 2D C6 45 EA EB C6 45 EB 30 C6 45 EC 1F C6 45 ED B5 C6 45 EE D9 C6 45 EF C7} // Key\r\n        $ = {C6 45 C0 77 C6 45 C1 90 C6 45 C2 3D C6 45 C3 35 C6 45 C4 A4 C6 45 C5 9F C6 45 C6 0F C6 45 C7 5E C6 45 C8 F5 C6 45 C9 52 C6 45 CA 44 C6 45 CB 69 C6 45 CC B9 C6 45 CD C0 C6 45 CE BA C6 45 CF DC} // IV     \r\n\r\n    condition:\r\n        uint32(0) == 0x464C457F and\r\n        any of them\r\n}\r\n",
+      "description": "Identifies UMBRELLA STAND sample based on encrypted stack strings.",
+      "valid_from": "2025-06-18T09:27:59.007Z",
+      "name": "YARA: UMBRELLA_STAND_stack_constants_used_for_crypt",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e430bcd7-c774-4942-9f29-48665429c51b",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3992aeb9-3b3e-4fc1-b6bc-3db457db7f25",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--838286e0-57cd-40fd-a824-c145e8201699",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--3992aeb9-3b3e-4fc1-b6bc-3db457db7f25",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--780ccd4d-0698-4259-a3ec-6bdd85005402",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--3992aeb9-3b3e-4fc1-b6bc-3db457db7f25",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a6f7bf24-eb77-41a2-9e63-d6f5b47436e8",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--3992aeb9-3b3e-4fc1-b6bc-3db457db7f25",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--df77689a-1feb-445b-a4e4-f4e238243b08",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule UMBRELLA_STAND_plaintext_of_encrypted_stings\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Identifies UMBRELLA STAND sample based on strings, if string obfuscation is not present.\"\r\n        date = \"2025-06-18\"\r\n    strings:\r\n        $ = {EDB88320}\r\n        $ = \"%s/%d.sv\"\r\n        $ = \"%s/%s.ini\"\r\n        $ = \"%s>%s 2>&1\"\r\n        $ = \"%[^=]=%[^=]\"\r\n        $ = \"/data2/.ztls/\"\r\n        $ = \"/proc/%s/status\"\r\n        $ = \"%*s %s\"\r\n        $ = \"./lidwok killall blghtd\"\r\n        $ = \"89.44.194.32\"\r\n        $ = \"/data2/.ztls/lidwok\"   \r\n\r\n    condition:\r\n        uint32(0) == 0x464C457F and\r\n        5 of them\r\n}\r\n",
+      "description": "Identifies UMBRELLA STAND sample based on strings, if string obfuscation is not present.",
+      "valid_from": "2025-06-18T09:27:59.007Z",
+      "name": "YARA: UMBRELLA_STAND_plaintext_of_encrypted_stings",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b77ea310-7e7d-43e1-87ec-08eaeb1513c0",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--df77689a-1feb-445b-a4e4-f4e238243b08",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0fcee6e5-0bdf-46c7-ab67-d1fca483c425",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--df77689a-1feb-445b-a4e4-f4e238243b08",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--908a2f15-0c51-469c-abb4-e6f4c3f34247",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--df77689a-1feb-445b-a4e4-f4e238243b08",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5472286d-df61-4c38-8b53-0489c1f46d9f",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--df77689a-1feb-445b-a4e4-f4e238243b08",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2665f5a3-8d62-48bf-803c-ee2de8156b04",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule UMBRELLA_STAND_injected_tool_load_mechanism\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Identifies UMBRELLA STAND sample based on strings present in tooling.\"\r\n        date = \"2025-06-18\"\r\n    strings:\r\n        $ = \"LoadMsg\"\r\n        $ = \"/bin/httpsd\"\r\n        $ = \"/proc/%d/cmdline\"\r\n        $ = \"/tmp/logx\" \r\n        $ = \"error\"\r\n\r\n    condition:\r\n        uint32(0) == 0x464C457F and\r\n        all of them\r\n}\r\n",
+      "description": "Identifies UMBRELLA STAND sample based on strings present in injected tooling.",
+      "valid_from": "2025-06-18T09:27:59.007Z",
+      "name": "YARA: UMBRELLA_STAND_injected_tool_load_mechanism",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c0759d06-90ee-49d6-afa2-30156ed0131e",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2665f5a3-8d62-48bf-803c-ee2de8156b04",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cd04a4d2-98af-47c4-8fd1-1d61268245de",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2665f5a3-8d62-48bf-803c-ee2de8156b04",
+      "target_ref": "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d3e7adc8-1945-4462-b19e-1849317dee80",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2665f5a3-8d62-48bf-803c-ee2de8156b04",
+      "target_ref": "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--16a63b5b-d990-44ff-b778-4211253e2a27",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2665f5a3-8d62-48bf-803c-ee2de8156b04",
+      "target_ref": "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--df28a049-ec2b-48e9-8441-94008f93e621",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule UMBRELLA_STAND_deobfuscated_custom_base64_and_encryption_key\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Identifies UMBRELLA STAND sample based on custom base64 alphabet and encryption key reference.\"\r\n        date = \"2025-06-18\"\r\n    strings:\r\n        $ = \",((@=+utivp45ztvo6&RFvt&*^tp&!q;\"\r\n        $ = \"ef345FGHIJKLMNOPWghijklmnoXYd67TUVABC89+/pqrstQRSDEZabcuvwxyz012\"\r\n\r\n    condition:\r\n        uint32(0) == 0x464C457F and\r\n        any of them \r\n}",
+      "description": "Identifies UMBRELLA STAND sample based on custom base64 alphabet and encryption key.",
+      "valid_from": "2025-06-18T09:27:59.007Z",
+      "name": "YARA: UMBRELLA_STAND_deobfuscated_custom_base64_and_encryption_key",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e7f785ad-f7ab-41be-a897-6ec0fd5274d0",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--df28a049-ec2b-48e9-8441-94008f93e621",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--78a5e43b-e12d-4bcb-8d4a-45d51819de0e",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--df28a049-ec2b-48e9-8441-94008f93e621",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d2d2fe1e-a483-4135-a469-e3b9841a57d8",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--df28a049-ec2b-48e9-8441-94008f93e621",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2090209c-66de-496c-82c3-779be3033d80",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--df28a049-ec2b-48e9-8441-94008f93e621",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a9e4af41-1893-4050-9ebc-a35d905daeb0",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule UMBRELLA_STAND_strings_used_in_firewall_malware\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Identifies UMBRELLA STAND sample based on strings.\"\r\n        date = \"2025-06-18\"\r\n    strings:\r\n        $ = \"/bin/httpsd\"\r\n        $ = \"dxumbsu\" \r\n        $ = \"/proc/%d/cmdline\"\r\n        $ = \"/tmp/logx\"\r\n        $ = \"/etc/ld.so.preload\"\r\n        $ = \"loadMsg\"\r\n        $ =\"/SYSV64564856\"\r\n\r\n    condition:\r\n        uint32(0) == 0x464C457F and\r\n        all of them\r\n}\r\n",
+      "description": "Identifies UMBRELLA STAND sample based on string usage",
+      "valid_from": "2025-06-18T09:27:59.007Z",
+      "name": "YARA: UMBRELLA_STAND_strings_used_in_firewall_malware",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ac2eb100-4898-4a4d-8744-7dd8062b7e9d",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a9e4af41-1893-4050-9ebc-a35d905daeb0",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--95d03409-1158-41b5-89af-60e4b437d949",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--a9e4af41-1893-4050-9ebc-a35d905daeb0",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--aa974471-47bf-4052-83c9-cf63909db358",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--a9e4af41-1893-4050-9ebc-a35d905daeb0",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5fcece8f-3dfc-4943-b1c6-fd78f4869720",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--a9e4af41-1893-4050-9ebc-a35d905daeb0",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0abd1234-6cb8-443c-b5b8-26ce32c083c7",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule UMBRELLA_STAND_injection_related_strings\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Identifies UMBRELLA STAND sample based on strings used to configure injection.\"\r\n        date = \"2025-06-18\"\r\n    strings:\r\n        $ = \"/SYSV64564856\" \r\n        $ = \"/etc/ld.so.preload\"\r\n        $ = \"version 2\"\r\n        $ = \"init_drivercheck\"\r\n\r\n    condition:\r\n        uint32(0) == 0x464C457F and\r\n        3 of them\r\n}\r\n",
+      "description": "Identifies UMBRELLA STAND sample based on strings used to configure injection.",
+      "valid_from": "2025-06-18T09:27:59.007Z",
+      "name": "YARA: UMBRELLA_STAND_injection_related_strings",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1defeb8a-8ec8-4a0a-b702-1ba78af4f6ff",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--0abd1234-6cb8-443c-b5b8-26ce32c083c7",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b0beb737-1198-4da3-9263-32d571f0227d",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--0abd1234-6cb8-443c-b5b8-26ce32c083c7",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--31fadd16-c06d-43c1-baa7-6b4e3c0b4d1f",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--0abd1234-6cb8-443c-b5b8-26ce32c083c7",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8e83895d-849f-4c57-a92f-5396e3fe9c84",
+      "created": "2025-06-18T09:27:59.007Z",
+      "modified": "2025-06-18T09:27:59.007Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--0abd1234-6cb8-443c-b5b8-26ce32c083c7",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--36684a9c-5ec2-4d90-b534-337904e92d4c",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[ipv4-addr:value = '89.44.194.32']",
+      "description": "C2 infrastructure ",
+      "valid_from": "2025-06-18T09:27:59.008Z",
+      "name": "IPv4: 89.44.194.32",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2980275f-84a7-4490-b6dd-0eb6c24d7608",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--36684a9c-5ec2-4d90-b534-337904e92d4c",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--caec4069-cdb4-458d-b134-a2e6c7e12b4f",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--36684a9c-5ec2-4d90-b534-337904e92d4c",
+      "target_ref": "attack-pattern--bc9df8d6-309d-4a87-b0c5-bdd1ac4fe55f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b4002d2a-1be3-4226-b3df-79977cd05f82",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--36684a9c-5ec2-4d90-b534-337904e92d4c",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ff75c140-91db-45e7-be27-85dc1ca825bf",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--36684a9c-5ec2-4d90-b534-337904e92d4c",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--175400c3-5bd4-4996-b395-5e1e1391efb6",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--36684a9c-5ec2-4d90-b534-337904e92d4c",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ee5827d7-24ec-42be-861d-e72e72628557",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[directory:path LIKE '/data2/.ztls/']",
+      "description": "Hidden directory actor tooling uses",
+      "valid_from": "2025-06-18T09:27:59.008Z",
+      "name": "Path: /data2/.ztls/",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2264a889-9b04-47c2-815d-0ef6d9c827ac",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ee5827d7-24ec-42be-861d-e72e72628557",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7d7ae7bd-a0be-40c2-a438-8d52ebf04c49",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ee5827d7-24ec-42be-861d-e72e72628557",
+      "target_ref": "attack-pattern--45ba4683-2836-4d78-af1d-5ec3ff4ceea8"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--98a63c81-3124-43f2-80b4-f1c85ad102d7",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--ee5827d7-24ec-42be-861d-e72e72628557",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3def2476-cbac-483f-94ba-3f01aa904511",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--ee5827d7-24ec-42be-861d-e72e72628557",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--62929f58-93bc-47bd-b898-13bd79c82f03",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--ee5827d7-24ec-42be-861d-e72e72628557",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0cb3bf10-4113-492e-a558-c3b3bf610c78",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = '%d.sv' AND file:parent_directory_ref.path = '/tmp']",
+      "description": "Paths used by the actors",
+      "valid_from": "2025-06-18T09:27:59.008Z",
+      "name": "Path: /tmp/%d.sv",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2e992f51-961c-4384-a529-73397e86ed9e",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--0cb3bf10-4113-492e-a558-c3b3bf610c78",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ded6da93-8f90-4e8e-b5f3-2f009f2fd892",
+      "created": "2025-06-18T09:27:59.008Z",
+      "modified": "2025-06-18T09:27:59.008Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--0cb3bf10-4113-492e-a558-c3b3bf610c78",
+      "target_ref": "attack-pattern--5ed6a9ac-e1f7-45e8-bb7d-f889348d8599"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5ebd4250-e7e4-4ef4-9d51-e582cb67202a",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--0cb3bf10-4113-492e-a558-c3b3bf610c78",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6ca963ca-c21b-48b8-bcb8-5245ec18ca2a",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--0cb3bf10-4113-492e-a558-c3b3bf610c78",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fa95ca2d-c22d-4bf9-92fc-d8d3d5d0f620",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--0cb3bf10-4113-492e-a558-c3b3bf610c78",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8608c198-3ea9-420a-ac35-004dd965f843",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = '%s.ini' AND file:parent_directory_ref.path = '/data2/tmp']",
+      "description": "Paths used by the actors",
+      "valid_from": "2025-06-18T09:27:59.009Z",
+      "name": "Path: /data2/tmp/%s.ini",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0675750e-2f7b-42ab-adf4-ed2fd65bee39",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8608c198-3ea9-420a-ac35-004dd965f843",
+      "target_ref": "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b0e66460-bd3a-4d4b-b06a-6634b061d4cf",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8608c198-3ea9-420a-ac35-004dd965f843",
+      "target_ref": "attack-pattern--5ed6a9ac-e1f7-45e8-bb7d-f889348d8599"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--60cf5230-ee8b-4824-9b02-d23d3f914284",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--8608c198-3ea9-420a-ac35-004dd965f843",
+      "target_ref": "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--007603be-635f-4ec0-9591-e5e404f69f00",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--8608c198-3ea9-420a-ac35-004dd965f843",
+      "target_ref": "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ff8831f5-479f-424b-9266-672adfe39895",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--8608c198-3ea9-420a-ac35-004dd965f843",
+      "target_ref": "indicator--82f6c772-948c-475c-93f3-f93620b2f32a"
+    },
+    {
+      "type": "marking-definition", 
+      "spec_version": "2.1", 
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487", 
+      "created": "2022-10-01T00:00:00.000Z",
+      "modified": "2022-10-01T00:00:00.000Z", 
+      "name": "TLP:CLEAR",
+      "extensions": {
+      "extension-definition--60a3c5c5-0d10-413e-aab3-9e08dde9e88d": {
+         "extension_type": "property-extension",
+         "tlp_2_0" : "clear"
+         }
+      }
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "created": "2021-05-20T12:00:00.000Z",
+      "modified": "2021-05-20T12:00:00.000Z",
+      "name": "NCSC",
+      "contact_information": "https://ncsc.gov.uk/section/about-this-website/contact-us"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a9d4b653-6915-42af-98b2-5758c4ceee56",
+      "created": "2020-03-09T14:15:05.330Z",
+      "modified": "2021-07-26T22:34:43.261Z",
+      "x_mitre_platforms": [
+        "macOS",
+        "Linux"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.004",
+          "url": "https://attack.mitre.org/techniques/T1059/004"
+        },
+        {
+          "source_name": "DieNet Bash",
+          "url": "https://linux.die.net/man/1/bash",
+          "description": "die.net. (n.d.). bash(1) - Linux man page. Retrieved June 12, 2020."
+        },
+        {
+          "source_name": "Apple ZShell",
+          "url": "https://support.apple.com/HT208050",
+          "description": "Apple. (2020, January 28). Use zsh as the default shell on your Mac. Retrieved June 12, 2020."
+        }
+      ],
+      "name": "Unix Shell",
+      "description": "Adversaries may abuse Unix shell commands and scripts for execution. Unix shells are the primary command prompt on Linux and macOS systems, though many variations of the Unix shell exist (e.g. sh, bash, zsh, etc.) depending on the specific OS or distribution.(Citation: DieNet Bash)(Citation: Apple ZShell) Unix shells can control every aspect of a system, with certain commands requiring elevated privileges.\n\nUnix shells also support scripts that enable sequential execution of commands as well as other typical programming operations such as conditionals and loops. Common uses of shell scripts include long or repetitive tasks, or the need to run the same set of commands on multiple systems.\n\nAdversaries may abuse Unix shells to execute various commands or payloads. Interactive shells may be accessed through command and control channels or during lateral movement such as with [SSH](https://attack.mitre.org/techniques/T1021/004). Adversaries may also leverage shell scripts to deliver and execute multiple commands on victims or as part of payloads used for persistence.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "x_mitre_detection": "Unix shell usage may be common on administrator, developer, or power user systems, depending on job function. If scripting is restricted for normal users, then any attempt to enable scripts running on a system would be considered suspicious. If scripts are not commonly used on a system, but enabled, scripts running out of cycle from patching or other administrator functions are suspicious. Scripts should be captured from the file system when possible to determine their actions and intent.\n\nScripts are likely to perform actions with various effects on a system that may generate events, depending on the types of monitoring used. Monitor processes and command-line arguments for script execution and subsequent behavior. Actions may be related to network and system information discovery, collection, or other scriptable post-compromise behaviors and could be used as indicators of detection leading back to the source script. ",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "1.1",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Process: Process Creation",
+        "Command: Command Execution"
+      ],
+      "x_mitre_permissions_required": [
+        "User",
+        "root"
+      ],
+      "x_mitre_remote_support": true,
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+      "created": "2017-12-14T16:46:06.044Z",
+      "modified": "2022-05-05T04:05:42.508Z",
+      "x_mitre_platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Matthew Demaske, Adaptforward",
+        "Red Canary"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.1",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140",
+          "url": "https://attack.mitre.org/techniques/T1140"
+        },
+        {
+          "source_name": "Volexity PowerDuke November 2016",
+          "url": "https://www.volexity.com/blog/2016/11/09/powerduke-post-election-spear-phishing-campaigns-targeting-think-tanks-and-ngos/",
+          "description": "Adair, S.. (2016, November 9). PowerDuke: Widespread Post-Election Spear Phishing Campaigns Targeting Think Tanks and NGOs. Retrieved January 11, 2017."
+        },
+        {
+          "source_name": "Malwarebytes Targeted Attack against Saudi Arabia",
+          "url": "https://blog.malwarebytes.com/cybercrime/social-engineering-cybercrime/2017/03/new-targeted-attack-saudi-arabia-government/",
+          "description": "Malwarebytes Labs. (2017, March 27). New targeted attack against Saudi Arabia Government. Retrieved July 3, 2017."
+        },
+        {
+          "source_name": "Carbon Black Obfuscation Sept 2016",
+          "url": "https://www.carbonblack.com/2016/09/23/security-advisory-variants-well-known-adware-families-discovered-include-sophisticated-obfuscation-techniques-previously-associated-nation-state-attacks/",
+          "description": "Tedesco, B. (2016, September 23). Security Alert Summary. Retrieved February 12, 2018."
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may use [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027) to hide artifacts of an intrusion from analysis. They may require separate mechanisms to decode or deobfuscate that information depending on how they intend to use it. Methods for doing that include built-in functionality of malware or by using utilities present on the system.\n\nOne such example is use of [certutil](https://attack.mitre.org/software/S0160) to decode a remote access tool portable executable file that has been hidden inside a certificate file. (Citation: Malwarebytes Targeted Attack against Saudi Arabia) Another example is using the Windows <code>copy /b</code> command to reassemble binary fragments into a malicious payload. (Citation: Carbon Black Obfuscation Sept 2016)\n\nSometimes a user's action may be required to open it for deobfuscation or decryption as part of [User Execution](https://attack.mitre.org/techniques/T1204). The user may also be required to input a password to open a password protected compressed/encrypted file that was provided by the adversary. (Citation: Volexity PowerDuke November 2016)",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Deobfuscate/Decode Files or Information",
+      "x_mitre_detection": "Detecting the action of deobfuscating or decoding files or information may be difficult depending on the implementation. If the functionality is contained within malware and uses the Windows API, then attempting to detect malicious behavior before or after the action may yield better results than attempting to perform analysis on loaded libraries or API calls. If scripts are used, then collecting the scripts for analysis may be necessary. Perform process and command-line monitoring to detect potentially malicious behavior related to scripts and system utilities such as [certutil](https://attack.mitre.org/software/S0160).\n\nMonitor the execution file paths and command-line arguments for common archive file applications and extensions, such as those for Zip and RAR archive tools, and correlate with other suspicious behavior to reduce false positives from normal user and administrator behavior.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_data_sources": [
+        "Process: Process Creation",
+        "File: File Modification",
+        "Script: Script Execution"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Anti-virus",
+        "Host Intrusion Prevention Systems",
+        "Signature-based Detection",
+        "Network Intrusion Detection System"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--43e7dc91-05b2-474c-b9ac-2ed4fe101f4d",
+      "created": "2017-05-31T21:30:47.843Z",
+      "modified": "2022-10-18T20:58:50.105Z",
+      "name": "Process Injection",
+      "description": "Adversaries may inject code into processes in order to evade process-based defenses as well as possibly elevate privileges. Process injection is a method of executing arbitrary code in the address space of a separate live process. Running code in the context of another process may allow access to the process's memory, system/network resources, and possibly elevated privileges. Execution via process injection may also evade detection from security products since the execution is masked under a legitimate process. \n\nThere are many different ways to inject code into a process, many of which abuse legitimate functionalities. These implementations exist for every major OS but are typically platform specific. \n\nMore sophisticated samples may perform multiple process injections to segment modules and further evade detection, utilizing named pipes or other inter-process communication (IPC) mechanisms as a communication channel. ",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ],
+      "x_mitre_detection": "Monitoring Windows API calls indicative of the various types of code injection may generate a significant amount of data and may not be directly useful for defense unless collected under specific circumstances for known bad sequences of calls, since benign use of API functions may be common and difficult to distinguish from malicious behavior. Windows API calls such as <code>CreateRemoteThread</code>, <code>SuspendThread</code>/<code>SetThreadContext</code>/<code>ResumeThread</code>, <code>QueueUserAPC</code>/<code>NtQueueApcThread</code>, and those that can be used to modify memory within another process, such as <code>VirtualAllocEx</code>/<code>WriteProcessMemory</code>, may be used for this technique.(Citation: Elastic Process Injection July 2017) \n\nMonitor DLL/PE file events, specifically creation of these binary files as well as the loading of DLLs into processes. Look for DLLs that are not recognized or not normally loaded into a process. \n\nMonitoring for Linux specific calls such as the ptrace system call should not generate large amounts of data due to their specialized nature, and can be a very effective method to detect some of the common process injection methods.(Citation: ArtOfMemoryForensics)  (Citation: GNU Acct)  (Citation: RHEL auditd)  (Citation: Chokepoint preload rootkits) \n\nMonitor for named pipe creation and connection events (Event IDs 17 and 18) for possible indicators of infected processes with external modules.(Citation: Microsoft Sysmon v6 May 2017) \n\nAnalyze process behavior to determine if a process is performing actions it usually does not, such as opening network connections, reading files, or other suspicious actions that could relate to post-compromise behavior. ",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_deprecated": false,
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_version": "1.3",
+      "x_mitre_contributors": [
+        "Anastasios Pingios",
+        "Christiaan Beek, @ChristiaanBeek",
+        "Ryan Becwar"
+      ],
+      "x_mitre_data_sources": [
+        "Process: Process Modification",
+        "File: File Metadata",
+        "File: File Modification",
+        "Process: Process Metadata",
+        "Process: OS API Execution",
+        "Process: Process Access",
+        "Module: Module Load"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Application control",
+        "Anti-virus"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "revoked": false,
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1055",
+          "external_id": "T1055"
+        },
+        {
+          "source_name": "GNU Acct",
+          "description": "GNU. (2010, February 5). The GNU Accounting Utilities. Retrieved December 20, 2017.",
+          "url": "https://www.gnu.org/software/acct/"
+        },
+        {
+          "source_name": "Elastic Process Injection July 2017",
+          "description": "Hosseini, A. (2017, July 18). Ten Process Injection Techniques: A Technical Survey Of Common And Trending Process Injection Techniques. Retrieved December 7, 2017.",
+          "url": "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+        },
+        {
+          "source_name": "RHEL auditd",
+          "description": "Jahoda, M. et al.. (2017, March 14). redhat Security Guide - Chapter 7 - System Auditing. Retrieved December 20, 2017.",
+          "url": "https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/security_guide/chap-system_auditing"
+        },
+        {
+          "source_name": "ArtOfMemoryForensics",
+          "description": "Ligh, M.H. et al.. (2014, July). The Art of Memory Forensics: Detecting Malware and Threats in Windows, Linux, and Mac Memory. Retrieved December 20, 2017."
+        },
+        {
+          "source_name": "Microsoft Sysmon v6 May 2017",
+          "description": "Russinovich, M. & Garnier, T. (2017, May 22). Sysmon v6.20. Retrieved December 13, 2017.",
+          "url": "https://docs.microsoft.com/sysinternals/downloads/sysmon"
+        },
+        {
+          "source_name": "Chokepoint preload rootkits",
+          "description": "stderr. (2014, February 14). Detecting Userland Preload Rootkits. Retrieved December 20, 2017.",
+          "url": "http://www.chokepoint.net/2014/02/detecting-userland-preload-rootkits.html"
+        },
+        {
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/640.html",
+          "external_id": "CAPEC-640"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d63a3fb8-9452-4e9d-a60a-54be68d5998c",
+      "created": "2020-01-31T12:35:36.479Z",
+      "modified": "2022-04-16T18:25:43.231Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Walker Johnson"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.1",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004",
+          "url": "https://attack.mitre.org/techniques/T1070/004"
+        },
+        {
+          "source_name": "Microsoft SDelete July 2016",
+          "url": "https://docs.microsoft.com/en-us/sysinternals/downloads/sdelete",
+          "description": "Russinovich, M. (2016, July 4). SDelete v2.0. Retrieved February 8, 2018."
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may delete files left behind by the actions of their intrusion activity. Malware, tools, or other non-native files dropped or created on a system by an adversary (ex: [Ingress Tool Transfer](https://attack.mitre.org/techniques/T1105)) may leave traces to indicate to what was done within a network and how. Removal of these files can occur during an intrusion, or as part of a post-intrusion process to minimize the adversary's footprint.\n\nThere are tools available from the host operating system to perform cleanup, but adversaries may use other tools as well.(Citation: Microsoft SDelete July 2016) Examples of built-in [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059) functions include <code>del</code> on Windows and <code>rm</code> or <code>unlink</code> on Linux and macOS.",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "File Deletion",
+      "x_mitre_detection": "It may be uncommon for events related to benign command-line functions such as DEL or third-party utilities or tools to be found in an environment, depending on the user base and how systems are typically used. Monitoring for command-line deletion functions to correlate with binaries or other files that an adversary may drop and remove may lead to detection of malicious activity. Another good practice is monitoring for known deletion and secure deletion tools that are not already on systems within an enterprise network that an adversary could introduce. Some monitoring tools may collect command-line arguments, but may not capture DEL commands since DEL is a native function within cmd.exe.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_data_sources": [
+        "Command: Command Execution",
+        "File: File Deletion"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Host forensic analysis"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ffe59ad3-ad9b-4b9f-b74f-5beb3c309dc1",
+      "created": "2021-11-19T14:13:11.335Z",
+      "modified": "2021-11-29T15:56:50.370Z",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.010",
+          "url": "https://attack.mitre.org/techniques/T1564/010"
+        },
+        {
+          "source_name": "Microsoft PEB 2021",
+          "url": "https://docs.microsoft.com/en-us/windows/win32/api/winternl/ns-winternl-peb",
+          "description": "Microsoft. (2021, October 6). PEB structure (winternl.h). Retrieved November 19, 2021."
+        },
+        {
+          "source_name": "Xpn Argue Like Cobalt 2019",
+          "url": "https://blog.xpnsec.com/how-to-argue-like-cobalt-strike/",
+          "description": "Chester, A. (2019, January 28). How to Argue like Cobalt Strike. Retrieved November 19, 2021."
+        },
+        {
+          "source_name": "Cobalt Strike Arguments 2019",
+          "url": "https://blog.cobaltstrike.com/2019/01/02/cobalt-strike-3-13-why-do-we-argue/",
+          "description": "Mudge, R. (2019, January 2). https://blog.cobaltstrike.com/2019/01/02/cobalt-strike-3-13-why-do-we-argue/. Retrieved November 19, 2021."
+        },
+        {
+          "source_name": "Nviso Spoof Command Line 2020",
+          "url": "https://blog.nviso.eu/2020/02/04/the-return-of-the-spoof-part-2-command-line-spoofing/",
+          "description": "Daman, R. (2020, February 4). The return of the spoof part 2: Command line spoofing. Retrieved November 19, 2021."
+        },
+        {
+          "source_name": "FireEye FiveHands April 2021",
+          "url": "https://www.fireeye.com/blog/threat-research/2021/04/unc2447-sombrat-and-fivehands-ransomware-sophisticated-financial-threat.html",
+          "description": "McLellan, T.  and Moore, J. et al. (2021, April 29). UNC2447 SOMBRAT and FIVEHANDS Ransomware: A Sophisticated Financial Threat. Retrieved June 2, 2021."
+        },
+        {
+          "source_name": "Mandiant Endpoint Evading 2019",
+          "url": "https://www.mandiant.com/resources/staying-hidden-on-the-endpoint-evading-detection-with-shellcode",
+          "description": "Pena, E., Erikson, C. (2019, October 10). Staying Hidden on the Endpoint: Evading Detection with Shellcode. Retrieved November 29, 2021."
+        }
+      ],
+      "name": "Process Argument Spoofing",
+      "description": "Adversaries may attempt to hide process command-line arguments by overwriting process memory. Process command-line arguments are stored in the process environment block (PEB), a data structure used by Windows to store various information about/used by a process. The PEB includes the process command-line arguments that are referenced when executing the process. When a process is created, defensive tools/sensors that monitor process creations may retrieve the process arguments from the PEB.(Citation: Microsoft PEB 2021)(Citation: Xpn Argue Like Cobalt 2019)\n\nAdversaries may manipulate a process PEB to evade defenses. For example, [Process Hollowing](https://attack.mitre.org/techniques/T1055/012) can be abused to spawn a process in a suspended state with benign arguments. After the process is spawned and the PEB is initialized (and process information is potentially logged by tools/sensors), adversaries may override the PEB to modify the command-line arguments (ex: using the [Native API](https://attack.mitre.org/techniques/T1106) <code>WriteProcessMemory()</code> function) then resume process execution with malicious arguments.(Citation: Cobalt Strike Arguments 2019)(Citation: Xpn Argue Like Cobalt 2019)(Citation: Nviso Spoof Command Line 2020)\n\nAdversaries may also execute a process with malicious command-line arguments then patch the memory with benign arguments that may bypass subsequent process memory analysis.(Citation: FireEye FiveHands April 2021)\n\nThis behavior may also be combined with other tricks (such as [Parent PID Spoofing](https://attack.mitre.org/techniques/T1134/004)) to manipulate or further evade process-based detections.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_detection": "Detection of process argument spoofing may be difficult as adversaries may momentarily modify stored arguments used for malicious execution. These changes may bypass process creation detection and/or later process memory analysis. Consider monitoring for [Process Hollowing](https://attack.mitre.org/techniques/T1055/012), which includes monitoring for process creation (especially those in a suspended state) as well as access and/or modifications of these processes (especially by the parent process) via Windows API calls.(Citation: Nviso Spoof Command Line 2020)(Citation: Mandiant Endpoint Evading 2019)\n\nAnalyze process behavior to determine if a process is performing actions it usually does not and/or do no align with its logged command-line arguments.",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Process: Process Creation"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ec8fc7e2-b356-455c-8db5-2e37be158e7d",
+      "created": "2020-02-26T17:46:13.128Z",
+      "modified": "2020-03-29T22:32:25.985Z",
+      "x_mitre_platforms": [
+        "Windows",
+        "macOS",
+        "Linux"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.001",
+          "url": "https://attack.mitre.org/techniques/T1564/001"
+        },
+        {
+          "url": "https://researchcenter.paloaltonetworks.com/2016/09/unit42-sofacys-komplex-os-x-trojan/",
+          "description": "Dani Creus, Tyler Halfpop, Robert Falcone. (2016, September 26). Sofacy's 'Komplex' OS X Trojan. Retrieved July 8, 2017.",
+          "source_name": "Sofacy Komplex Trojan"
+        },
+        {
+          "url": "https://blog.malwarebytes.com/threat-analysis/2017/01/new-mac-backdoor-using-antiquated-code/",
+          "description": "Thomas Reed. (2017, January 18). New Mac backdoor using antiquated code. Retrieved July 5, 2017.",
+          "source_name": "Antiquated Mac Malware"
+        },
+        {
+          "url": "https://www.paloaltonetworks.com/content/dam/pan/en_US/assets/pdf/reports/Unit_42/unit42-wirelurker.pdf",
+          "description": "Claud Xiao. (n.d.). WireLurker: A New Era in iOS and OS X Malware. Retrieved July 10, 2017.",
+          "source_name": "WireLurker"
+        }
+      ],
+      "name": "Hidden Files and Directories",
+      "description": "Adversaries may set files and directories to be hidden to evade detection mechanisms. To prevent normal users from accidentally changing special files on a system, most operating systems have the concept of a 'hidden' file. These files don't show up when a user browses the file system with a GUI or when using normal commands on the command line. Users must explicitly ask to show the hidden files either via a series of Graphical User Interface (GUI) prompts or with command line switches (<code>dir /a</code> for Windows and <code>ls /a</code> for Linux and macOS).\n\nOn Linux and Mac, users can mark specific files as hidden simply by putting a '.' as the first character in the file or folder name  (Citation: Sofacy Komplex Trojan) (Citation: Antiquated Mac Malware). Files and folders that start with a period, '.', are by default hidden from being viewed in the Finder application and standard command-line utilities like 'ls'. Users must specifically change settings to have these files viewable.\n\nFiles on macOS can also be marked with the UF_HIDDEN flag which prevents them from being seen in Finder.app, but still allows them to be seen in Terminal.app (Citation: WireLurker). On Windows, users can mark specific files as hidden by using the attrib.exe binary. Many applications create these hidden files and folders to store information so that it doesn't clutter up the user's workspace. For example, SSH utilities create a .ssh folder that's hidden and contains the user's known hosts and keys.\n\nAdversaries can use this to their advantage to hide files and folders anywhere on the system and evading a typical user or system analysis that does not incorporate investigation of hidden files.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_detection": "Monitor the file system and shell commands for files being created with a leading \".\" and the Windows command-line use of attrib.exe to add the hidden attribute.",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Process: Process Creation",
+        "File: File Metadata",
+        "Command: Command Execution",
+        "File: File Creation"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Host forensic analysis"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a1b52199-c8c5-438a-9ded-656f1d0888c6",
+      "created": "2020-01-24T17:42:23.339Z",
+      "modified": "2022-04-20T18:53:39.406Z",
+      "x_mitre_platforms": [
+        "macOS",
+        "Linux"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Wayne Silva, F-Secure Countercept",
+        "Anastasios Pingios",
+        "Jeremy Galloway",
+        "Red Canary",
+        "Eric Kaiser @ideologysec"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.3",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.006",
+          "url": "https://attack.mitre.org/techniques/T1547/006"
+        },
+        {
+          "source_name": "Apple Developer Configuration Profile",
+          "url": "https://developer.apple.com/business/documentation/Configuration-Profile-Reference.pdf",
+          "description": "Apple. (2019, May 3). Configuration Profile Reference. Retrieved September 23, 2021."
+        },
+        {
+          "source_name": "Apple Kernel Extension Deprecation",
+          "url": "https://developer.apple.com/support/kernel-extensions/",
+          "description": "Apple. (n.d.). Deprecated Kernel Extensions and System Extension Alternatives. Retrieved November 4, 2020."
+        },
+        {
+          "source_name": "System and kernel extensions in macOS",
+          "url": "https://support.apple.com/guide/deployment/system-and-kernel-extensions-in-macos-depa5fb8376f/web",
+          "description": "Apple. (n.d.). System and kernel extensions in macOS. Retrieved March 31, 2022."
+        },
+        {
+          "source_name": "GitHub Reptile",
+          "url": "https://github.com/f0rb1dd3n/Reptile",
+          "description": "Augusto, I. (2018, March 8). Reptile - LMK Linux rootkit. Retrieved April 9, 2018."
+        },
+        {
+          "source_name": "Volatility Phalanx2",
+          "url": "https://volatility-labs.blogspot.com/2012/10/phalanx-2-revealed-using-volatility-to.html",
+          "description": "Case, A. (2012, October 10). Phalanx 2 Revealed: Using Volatility to Analyze an Advanced Linux Rootkit. Retrieved April 9, 2018."
+        },
+        {
+          "source_name": "iDefense Rootkit Overview",
+          "url": "http://www.megasecurity.org/papers/Rootkits.pdf",
+          "description": "Chuvakin, A. (2003, February). An Overview of Rootkits. Retrieved April 6, 2018."
+        },
+        {
+          "source_name": "Linux Loadable Kernel Module Insert and Remove LKMs",
+          "url": "http://tldp.org/HOWTO/Module-HOWTO/x197.html",
+          "description": "Henderson, B. (2006, September 24). How To Insert And Remove LKMs. Retrieved April 9, 2018."
+        },
+        {
+          "source_name": "CrowdStrike Linux Rootkit",
+          "url": "https://www.crowdstrike.com/blog/http-iframe-injecting-linux-rootkit/",
+          "description": "Kurtz, G. (2012, November 19). HTTP iframe Injecting Linux Rootkit. Retrieved December 21, 2017."
+        },
+        {
+          "source_name": "GitHub Diamorphine",
+          "url": "https://github.com/m0nad/Diamorphine",
+          "description": "Mello, V. (2018, March 8). Diamorphine - LMK rootkit for Linux Kernels 2.6.x/3.x/4.x (x86 and x86_64). Retrieved April 9, 2018."
+        },
+        {
+          "source_name": "Securelist Ventir",
+          "url": "https://securelist.com/the-ventir-trojan-assemble-your-macos-spy/67267/",
+          "description": "Mikhail, K. (2014, October 16). The Ventir Trojan: assemble your MacOS spy. Retrieved April 6, 2018."
+        },
+        {
+          "source_name": "User Approved Kernel Extension Pike's",
+          "url": "https://pikeralpha.wordpress.com/2017/08/29/user-approved-kernel-extension-loading/",
+          "description": "Pikeralpha. (2017, August 29). User Approved Kernel Extension Loading&. Retrieved September 23, 2021."
+        },
+        {
+          "source_name": "Linux Kernel Module Programming Guide",
+          "url": "http://www.tldp.org/LDP/lkmpg/2.4/html/x437.html",
+          "description": "Pomerantz, O., Salzman, P. (2003, April 4). Modules vs Programs. Retrieved April 6, 2018."
+        },
+        {
+          "source_name": "Linux Kernel Programming",
+          "url": "https://www.tldp.org/LDP/lkmpg/2.4/lkmpg.pdf",
+          "description": "Pomerantz, O., Salzman, P.. (2003, April 4). The Linux Kernel Module Programming Guide. Retrieved April 6, 2018."
+        },
+        {
+          "source_name": "Trend Micro Skidmap",
+          "url": "https://blog.trendmicro.com/trendlabs-security-intelligence/skidmap-linux-malware-uses-rootkit-capabilities-to-hide-cryptocurrency-mining-payload/",
+          "description": "Remillano, A., Urbanec, J. (2019, September 19). Skidmap Linux Malware Uses Rootkit Capabilities to Hide Cryptocurrency-Mining Payload. Retrieved June 4, 2020."
+        },
+        {
+          "source_name": "Purves Kextpocalypse 2",
+          "url": "https://richard-purves.com/2017/11/09/mdm-and-the-kextpocalypse-2/",
+          "description": "Richard Purves. (2017, November 9). MDM and the Kextpocalypse . Retrieved September 23, 2021."
+        },
+        {
+          "source_name": "RSAC 2015 San Francisco Patrick Wardle",
+          "url": "https://www.virusbulletin.com/uploads/pdf/conference/vb2014/VB2014-Wardle.pdf",
+          "description": "Wardle, P. (2015, April). Malware Persistence on OS X Yosemite. Retrieved April 6, 2018."
+        },
+        {
+          "source_name": "Synack Secure Kernel Extension Broken",
+          "url": "https://www.synack.com/2017/09/08/high-sierras-secure-kernel-extension-loading-is-broken/",
+          "description": "Wardle, P. (2017, September 8). High Sierra's 'Secure Kernel Extension Loading' is Broken. Retrieved April 6, 2018."
+        },
+        {
+          "source_name": "Wikipedia Loadable Kernel Module",
+          "url": "https://en.wikipedia.org/wiki/Loadable_kernel_module#Linux",
+          "description": "Wikipedia. (2018, March 17). Loadable kernel module. Retrieved April 9, 2018."
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may modify the kernel to automatically execute programs on system boot. Loadable Kernel Modules (LKMs) are pieces of code that can be loaded and unloaded into the kernel upon demand. They extend the functionality of the kernel without the need to reboot the system. For example, one type of module is the device driver, which allows the kernel to access hardware connected to the system.(Citation: Linux Kernel Programming) \n\nWhen used maliciously, LKMs can be a type of kernel-mode [Rootkit](https://attack.mitre.org/techniques/T1014) that run with the highest operating system privilege (Ring 0).(Citation: Linux Kernel Module Programming Guide) Common features of LKM based rootkits include: hiding itself, selective hiding of files, processes and network activity, as well as log tampering, providing authenticated backdoors, and enabling root access to non-privileged users.(Citation: iDefense Rootkit Overview)\n\nKernel extensions, also called kext, are used in macOS to load functionality onto a system similar to LKMs for Linux. Since the kernel is responsible for enforcing security and the kernel extensions run as apart of the kernel, kexts are not governed by macOS security policies. Kexts are loaded and unloaded through <code>kextload</code> and <code>kextunload</code> commands. Kexts need to be signed with a developer ID that is granted privileges by Apple allowing it to sign Kernel extensions. Developers without these privileges may still sign kexts but they will not load unless SIP is disabled. If SIP is enabled, the kext signature is verified before being added to the AuxKC.(Citation: System and kernel extensions in macOS)\n\nSince macOS Catalina 10.15, kernel extensions have been deprecated in favor of System Extensions. However, kexts are still allowed as \"Legacy System Extensions\" since there is no System Extension for Kernel Programming Interfaces.(Citation: Apple Kernel Extension Deprecation)\n\nAdversaries can use LKMs and kexts to conduct [Persistence](https://attack.mitre.org/tactics/TA0003) and/or [Privilege Escalation](https://attack.mitre.org/tactics/TA0004) on a system. Examples have been found in the wild, and there are some relevant open source projects as well.(Citation: Volatility Phalanx2)(Citation: CrowdStrike Linux Rootkit)(Citation: GitHub Reptile)(Citation: GitHub Diamorphine)(Citation: RSAC 2015 San Francisco Patrick Wardle)(Citation: Synack Secure Kernel Extension Broken)(Citation: Securelist Ventir)(Citation: Trend Micro Skidmap)",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Kernel Modules and Extensions",
+      "x_mitre_detection": "Loading, unloading, and manipulating modules on Linux systems can be detected by monitoring for the following commands: <code>modprobe</code>, <code>insmod</code>, <code>lsmod</code>, <code>rmmod</code>, or <code>modinfo</code> (Citation: Linux Loadable Kernel Module Insert and Remove LKMs) LKMs are typically loaded into <code>/lib/modules</code> and have had the extension .ko (\"kernel object\") since version 2.6 of the Linux kernel. (Citation: Wikipedia Loadable Kernel Module)\n\nAdversaries may run commands on the target system before loading a malicious module in order to ensure that it is properly compiled. (Citation: iDefense Rootkit Overview) Adversaries may also execute commands to identify the exact version of the running Linux kernel and/or download multiple versions of the same .ko (kernel object) files to use the one appropriate for the running system.(Citation: Trend Micro Skidmap) Many LKMs require Linux headers (specific to the target kernel) in order to compile properly. These are typically obtained through the operating systems package manager and installed like a normal package. On Ubuntu and Debian based systems this can be accomplished by running: <code>apt-get install linux-headers-$(uname -r)</code> On RHEL and CentOS based systems this can be accomplished by running: <code>yum install kernel-devel-$(uname -r)</code>\n\nOn macOS, monitor for execution of <code>kextload</code> commands and user installed kernel extensions performing abnormal and/or potentially malicious activity (such as creating network connections). Monitor for new rows added in the <code>kext_policy</code> table. KextPolicy stores a list of user approved (non Apple) kernel extensions and a partial history of loaded kernel modules in a SQLite database, <code>/var/db/SystemPolicyConfiguration/KextPolicy</code>.(Citation: User Approved Kernel Extension Pike's)(Citation: Purves Kextpocalypse 2)(Citation: Apple Developer Configuration Profile)\n",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_data_sources": [
+        "File: File Creation",
+        "File: File Modification",
+        "Command: Command Execution",
+        "Process: Process Creation",
+        "Kernel: Kernel Module Load"
+      ],
+      "x_mitre_permissions_required": [
+        "root"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--633a100c-b2c9-41bf-9be5-905c1b16c825",
+      "created": "2020-03-13T20:09:59.569Z",
+      "modified": "2021-04-27T19:55:18.453Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1574.006",
+          "url": "https://attack.mitre.org/techniques/T1574/006"
+        },
+        {
+          "external_id": "CAPEC-13",
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/13.html"
+        },
+        {
+          "external_id": "CAPEC-640",
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/640.html"
+        },
+        {
+          "source_name": "Man LD.SO",
+          "url": "https://www.man7.org/linux/man-pages/man8/ld.so.8.html",
+          "description": "Kerrisk, M. (2020, June 13). Linux Programmer's Manual. Retrieved June 15, 2020."
+        },
+        {
+          "source_name": "TLDP Shared Libraries",
+          "url": "https://www.tldp.org/HOWTO/Program-Library-HOWTO/shared-libraries.html",
+          "description": "The Linux Documentation Project. (n.d.). Shared Libraries. Retrieved January 31, 2020."
+        },
+        {
+          "source_name": "Apple Doco Archive Dynamic Libraries",
+          "url": "https://developer.apple.com/library/archive/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html",
+          "description": "Apple Inc.. (2012, July 23). Overview of Dynamic Libraries. Retrieved March 24, 2021."
+        },
+        {
+          "source_name": "Baeldung LD_PRELOAD",
+          "url": "https://www.baeldung.com/linux/ld_preload-trick-what-is",
+          "description": "baeldung. (2020, August 9). What Is the LD_PRELOAD Trick?. Retrieved March 24, 2021."
+        },
+        {
+          "source_name": "Code Injection on Linux and macOS",
+          "url": "https://www.datawire.io/code-injection-on-linux-and-macos/",
+          "description": "Itamar Turner-Trauring. (2017, April 18). 'This will only hurt for a moment': code injection on Linux and macOS with LD_PRELOAD. Retrieved December 20, 2017."
+        },
+        {
+          "url": "http://hick.org/code/skape/papers/needle.txt",
+          "description": "skape. (2003, January 19). Linux x86 run-time process manipulation. Retrieved December 20, 2017.",
+          "source_name": "Uninformed Needle"
+        },
+        {
+          "url": "http://phrack.org/issues/51/8.html",
+          "description": "halflife. (1997, September 1). Shared Library Redirection Techniques. Retrieved December 20, 2017.",
+          "source_name": "Phrack halfdead 1997"
+        },
+        {
+          "source_name": "Brown Exploiting Linkers",
+          "url": "http://www.nth-dimension.org.uk/pub/BTL.pdf",
+          "description": "Tim Brown. (2011, June 29). Breaking the links: Exploiting the linker. Retrieved March 29, 2021."
+        },
+        {
+          "source_name": "TheEvilBit DYLD_INSERT_LIBRARIES",
+          "url": "https://theevilbit.github.io/posts/dyld_insert_libraries_dylib_injection_in_macos_osx_deep_dive/",
+          "description": "Fitzl, C. (2019, July 9). DYLD_INSERT_LIBRARIES DYLIB injection in macOS / OSX. Retrieved March 26, 2020."
+        },
+        {
+          "source_name": "Timac DYLD_INSERT_LIBRARIES",
+          "url": "https://blog.timac.org/2012/1218-simple-code-injection-using-dyld_insert_libraries/",
+          "description": "Timac. (2012, December 18). Simple code injection using DYLD_INSERT_LIBRARIES. Retrieved March 26, 2020."
+        },
+        {
+          "source_name": "Gabilondo DYLD_INSERT_LIBRARIES Catalina Bypass",
+          "url": "https://jon-gabilondo-angulo-7635.medium.com/how-to-inject-code-into-mach-o-apps-part-ii-ddb13ebc8191",
+          "description": "Jon Gabilondo. (2019, September 22). How to Inject Code into Mach-O Apps. Part II.. Retrieved March 24, 2021."
+        }
+      ],
+      "name": "Dynamic Linker Hijacking",
+      "description": "Adversaries may execute their own malicious payloads by hijacking environment variables the dynamic linker uses to load shared libraries. During the execution preparation phase of a program, the dynamic linker loads specified absolute paths of shared libraries from environment variables and files, such as <code>LD_PRELOAD</code> on Linux or <code>DYLD_INSERT_LIBRARIES</code> on macOS. Libraries specified in environment variables are loaded first, taking precedence over system libraries with the same function name.(Citation: Man LD.SO)(Citation: TLDP Shared Libraries)(Citation: Apple Doco Archive Dynamic Libraries) These variables are often used by developers to debug binaries without needing to recompile, deconflict mapped symbols, and implement custom functions without changing the original library.(Citation: Baeldung LD_PRELOAD)\n\nOn Linux and macOS, hijacking dynamic linker variables may grant access to the victim process's memory, system/network resources, and possibly elevated privileges. This method may also evade detection from security products since the execution is masked under a legitimate process. Adversaries can set environment variables via the command line using the <code>export</code> command, <code>setenv</code> function, or <code>putenv</code> function. Adversaries can also leverage [Dynamic Linker Hijacking](https://attack.mitre.org/techniques/T1574/006) to export variables in a shell or set variables programmatically using higher level syntax such Python's <code>os.environ</code>.\n\nOn Linux, adversaries may set <code>LD_PRELOAD</code> to point to malicious libraries that match the name of legitimate libraries which are requested by a victim program, causing the operating system to load the adversary's malicious code upon execution of the victim program. <code>LD_PRELOAD</code> can be set via the environment variable or <code>/etc/ld.so.preload</code> file.(Citation: Man LD.SO)(Citation: TLDP Shared Libraries) Libraries specified by <code>LD_PRELOAD</code> are loaded and mapped into memory by <code>dlopen()</code> and <code>mmap()</code> respectively.(Citation: Code Injection on Linux and macOS)(Citation: Uninformed Needle) (Citation: Phrack halfdead 1997)(Citation: Brown Exploiting Linkers) \n\nOn macOS this behavior is conceptually the same as on Linux, differing only in how the macOS dynamic libraries (dyld) is implemented at a lower level. Adversaries can set the <code>DYLD_INSERT_LIBRARIES</code> environment variable to point to malicious libraries containing names of legitimate libraries or functions requested by a victim program.(Citation: TheEvilBit DYLD_INSERT_LIBRARIES)(Citation: Timac DYLD_INSERT_LIBRARIES)(Citation: Gabilondo DYLD_INSERT_LIBRARIES Catalina Bypass) ",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_detection": "Monitor for changes to environment variables and files associated with loading shared libraries such as <code>LD_PRELOAD</code> and <code>DYLD_INSERT_LIBRARIES</code>, as well as the commands to implement these changes.\n\nMonitor processes for unusual activity (e.g., a process that does not use the network begins to do so). Track library metadata, such as a hash, and compare libraries that are loaded at process execution time against previous executions to detect differences that do not correlate with patching or updates.",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "2.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Module: Module Load",
+        "Command: Command Execution",
+        "Process: Process Creation",
+        "File: File Creation",
+        "File: File Modification"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8f4a33ec-8b1f-4b80-a2f6-642b2e479580",
+      "created": "2017-05-31T21:30:48.728Z",
+      "modified": "2020-03-26T18:05:53.130Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1057",
+          "external_id": "T1057"
+        },
+        {
+          "external_id": "CAPEC-573",
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/573.html"
+        }
+      ],
+      "name": "Process Discovery",
+      "description": "Adversaries may attempt to get information about running processes on a system. Information obtained could be used to gain an understanding of common software/applications running on systems within the network. Adversaries may use the information from [Process Discovery](https://attack.mitre.org/techniques/T1057) during automated discovery to shape follow-on behaviors, including whether or not the adversary fully infects the target and/or attempts specific actions.\n\nIn Windows environments, adversaries could obtain details on running processes using the [Tasklist](https://attack.mitre.org/software/S0057) utility via [cmd](https://attack.mitre.org/software/S0106) or <code>Get-Process</code> via [PowerShell](https://attack.mitre.org/techniques/T1059/001). Information about processes can also be extracted from the output of [Native API](https://attack.mitre.org/techniques/T1106) calls such as <code>CreateToolhelp32Snapshot</code>. In Mac and Linux, this is accomplished with the <code>ps</code> command. Adversaries may also opt to enumerate processes via /proc.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "x_mitre_detection": "System and network discovery techniques normally occur throughout an operation as an adversary learns the environment. Data and events should not be viewed in isolation, but as part of a chain of behavior that could lead to other activities, such as Lateral Movement, based on the information obtained.\n\nNormal, benign system and network events that look like process discovery may be uncommon, depending on the environment and how they are used. Monitor processes and command-line arguments for actions that could be taken to gather system and network information. Remote access tools with built-in features may interact directly with the Windows API to gather information. Information may also be acquired through Windows system management tools such as [Windows Management Instrumentation](https://attack.mitre.org/techniques/T1047) and [PowerShell](https://attack.mitre.org/techniques/T1059/001).",
+      "x_mitre_version": "1.2",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Process: OS API Execution",
+        "Command: Command Execution",
+        "Process: Process Creation"
+      ],
+      "x_mitre_permissions_required": [
+        "User",
+        "Administrator",
+        "SYSTEM"
+      ],
+      "x_mitre_system_requirements": [
+        "Administrator, SYSTEM may provide better process ownership details"
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e3a12395-188d-4051-9a16-ea8e14d07b88",
+      "created": "2017-05-31T21:30:43.915Z",
+      "modified": "2022-04-20T16:05:30.960Z",
+      "x_mitre_platforms": [
+        "Windows",
+        "IaaS",
+        "Linux",
+        "macOS",
+        "Containers",
+        "Network"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Praetorian"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "3.0",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1046",
+          "url": "https://attack.mitre.org/techniques/T1046"
+        },
+        {
+          "source_name": "apple doco bonjour description",
+          "url": "https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/NetServices/Introduction.html",
+          "description": "Apple Inc. (2013, April 23). Bonjour Overview. Retrieved October 11, 2021."
+        },
+        {
+          "source_name": "CISA AR21-126A FIVEHANDS May 2021",
+          "url": "https://us-cert.cisa.gov/ncas/analysis-reports/ar21-126a",
+          "description": "CISA. (2021, May 6). Analysis Report (AR21-126A) FiveHands Ransomware. Retrieved June 7, 2021."
+        },
+        {
+          "source_name": "macOS APT Activity Bradley",
+          "url": "https://themittenmac.com/what-does-apt-activity-look-like-on-macos/",
+          "description": "Jaron Bradley. (2021, November 14). What does APT Activity Look Like on macOS?. Retrieved January 19, 2022."
+        },
+        {
+          "url": "https://capec.mitre.org/data/definitions/300.html",
+          "source_name": "capec",
+          "external_id": "CAPEC-300"
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may attempt to get a listing of services running on remote hosts and local network infrastructure devices, including those that may be vulnerable to remote software exploitation. Common methods to acquire this information include port and/or vulnerability scans using tools that are brought onto a system.(Citation: CISA AR21-126A FIVEHANDS May 2021)   \n\nWithin cloud environments, adversaries may attempt to discover services running on other cloud hosts. Additionally, if the cloud environment is connected to a on-premises environment, adversaries may be able to identify services running on non-cloud systems as well.\n\nWithin macOS environments, adversaries may use the native Bonjour application to discover services running on other macOS hosts within a network. The Bonjour mDNSResponder daemon automatically registers and advertises a host's registered services on the network. For example, adversaries can use a mDNS query (such as <code>dns-sd -B _ssh._tcp .</code>) to find other systems broadcasting the ssh service.(Citation: apple doco bonjour description)(Citation: macOS APT Activity Bradley)",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Network Service Discovery",
+      "x_mitre_detection": "System and network discovery techniques normally occur throughout an operation as an adversary learns the environment. Data and events should not be viewed in isolation, but as part of a chain of behavior that could lead to other activities, such as Lateral Movement, based on the information obtained.\n\nNormal, benign system and network events from legitimate remote service scanning may be uncommon, depending on the environment and how they are used. Legitimate open port and vulnerability scanning may be conducted within the environment and will need to be deconflicted with any detection capabilities developed. Network intrusion detection systems can also be used to identify scanning activity. Monitor for process use of the networks and inspect intra-network flows to detect port scans.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_data_sources": [
+        "Cloud Service: Cloud Service Enumeration",
+        "Network Traffic: Network Traffic Flow",
+        "Command: Command Execution"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3257eb21-f9a7-4430-8de1-d8b6e288f529",
+      "created": "2017-05-31T21:30:41.399Z",
+      "modified": "2022-05-20T17:32:27.146Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Network",
+        "IaaS"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Oleg Kolesnikov, Securonix",
+        "Tiago Faria, 3CORESec"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.3",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1040",
+          "url": "https://attack.mitre.org/techniques/T1040"
+        },
+        {
+          "source_name": "AWS Traffic Mirroring",
+          "url": "https://docs.aws.amazon.com/vpc/latest/mirroring/traffic-mirroring-how-it-works.html",
+          "description": "Amazon Web Services. (n.d.). How Traffic Mirroring works. Retrieved March 17, 2022."
+        },
+        {
+          "source_name": "GCP Packet Mirroring",
+          "url": "https://cloud.google.com/vpc/docs/packet-mirroring",
+          "description": "Google Cloud. (n.d.). Packet Mirroring overview. Retrieved March 17, 2022."
+        },
+        {
+          "source_name": "SpecterOps AWS Traffic Mirroring",
+          "url": "https://posts.specterops.io/through-the-looking-glass-part-1-f539ae308512",
+          "description": "Luke Paine. (2020, March 11). Through the Looking Glass - Part 1. Retrieved March 17, 2022."
+        },
+        {
+          "source_name": "Azure Virtual Network TAP",
+          "url": "https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-tap-overview",
+          "description": "Microsoft. (2022, February 9). Virtual network TAP. Retrieved March 17, 2022."
+        },
+        {
+          "source_name": "Rhino Security Labs AWS VPC Traffic Mirroring",
+          "url": "https://rhinosecuritylabs.com/aws/abusing-vpc-traffic-mirroring-in-aws/",
+          "description": "Spencer Gietzen. (2019, September 17). Abusing VPC Traffic Mirroring in AWS. Retrieved March 17, 2022."
+        },
+        {
+          "url": "https://capec.mitre.org/data/definitions/158.html",
+          "source_name": "capec",
+          "external_id": "CAPEC-158"
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may sniff network traffic to capture information about an environment, including authentication material passed over the network. Network sniffing refers to using the network interface on a system to monitor or capture information sent over a wired or wireless connection. An adversary may place a network interface into promiscuous mode to passively access data in transit over the network, or use span ports to capture a larger amount of data.\n\nData captured via this technique may include user credentials, especially those sent over an insecure, unencrypted protocol. Techniques for name service resolution poisoning, such as [LLMNR/NBT-NS Poisoning and SMB Relay](https://attack.mitre.org/techniques/T1557/001), can also be used to capture credentials to websites, proxies, and internal systems by redirecting traffic to an adversary.\n\nNetwork sniffing may also reveal configuration details, such as running services, version numbers, and other network characteristics (e.g. IP addresses, hostnames, VLAN IDs) necessary for subsequent Lateral Movement and/or Defense Evasion activities.\n\nIn cloud-based environments, adversaries may still be able to use traffic mirroring services to sniff network traffic from virtual machines. For example, AWS Traffic Mirroring, GCP Packet Mirroring, and Azure vTap allow users to define specified instances to collect traffic from and specified targets to send collected traffic to.(Citation: AWS Traffic Mirroring) (Citation: GCP Packet Mirroring) (Citation: Azure Virtual Network TAP) Often, much of this traffic will be in cleartext due to the use of TLS termination at the load balancer level to reduce the strain of encrypting and decrypting traffic.(Citation: Rhino Security Labs AWS VPC Traffic Mirroring) (Citation: SpecterOps AWS Traffic Mirroring) The adversary can then use exfiltration techniques such as Transfer Data to Cloud Account in order to access the sniffed traffic. (Citation: Rhino Security Labs AWS VPC Traffic Mirroring)",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Network Sniffing",
+      "x_mitre_detection": "Detecting the events leading up to sniffing network traffic may be the best method of detection. From the host level, an adversary would likely need to perform a [Adversary-in-the-Middle](https://attack.mitre.org/techniques/T1557) attack against other devices on a wired network in order to capture traffic that was not to or from the current compromised system. This change in the flow of information is detectable at the enclave network level. Monitor for ARP spoofing and gratuitous ARP broadcasts. Detecting compromised network devices is a bit more challenging. Auditing administrator logins, configuration changes, and device images is required to detect malicious changes.\n\nIn cloud-based environments, monitor for the creation of new traffic mirrors or modification of existing traffic mirrors.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_data_sources": [
+        "Command: Command Execution",
+        "Process: Process Creation"
+      ],
+      "x_mitre_system_requirements": [
+        "Network interface access and packet capture driver"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c325b232-d5bc-4dde-a3ec-71f3db9e8adc",
+      "created": "2020-03-15T00:40:27.503Z",
+      "modified": "2020-03-15T00:40:27.503Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "Windows",
+        "macOS"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1001.003",
+          "url": "https://attack.mitre.org/techniques/T1001/003"
+        },
+        {
+          "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf",
+          "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+          "source_name": "University of Birmingham C2"
+        }
+      ],
+      "name": "Protocol Impersonation",
+      "description": "Adversaries may impersonate legitimate protocols or web service traffic to disguise command and control activity and thwart analysis efforts. By impersonating legitimate protocols or web services, adversaries can make their command and control traffic blend in with legitimate network traffic.  \n\nAdversaries may impersonate a fake SSL/TLS handshake to make it look like subsequent traffic is SSL/TLS encrypted, potentially interfering with some security tooling, or to make the traffic look like it is related with a trusted entity. ",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "x_mitre_detection": "Analyze network data for uncommon data flows (e.g., a client sending significantly more data than it receives from a server). Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. Analyze packet contents to detect communications that do not follow the expected protocol behavior for the port that is being used.(Citation: University of Birmingham C2)",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Network Traffic: Network Traffic Content"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--844d28c1-43f7-4da8-99cc-8223912dbe12",
+      "created": "2025-06-18T09:27:59.009Z",
+      "modified": "2025-06-18T09:27:59.009Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Malware Analysis Report: Umbrella Stand",
+      "description": "Malware targeting Fortinet devices\nUMBRELLA STAND beacons to its C2 server using fake TLS on port 443.\nUMBRELLA STAND has functionality to run shell commands.\nUMBRELLA STAND has been observed targeting FortiGate 100D series firewalls produced by Fortinet.\nUMBRELLA STAND has command configurable C2 and beacon frequency.\nUMBRELLA STAND has been observed deployed in conjunction with a set of publicly available tooling including: BusyBox, nbtscan, tcpdump and openLDAP.\nUMBRELLA STAND is able to hook the reboot functionality of the device. \n",
+      "published": "2025-06-18T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "NCSC",
+          "external_id": "NCSC/MAR/UMBRELLA_STAND"
+        }
+      ],
+      "report_types": [
+        "malware"
+      ],
+      "object_refs": [
+        "malware--5941acb9-7958-4a18-86ac-fa5616d2dfaa",
+        "attack-pattern--3c48d49c-29a8-44b6-bed6-2c8c3a326dfd",
+        "relationship--ac92bd8e-fb55-4c84-a2d3-03d99dbdc72d",
+        "relationship--4a7fb741-55a2-4f63-84a8-11cc120d18bf",
+        "attack-pattern--35ca7caf-bc9b-40ec-8e5f-380a0574163e",
+        "relationship--735661bb-7980-4498-b898-e73b4c867bad",
+        "relationship--272ed36d-8fb2-4c76-b03b-dce29feb4185",
+        "attack-pattern--881f247f-3f89-4b48-bb47-0f72a6b9817a",
+        "relationship--6e131ab9-6516-4a0d-a084-074e7dd1f036",
+        "relationship--355e17db-3709-42cc-ad6a-f22d4ad91ff7",
+        "attack-pattern--5ed6a9ac-e1f7-45e8-bb7d-f889348d8599",
+        "relationship--160c6e33-a431-44f5-8aad-4b4a9664e590",
+        "relationship--e419ef43-f996-416c-ab32-c6319dd225dc",
+        "attack-pattern--bf856889-6cf4-4816-aeaa-40d00441638f",
+        "relationship--b2215ed7-6c1e-46a5-a3bd-a90938b571de",
+        "relationship--d39c4406-1f4e-408e-aa25-748885160a13",
+        "attack-pattern--45ba4683-2836-4d78-af1d-5ec3ff4ceea8",
+        "relationship--de1228ae-d48e-4b14-b603-9bf48b453f18",
+        "relationship--a40c1a80-48c4-4d8d-a631-8e4e7b1b44d2",
+        "attack-pattern--b1001fb4-5cd7-41e7-8fdf-dae65622e72e",
+        "relationship--0fbb259b-7a0b-4d0f-a61e-cf1c79a75c3a",
+        "relationship--010acad3-8a8a-4fdb-b88d-a27d65cabc0c",
+        "attack-pattern--a41cefc3-03d7-4815-be0b-87ae8b89d341",
+        "relationship--80b68e13-cd3a-40ac-be32-32094eebf84a",
+        "relationship--b7b341ed-2626-4820-9a0a-c5d4b16cb40b",
+        "attack-pattern--e2949263-f2c4-4b36-9838-5c67d7e6bced",
+        "relationship--285985bb-fda4-4cdb-94c9-297febf8c1c1",
+        "relationship--469e2b9e-5547-4f23-8db3-b90d2f292f0c",
+        "attack-pattern--baeaf01d-8da1-492c-9eb0-7b1674251125",
+        "relationship--f44b86b5-0677-4234-9753-f53b510a91ad",
+        "relationship--e45b95c8-9f60-4225-b1bd-f2b09917bf03",
+        "attack-pattern--cb254de4-c831-496f-9ac8-a0fca31fff98",
+        "relationship--0b8ea51d-377e-4443-99d0-3f76c0a0f14f",
+        "relationship--0061a14f-21e0-41e8-9695-7ae40eee08aa",
+        "attack-pattern--bc9df8d6-309d-4a87-b0c5-bdd1ac4fe55f",
+        "relationship--b5ba8bd9-945f-4e8d-b8b8-8d61881fc6cf",
+        "relationship--3f7402e4-1088-4c7a-a11b-4d741fe6a8bd",
+        "relationship--700de81b-7ca6-45f5-a161-6e44783d8642",
+        "relationship--82b37beb-79ce-4d6f-af98-c324af87c585",
+        "relationship--00ae4d18-27cb-435d-aa3c-a956355fcc0c",
+        "relationship--0160c9a2-4cb8-4687-b853-2638a04bc4db",
+        "relationship--20053f82-6024-452c-bdbc-6d43cd778a6d",
+        "relationship--15121a6f-efc8-462a-a1e2-d1f9bebd5677",
+        "relationship--514b3eb2-df86-4c5b-bfab-18037e715313",
+        "relationship--5d1c6d5c-0fe6-482f-af94-0e3c1a05159d",
+        "relationship--c2005294-8eef-40b8-8f0d-8911fcbc5dbe",
+        "relationship--620601de-371a-4427-ad8f-cb59af9d56c4",
+        "relationship--78bf68c6-4de9-43fc-9ee3-22f87319390c",
+        "relationship--eacde7c8-23c4-42fd-80a9-22a6a6662f8a",
+        "relationship--f23d4997-6f74-4d94-ae9c-13d6a7424d1d",
+        "relationship--e5d92b12-17b4-4674-91b5-b0d579cc84e4",
+        "relationship--41381446-5a55-4f3e-96ad-de827a16f247",
+        "relationship--68384cbb-fa78-4b1e-959e-97187eb4b2d5",
+        "relationship--29f01925-4f95-4db5-9b63-95e49fdd6b62",
+        "relationship--c596d398-46e6-412a-ae60-51f7c98e25f9",
+        "indicator--fb0e6532-3e91-4076-b24a-4eb39cc86919",
+        "relationship--e65aa2e5-0b24-4dfa-80be-487c3f2209ca",
+        "indicator--bd2ff7e3-f817-489d-b859-765069d57ef4",
+        "relationship--4b3e34ba-20bf-4bfb-af8f-550cb05ace9a",
+        "indicator--82f6c772-948c-475c-93f3-f93620b2f32a",
+        "relationship--3a1bfd4e-5ed5-4dc5-94f6-739e20db1883",
+        "indicator--232ec417-ffb6-4fb7-a172-22b92b72c974",
+        "relationship--a045f805-0ac1-475e-8678-645d5b91b815",
+        "indicator--e69324f4-8c1e-4019-ac8c-54e8062d3706",
+        "relationship--05e6a56b-25b1-4080-8371-d73308bce41d",
+        "indicator--cbe2000c-0e17-40dd-984b-d4e79b5d24ed",
+        "relationship--4c8f4ee1-2927-462b-933f-651b4a6ca75c",
+        "indicator--6fcf2b29-51d6-402f-9804-bf53713dab23",
+        "relationship--85339bd7-2403-456d-b492-f1a944cfb678",
+        "indicator--569e7c22-d451-4b8b-ab8e-70571e6c7d3b",
+        "relationship--1332298c-eb61-4c4e-9d66-fb2b7b1c3bdc",
+        "indicator--12d735c1-3103-4043-a411-77321b5cacc7",
+        "relationship--f981733d-6092-4235-863d-b0fa0f53b0a9",
+        "indicator--3992aeb9-3b3e-4fc1-b6bc-3db457db7f25",
+        "relationship--e430bcd7-c774-4942-9f29-48665429c51b",
+        "relationship--838286e0-57cd-40fd-a824-c145e8201699",
+        "relationship--780ccd4d-0698-4259-a3ec-6bdd85005402",
+        "relationship--a6f7bf24-eb77-41a2-9e63-d6f5b47436e8",
+        "indicator--df77689a-1feb-445b-a4e4-f4e238243b08",
+        "relationship--b77ea310-7e7d-43e1-87ec-08eaeb1513c0",
+        "relationship--0fcee6e5-0bdf-46c7-ab67-d1fca483c425",
+        "relationship--908a2f15-0c51-469c-abb4-e6f4c3f34247",
+        "relationship--5472286d-df61-4c38-8b53-0489c1f46d9f",
+        "indicator--2665f5a3-8d62-48bf-803c-ee2de8156b04",
+        "relationship--c0759d06-90ee-49d6-afa2-30156ed0131e",
+        "relationship--cd04a4d2-98af-47c4-8fd1-1d61268245de",
+        "relationship--d3e7adc8-1945-4462-b19e-1849317dee80",
+        "relationship--16a63b5b-d990-44ff-b778-4211253e2a27",
+        "indicator--df28a049-ec2b-48e9-8441-94008f93e621",
+        "relationship--e7f785ad-f7ab-41be-a897-6ec0fd5274d0",
+        "relationship--78a5e43b-e12d-4bcb-8d4a-45d51819de0e",
+        "relationship--d2d2fe1e-a483-4135-a469-e3b9841a57d8",
+        "relationship--2090209c-66de-496c-82c3-779be3033d80",
+        "indicator--a9e4af41-1893-4050-9ebc-a35d905daeb0",
+        "relationship--ac2eb100-4898-4a4d-8744-7dd8062b7e9d",
+        "relationship--95d03409-1158-41b5-89af-60e4b437d949",
+        "relationship--aa974471-47bf-4052-83c9-cf63909db358",
+        "relationship--5fcece8f-3dfc-4943-b1c6-fd78f4869720",
+        "indicator--0abd1234-6cb8-443c-b5b8-26ce32c083c7",
+        "relationship--1defeb8a-8ec8-4a0a-b702-1ba78af4f6ff",
+        "relationship--b0beb737-1198-4da3-9263-32d571f0227d",
+        "relationship--31fadd16-c06d-43c1-baa7-6b4e3c0b4d1f",
+        "relationship--8e83895d-849f-4c57-a92f-5396e3fe9c84",
+        "indicator--36684a9c-5ec2-4d90-b534-337904e92d4c",
+        "relationship--2980275f-84a7-4490-b6dd-0eb6c24d7608",
+        "relationship--caec4069-cdb4-458d-b134-a2e6c7e12b4f",
+        "relationship--b4002d2a-1be3-4226-b3df-79977cd05f82",
+        "relationship--ff75c140-91db-45e7-be27-85dc1ca825bf",
+        "relationship--175400c3-5bd4-4996-b395-5e1e1391efb6",
+        "indicator--ee5827d7-24ec-42be-861d-e72e72628557",
+        "relationship--2264a889-9b04-47c2-815d-0ef6d9c827ac",
+        "relationship--7d7ae7bd-a0be-40c2-a438-8d52ebf04c49",
+        "relationship--98a63c81-3124-43f2-80b4-f1c85ad102d7",
+        "relationship--3def2476-cbac-483f-94ba-3f01aa904511",
+        "relationship--62929f58-93bc-47bd-b898-13bd79c82f03",
+        "indicator--0cb3bf10-4113-492e-a558-c3b3bf610c78",
+        "relationship--2e992f51-961c-4384-a529-73397e86ed9e",
+        "relationship--ded6da93-8f90-4e8e-b5f3-2f009f2fd892",
+        "relationship--5ebd4250-e7e4-4ef4-9d51-e582cb67202a",
+        "relationship--6ca963ca-c21b-48b8-bcb8-5245ec18ca2a",
+        "relationship--fa95ca2d-c22d-4bf9-92fc-d8d3d5d0f620",
+        "indicator--8608c198-3ea9-420a-ac35-004dd965f843",
+        "relationship--0675750e-2f7b-42ab-adf4-ed2fd65bee39",
+        "relationship--b0e66460-bd3a-4d4b-b06a-6634b061d4cf",
+        "relationship--60cf5230-ee8b-4824-9b02-d23d3f914284",
+        "relationship--007603be-635f-4ec0-9591-e5e404f69f00",
+        "relationship--ff8831f5-479f-424b-9266-672adfe39895"
+      ],
+      "x_version": "1.0"
+    }
+  ]
+}

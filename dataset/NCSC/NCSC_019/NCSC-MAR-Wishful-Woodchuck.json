@@ -1,0 +1,3594 @@
+{
+  "type": "bundle",
+  "spec_version": "2.1",
+  "id": "bundle--b826fb92-20c1-48ce-abc8-23efbed9edc7",
+  "created": "2021-07-09T13:19:53.513Z",
+  "modified": "2021-07-09T18:01:37.429Z",
+  "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+  ],
+  "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+  "objects": [
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c",
+      "created": "2021-07-09T13:19:53.491Z",
+      "modified": "2021-07-09T13:19:53.491Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Wishful Woodchuck",
+      "description": "Non-persistent Windows keylogger and dropper.",
+      "malware_types": [
+        "keylogger"
+      ],
+      "is_family": false,
+      "capabilities": [
+        "captures-input-peripherals"
+      ],
+      "architecture_execution_envs": [
+        "x86-64",
+        "x86"
+      ],
+      "implementation_languages": [
+        "x86-64",
+        "x86-32"
+      ],
+      "x_operating_systems": [
+        "windows"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9603b5bc-4f2d-4fff-9338-22efc9931ac7",
+      "created": "2021-07-09T13:19:53.492Z",
+      "modified": "2021-07-09T13:19:53.492Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Input Capture: Keylogging as used by Wishful Woodchuck",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ],
+      "description": "Wishful Woodchuck uses Windows API calls to log keystrokes"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--384c295f-7114-483c-9411-0cf15f9b7ddd",
+      "created": "2021-07-09T13:19:53.492Z",
+      "modified": "2021-07-09T13:19:53.492Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--9603b5bc-4f2d-4fff-9338-22efc9931ac7",
+      "target_ref": "attack-pattern--09a60ea3-a8d1-4ae5-976e-5783248b72a4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3aa6f45e-c779-40a2-b186-523d464f0dce",
+      "created": "2021-07-09T13:19:53.492Z",
+      "modified": "2021-07-09T13:19:53.492Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c",
+      "target_ref": "attack-pattern--9603b5bc-4f2d-4fff-9338-22efc9931ac7"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a5fce9d7-b6c6-43e4-8800-df51d5a33041",
+      "created": "2021-07-09T13:19:53.493Z",
+      "modified": "2021-07-09T13:19:53.493Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Obfuscated Files or Information as used by Wishful Woodchuck",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "Wishful Woodchuck uses multi-byte XOR obfuscation of strings in its binary and log file"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--43b2fff4-50a6-4c94-be72-65552b58193e",
+      "created": "2021-07-09T13:19:53.493Z",
+      "modified": "2021-07-09T13:19:53.493Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--a5fce9d7-b6c6-43e4-8800-df51d5a33041",
+      "target_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--58591bf3-ad64-4e8e-8e26-36b71a1c2e85",
+      "created": "2021-07-09T13:19:53.493Z",
+      "modified": "2021-07-09T13:19:53.493Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c",
+      "target_ref": "attack-pattern--a5fce9d7-b6c6-43e4-8800-df51d5a33041"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ec794528-dac6-4041-82ab-2982f31d7f49",
+      "created": "2021-07-09T13:19:53.493Z",
+      "modified": "2021-07-09T13:19:53.493Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Obfuscated Files or Information as used by Wishful Woodchuck",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "Wishful Woodchuck dynamically resolves Windows API functions using names XORed with 0x55"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--432ece2d-c07b-4c8b-85c3-e71ebb41db8c",
+      "created": "2021-07-09T13:19:53.494Z",
+      "modified": "2021-07-09T13:19:53.494Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--ec794528-dac6-4041-82ab-2982f31d7f49",
+      "target_ref": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--01e03da7-a2d4-4664-b854-b41f8c3595cb",
+      "created": "2021-07-09T13:19:53.494Z",
+      "modified": "2021-07-09T13:19:53.494Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c",
+      "target_ref": "attack-pattern--ec794528-dac6-4041-82ab-2982f31d7f49"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7de29a0c-4db0-4217-b73e-40ec3eeb5fc4",
+      "created": "2021-07-09T13:19:53.494Z",
+      "modified": "2021-07-09T13:19:53.494Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Masquerading: Match Legitimate Name or Location as used by Wishful Woodchuck",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "Wishful Woodchuck uses a filename (lmm32.dll) similar to a legitimate Windows signed binary (imm32.dll)"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3bbeb48b-5695-4672-ac46-d8490c809bb8",
+      "created": "2021-07-09T13:19:53.494Z",
+      "modified": "2021-07-09T13:19:53.494Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--7de29a0c-4db0-4217-b73e-40ec3eeb5fc4",
+      "target_ref": "attack-pattern--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c56e53d4-5413-4733-86fd-fd3372dc108f",
+      "created": "2021-07-09T13:19:53.494Z",
+      "modified": "2021-07-09T13:19:53.494Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c",
+      "target_ref": "attack-pattern--7de29a0c-4db0-4217-b73e-40ec3eeb5fc4"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fbca9f12-1ec2-41b3-9f6e-75bfdc4fa9a8",
+      "created": "2021-07-09T13:19:53.494Z",
+      "modified": "2021-07-09T16:59:22.561Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule wishfulwoodchuck_hardcoded_xorkey \r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Finds binaries containing the hardcoded XOR key from the keylogger binaries\"\r\n\r\n    strings:\r\n            $xorkey = {0A 19 59 2D 6C 59 6F FA 8B 6F 9B FF 37 9B BD 7B 59 4B 7B DD 0F 64 91 C7 D6 9C 6F 7B 9C 01 9C 91 79 C7 C8 C9 DF E1 FA FF 04 08 59 E6 64 6D 37 9B 38 81 2D 81 65 7D 66 9A}\r\n\r\n    condition:\r\n\t\tuint16(0) == 0x5A4D and\r\n\t\tuint32(uint32(0x3c)) == 0x00004550 and\r\n\t\tall of them\r\n}\r\n",
+      "description": "Finds binaries containing the hardcoded XOR key from the keylogger binaries",
+      "valid_from": "2021-07-09T13:19:53.494Z",
+      "name": "YARA: wishfulwoodchuck_hardcoded_xorkey ",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0d04ca85-393a-448b-974c-94a8af2ba8ef",
+      "created": "2021-07-09T13:19:53.495Z",
+      "modified": "2021-07-09T13:19:53.495Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fbca9f12-1ec2-41b3-9f6e-75bfdc4fa9a8",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--967485a1-0400-4e04-ae5b-5aaa20f120ec",
+      "created": "2021-07-09T13:19:53.495Z",
+      "modified": "2021-07-09T13:19:53.495Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fbca9f12-1ec2-41b3-9f6e-75bfdc4fa9a8",
+      "target_ref": "attack-pattern--a5fce9d7-b6c6-43e4-8800-df51d5a33041"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--3f1c29ee-c6f8-4f7a-bd89-79e2a17081f4",
+      "created": "2021-07-09T13:19:53.495Z",
+      "modified": "2021-07-09T16:59:22.561Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule wishfulwoodchuck_CheckKeystrokeValue\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Keystroke comparison code from binary\"\r\n\r\n\tstrings:\r\n\t\t// mov     eax, [ebp+1504h+var_1520]\r\n\t\t// mov     eax, [eax]\r\n\t\t// cmp     eax, 0A1h \t\r\n\t\t// jz      short loc_10002A89\r\n\t\t// cmp     eax, 0A0h \t\t\r\n\t\t// jz      short loc_10002A89\r\n\t\t// cmp     eax, 0A3h \t\t\r\n\t\t// jz      short loc_10002A89\r\n\t\t// cmp     eax, 0A2h \r\n\t\r\n\t\t$1 = {8B ?? ?? 8B 00 3D A1 00 00 00 74 ?? 3D A0 00 00 00 74 ?? 3D A3 00 00 00 74 ?? 3D A2 00 00 00}                                  \r\n                           \t\r\n\tcondition:\r\n\t\tuint16(0) == 0x5A4D and\r\n\t\tuint32(uint32(0x3c)) == 0x00004550 and\r\n\t\tall of them\r\n}\r\n",
+      "description": "Keystroke comparison code from binary",
+      "valid_from": "2021-07-09T13:19:53.495Z",
+      "name": "YARA: wishfulwoodchuck_CheckKeystrokeValue",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--89d9d735-1eb4-46ea-b7aa-226f947c96ea",
+      "created": "2021-07-09T13:19:53.495Z",
+      "modified": "2021-07-09T13:19:53.495Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3f1c29ee-c6f8-4f7a-bd89-79e2a17081f4",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7bfcbc5c-e582-4f4f-92e0-e2ee5d2ec6c1",
+      "created": "2021-07-09T13:19:53.495Z",
+      "modified": "2021-07-09T13:19:53.495Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3f1c29ee-c6f8-4f7a-bd89-79e2a17081f4",
+      "target_ref": "attack-pattern--9603b5bc-4f2d-4fff-9338-22efc9931ac7"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c41f19ed-9618-4084-92ec-4f8f8374a95b",
+      "created": "2021-07-09T13:19:53.495Z",
+      "modified": "2021-07-09T16:59:22.561Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule wishfulwoodchuck_obfuscation\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Obfuscation code from binary\"\r\n\r\n\tstrings:\t\r\n\t\t$1 = {B8 1F 85 EB 51 F7 E3 C1 EA 05 6B D2 64 8B C3 2B C2 0F BE 90 ?? ?? ?? ?? 0F BE 04 39 33 D0 88 14 39 43 89 ?? ?? ?? ?? ?? 41 EB ??}\r\n        // mov     eax, 51EB851Fh \r\n        // mul     ebx\r\n        // shr     edx, 5\r\n        // imul    edx, 64h ; 'd'\r\n        // mov     eax, ebx\r\n        // sub     eax, edx\r\n        // movsx   edx, keylist[eax]\r\n        // movsx   eax, byte ptr [ecx+edi]\r\n        // xor     edx, eax\r\n        // mov     [ecx+edi], dl\r\n        // inc     ebx\r\n        // mov     dword_1000FCE4, ebx\r\n        // inc     ecx\r\n        // jmp     short loc_100013D0                        \r\n                           \t\r\n\tcondition:\r\n\t\tuint16(0) == 0x5A4D and\r\n\t\tuint32(uint32(0x3c)) == 0x00004550 and\r\n\t\tall of them\r\n}\r\n",
+      "description": "Obfuscation code from binary",
+      "valid_from": "2021-07-09T13:19:53.495Z",
+      "name": "YARA: wishfulwoodchuck_obfuscation",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--547dfca4-925f-459f-9d42-fed7877cff99",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T13:19:53.496Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c41f19ed-9618-4084-92ec-4f8f8374a95b",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--98d89fbe-cb81-4e23-946a-c8a529ac5c81",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T13:19:53.496Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c41f19ed-9618-4084-92ec-4f8f8374a95b",
+      "target_ref": "attack-pattern--a5fce9d7-b6c6-43e4-8800-df51d5a33041"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--dd9b9353-16da-4f6d-bcac-323387985f81",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T16:59:22.562Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule wishfulwoodchuck_file_description\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Unique file description\"\r\n\r\n\tstrings:\r\n\t\t$description = \"Multi-User Windows IMM32 API CIient DLL\" wide\r\n\tcondition:\r\n\t\tuint16(0) == 0x5A4D and\r\n\t\tuint32(uint32(0x3c)) == 0x00004550 and\r\n\t\tall of them\r\n}\r\n",
+      "description": "Unique file description",
+      "valid_from": "2021-07-09T13:19:53.496Z",
+      "name": "YARA: wishfulwoodchuck_file_description",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bb545ced-f5ec-4413-8e23-0827be99d32d",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T13:19:53.496Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--dd9b9353-16da-4f6d-bcac-323387985f81",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--02c4e73f-e2bb-4fbb-a995-9e5ce6ef260a",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T13:19:53.496Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--dd9b9353-16da-4f6d-bcac-323387985f81",
+      "target_ref": "attack-pattern--7de29a0c-4db0-4217-b73e-40ec3eeb5fc4"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--356565cf-3dfb-4948-8421-32f6ab75dc5d",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T16:59:22.562Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule wishfulwoodchuck_logfile_encodedheader\r\n{\r\n    meta:\r\n        author = \"NCSC\"\r\n        description = \"Encoded log file header\"\r\n\r\n    strings:\r\n        $header = {41 19 0A 2D 20 59 5F FA 81 6F CF FF 61 9B D8 7B 2B 4B 46}\r\n    condition:\r\n        all of them\r\n}\r\n",
+      "description": "Encoded log file header",
+      "valid_from": "2021-07-09T13:19:53.496Z",
+      "name": "YARA: wishfulwoodchuck_logfile_encodedheader",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c7c2aa98-4cf6-4661-8404-aa7947ca686e",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T13:19:53.496Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--356565cf-3dfb-4948-8421-32f6ab75dc5d",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a8ad5e9b-36af-44cd-9d5d-717286d97886",
+      "created": "2021-07-09T13:19:53.496Z",
+      "modified": "2021-07-09T13:19:53.496Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--356565cf-3dfb-4948-8421-32f6ab75dc5d",
+      "target_ref": "attack-pattern--a5fce9d7-b6c6-43e4-8800-df51d5a33041"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8259b701-2653-4c97-ad8b-6e7f72983a8e",
+      "created": "2021-07-09T13:19:53.497Z",
+      "modified": "2021-07-09T13:19:53.497Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e",
+      "target_ref": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f4172d19-6097-4b82-8313-f37ff9e71448",
+      "created": "2021-07-09T13:19:53.497Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e",
+      "target_ref": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--63fef0c7-2f39-403b-a14f-8f88ab5ef8a5",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e",
+      "target_ref": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7ef91466-3112-479f-9671-430b92e85b31",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401",
+      "target_ref": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d8616a34-ae92-4291-ac08-ab1c6b507b39",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401",
+      "target_ref": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3ae2f070-2e66-412f-975a-3244ac20db65",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401",
+      "target_ref": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1efaa29b-86c6-40b1-a94e-559dfa7bb3dc",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3",
+      "target_ref": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8752d119-44bf-42c4-966b-e0fe25a7afa7",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3",
+      "target_ref": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--59d1f79e-1659-4176-90fe-e939e77791b1",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3",
+      "target_ref": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--72120c88-bd69-4a29-a975-29799ebaa55d",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752",
+      "target_ref": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--df87290f-8dbe-47be-b4fa-b7dc55e6a308",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752",
+      "target_ref": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--25f600ac-e3f4-4aa6-9f91-fe6b193d921c",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752",
+      "target_ref": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--34dc6846-114d-41b8-9a3a-78a0bbd2fd81",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131",
+      "target_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fada4de2-a797-4870-bb7e-af5c5a80a481",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131",
+      "target_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4c249468-f312-468d-b5d4-3c83d9ded8a4",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131",
+      "target_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cfe088a3-86ac-4562-b9b9-ee4eda20d701",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571",
+      "target_ref": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--52e6e479-671a-43af-a6aa-5ec3efe47922",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571",
+      "target_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1aaa7854-bbd4-454f-9ebb-8191f50c6ee8",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571",
+      "target_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b5d0df86-bdaf-4a5a-8b9c-b0c53b0b495c",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df",
+      "target_ref": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b7db9be6-32e8-44f7-a9fc-99b7161f1f57",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df",
+      "target_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--580d8492-cd4d-4234-a8b4-92065a29e7d3",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df",
+      "target_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--29858dcb-58b3-4357-8609-da331d470d7e",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492",
+      "target_ref": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6fd5816f-290c-4c15-a9d5-d9a0e7e5abe8",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492",
+      "target_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--13bbf4d5-24be-406a-a3ca-6c8a1bf78d1f",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492",
+      "target_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ce004618-19e3-483c-8e43-8e178912b6ac",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811",
+      "target_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8f14233d-8ea1-413e-b8db-d6cd73ab9c31",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811",
+      "target_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2bae781e-383c-43f6-af4d-002e3743df8d",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811",
+      "target_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1e204f5b-9dcb-4922-92e0-3eb13ec023ea",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8",
+      "target_ref": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1c937e61-453d-4020-961b-d5268f3ae64f",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8",
+      "target_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0522abcb-5796-4f91-818b-06b4258936cf",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8",
+      "target_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b35c51fa-cbec-446d-b75a-a6e95f14b3f7",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953",
+      "target_ref": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e99726b6-3dda-4b53-b215-1a43113d1447",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953",
+      "target_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b72ee85b-e40a-4fe6-8f86-cd47b38e1615",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953",
+      "target_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1673208a-292d-4c44-a472-0923a91ee1d7",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909",
+      "target_ref": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--49096aa1-7870-4a46-92ac-17fc7ed7ba6a",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909",
+      "target_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5c10a5f3-8b42-4861-bc28-a2a4f9593a97",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909",
+      "target_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cb9f6052-62bb-4e2d-8ce3-5d30fdec9f27",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815",
+      "target_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--22d9c04e-8ed9-4dd1-8627-2ab48c15c729",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815",
+      "target_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--796b6e6b-0443-4adb-b3de-11a8aba73caa",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815",
+      "target_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1f07f0b2-6508-4d40-bdcd-e45244c932d2",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362",
+      "target_ref": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4b2a9cc8-3428-4646-8aea-7ae22a69091f",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362",
+      "target_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--156b5801-8373-4f81-91c3-3d1159b7252b",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362",
+      "target_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--04eef04f-a20b-48e2-8f34-c723ef6f4c87",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487",
+      "target_ref": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--310d3113-c177-43be-8e8e-a1c6b9fe4836",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487",
+      "target_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c75449c4-ff5e-44d7-b54a-b6af4012ff7d",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487",
+      "target_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6f9498ae-ebef-4fd4-a7fe-b9e889c0b9c2",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774",
+      "target_ref": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d1c658bb-a4fe-4f9a-9337-ff9dc0c22b16",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774",
+      "target_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3ad66539-35c9-4316-a36c-1d4c6b58d0b3",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774",
+      "target_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7d1cd53f-5689-4f5b-8b4a-db4718d19be7",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb",
+      "target_ref": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--66034b3f-861e-4f44-9012-094fe20605e3",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb",
+      "target_ref": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9598b3c9-3450-4d1d-9d30-3c2525636623",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb",
+      "target_ref": "indicator--95827c11-4403-4266-aee6-b67e945cad6d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c75d6a0a-10ae-4ab8-8946-910df027abad",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38",
+      "target_ref": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4b7b5a6e-ae11-49e4-b252-1f9476275da0",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38",
+      "target_ref": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1996d034-d493-4d81-852f-400f730c19f1",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38",
+      "target_ref": "indicator--95827c11-4403-4266-aee6-b67e945cad6d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--81eb40be-3055-468e-9f8b-246b3452f6f1",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38",
+      "target_ref": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2614fb74-2641-4502-b1ce-2939096202db",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38",
+      "target_ref": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b5d04e01-9b45-44ce-8c71-5ce951f201b4",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38",
+      "target_ref": "indicator--95827c11-4403-4266-aee6-b67e945cad6d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2606ef97-f764-47fb-a198-de813bf77045",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--95827c11-4403-4266-aee6-b67e945cad6d",
+      "target_ref": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5bc9e22e-2654-45fb-ba07-c710c01dd57b",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--95827c11-4403-4266-aee6-b67e945cad6d",
+      "target_ref": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4d5f3fac-f71f-4923-a590-b5b0e71f9c45",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--95827c11-4403-4266-aee6-b67e945cad6d",
+      "target_ref": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--217ca8c1-58ff-41df-8144-be44beca7b19",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210",
+      "target_ref": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cd94741f-9cd2-4f71-a9aa-cce71c750dc2",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210",
+      "target_ref": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--607c3116-4e2d-4e2e-9be3-dd18421f5245",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210",
+      "target_ref": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7e7b61f3-8028-469d-8540-f62907829e14",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656",
+      "target_ref": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e10f7736-16a5-41d4-8f08-d3cfa5094fb4",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656",
+      "target_ref": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a3041055-13a7-4214-86be-535bf66b3c88",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656",
+      "target_ref": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--785aec2f-c36b-453f-a18c-8e8357854dcb",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71",
+      "target_ref": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b9d1d26d-962d-409d-bc2e-cef88412fa9a",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71",
+      "target_ref": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a43ae0c6-03ed-44b5-acd9-837e1afdd703",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71",
+      "target_ref": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5df004bf-f399-4b29-9597-b0ba4e7f002f",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9",
+      "target_ref": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b5d5dd57-bbcc-4917-8057-0a8fa85a66bc",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9",
+      "target_ref": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c83c207c-e468-41aa-aeb8-49a9373fa309",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9",
+      "target_ref": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ff74c432-0777-460e-9368-c07fcceebc3b",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--1a07ceec-622c-4f7f-90f9-c7bb0fd4b4da",
+      "target_ref": "indicator--812292d7-2566-4df9-bb1b-559658b6a943"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--84b4fd13-c5ae-41cf-8da1-c62507ce1d43",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--1a07ceec-622c-4f7f-90f9-c7bb0fd4b4da",
+      "target_ref": "indicator--eb6ff01c-0908-4a93-95d9-3e51dccff216"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cb31bc30-5f43-46fa-b8b8-e117fddd6cb5",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--812292d7-2566-4df9-bb1b-559658b6a943",
+      "target_ref": "indicator--1a07ceec-622c-4f7f-90f9-c7bb0fd4b4da"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d6777584-989d-41f2-88b9-20789740f22e",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--812292d7-2566-4df9-bb1b-559658b6a943",
+      "target_ref": "indicator--eb6ff01c-0908-4a93-95d9-3e51dccff216"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9f6d3017-3278-4229-9432-c5139dc2c1e0",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--eb6ff01c-0908-4a93-95d9-3e51dccff216",
+      "target_ref": "indicator--1a07ceec-622c-4f7f-90f9-c7bb0fd4b4da"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7bddd62f-8e16-4b08-9168-4fe6b9f9127e",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--eb6ff01c-0908-4a93-95d9-3e51dccff216",
+      "target_ref": "indicator--812292d7-2566-4df9-bb1b-559658b6a943"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6d7e7023-c2e0-4b4e-8e27-4b3883663a3d",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94",
+      "target_ref": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9b7087a4-411a-4aa8-a81a-530a8679167e",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94",
+      "target_ref": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--205d4a02-24a3-40a4-b2ea-0854d3cb6820",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94",
+      "target_ref": "indicator--c5e47578-c366-4437-912b-b120f747058c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--20065914-3016-42ce-adeb-b8bf97804903",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1",
+      "target_ref": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9f213edc-cf62-4a9d-8ba7-cc8d6a7ec1f3",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1",
+      "target_ref": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e23716a9-9365-429d-9e5f-0a92dac2489a",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1",
+      "target_ref": "indicator--c5e47578-c366-4437-912b-b120f747058c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--da274a96-c427-49db-b102-1e4287046c1e",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d",
+      "target_ref": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--022aac0b-1c1f-4619-97ac-b9ad0ba8e190",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d",
+      "target_ref": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--71e22190-35ee-45f0-9f72-e48864d1d09e",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d",
+      "target_ref": "indicator--c5e47578-c366-4437-912b-b120f747058c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fe8eb87a-7666-4c41-9188-823cc3253cf9",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c5e47578-c366-4437-912b-b120f747058c",
+      "target_ref": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e63e4f96-1a24-480a-954b-a43d20c1d3ff",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c5e47578-c366-4437-912b-b120f747058c",
+      "target_ref": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6d1adca9-a068-40b4-bb30-3c737163cc1c",
+      "created": "2021-07-09T13:19:53.504Z",
+      "modified": "2021-07-09T13:19:53.504Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c5e47578-c366-4437-912b-b120f747058c",
+      "target_ref": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f7d93bc9-7142-4c24-a7bd-5a7d51ae627e",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd",
+      "target_ref": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dd346d81-5b44-4327-8ed2-f4873f27abe4",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd",
+      "target_ref": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ae085a0c-55bb-4992-9d14-578b2ea6e2e5",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd",
+      "target_ref": "indicator--083d1a2c-3153-4b16-b03d-35f668761031"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ec36a288-958b-45a8-b676-dd2bfc5c7e70",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97",
+      "target_ref": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ca911c06-cfa4-4281-bb6a-11d8013d128a",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97",
+      "target_ref": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--28dd24a2-0e02-4fc4-ad69-36e6520a2940",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97",
+      "target_ref": "indicator--083d1a2c-3153-4b16-b03d-35f668761031"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--79160fbb-d220-4632-9d7d-e3a86d22ff44",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967",
+      "target_ref": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bc0af1ba-4f3d-4197-926e-8569d216d7b7",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967",
+      "target_ref": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a5e18a7d-5830-4b35-aed4-902fe7055698",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967",
+      "target_ref": "indicator--083d1a2c-3153-4b16-b03d-35f668761031"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e4ce9dd9-cd48-444d-807c-67392b4a25e6",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--083d1a2c-3153-4b16-b03d-35f668761031",
+      "target_ref": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3ad8a45d-6d45-4c11-910b-c85cf64a2fbb",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--083d1a2c-3153-4b16-b03d-35f668761031",
+      "target_ref": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--69ed1135-bef1-4492-ad25-76754bf33018",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--083d1a2c-3153-4b16-b03d-35f668761031",
+      "target_ref": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e",
+      "created": "2021-07-09T13:19:53.497Z",
+      "modified": "2021-07-09T13:19:53.497Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'msvrt.exe']",
+      "description": "Dropper for keylogger DLL",
+      "valid_from": "2021-07-09T13:19:53.497Z",
+      "name": "Wishful Woodchuck sample (Filename: msvrt.exe)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9e40e854-e51d-4596-ab8e-04493f78920e",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401",
+      "created": "2021-07-09T13:19:53.497Z",
+      "modified": "2021-07-09T13:19:53.497Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '4f97351fd325ecc4b1bcf10b67dfa885']",
+      "description": "Dropper for keylogger DLL",
+      "valid_from": "2021-07-09T13:19:53.497Z",
+      "name": "Wishful Woodchuck sample (MD5: 4f97351fd325ecc4b1bcf10b67dfa885)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0af953fe-b43b-4f46-9f33-e2242363a49d",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3",
+      "created": "2021-07-09T13:19:53.497Z",
+      "modified": "2021-07-09T13:19:53.497Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '8aac9cb8f12ffcf98a8bad5391e33ccf1021f60c']",
+      "description": "Dropper for keylogger DLL",
+      "valid_from": "2021-07-09T13:19:53.497Z",
+      "name": "Wishful Woodchuck sample (SHA-1: 8aac9cb8f12ffcf98a8bad5391e33ccf1021f60c)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ccef9a25-ad6d-4d78-882e-34437dda0d6e",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752",
+      "created": "2021-07-09T13:19:53.497Z",
+      "modified": "2021-07-09T13:19:53.497Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '5af100c1781e80ecedc09b43430e58fe38319e944b65c0f622c71f42985957a1']",
+      "description": "Dropper for keylogger DLL",
+      "valid_from": "2021-07-09T13:19:53.497Z",
+      "name": "Wishful Woodchuck sample (SHA-256: 5af100c1781e80ecedc09b43430e58fe38319e944b65c0f622c71f42985957a1)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ea3d53b4-e03c-4976-9dd5-938536388ee3",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'lMM32.dll']",
+      "description": "Keylogger DLL for x86, dropped by msvrt.exe, called by exports",
+      "valid_from": "2021-07-09T13:19:53.498Z",
+      "name": "Wishful Woodchuck sample (Filename: lMM32.dll)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f68ad7de-a414-4251-a848-8f114f140afb",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '887fba081dc7be123be7126cedae3e57']",
+      "description": "Keylogger DLL for x86, dropped by msvrt.exe, called by exports",
+      "valid_from": "2021-07-09T13:19:53.498Z",
+      "name": "Wishful Woodchuck sample (MD5: 887fba081dc7be123be7126cedae3e57)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--630117f2-46b1-4a94-884f-b0738e3fcc47",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = 'c4453b2dd4887ccdd2eccd19bad830d71c300943']",
+      "description": "Keylogger DLL for x86, dropped by msvrt.exe, called by exports",
+      "valid_from": "2021-07-09T13:19:53.498Z",
+      "name": "Wishful Woodchuck sample (SHA-1: c4453b2dd4887ccdd2eccd19bad830d71c300943)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6d772901-bc7c-4312-ae6c-5c6fafcf5cd8",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2df5296e-ee8b-4562-bbca-09344d505492",
+      "created": "2021-07-09T13:19:53.498Z",
+      "modified": "2021-07-09T13:19:53.498Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '740b27fc5552e5ac3c3655e9c598ed5711cfce442cc64e39af7dca8c468aad09']",
+      "description": "Keylogger DLL for x86, dropped by msvrt.exe, called by exports",
+      "valid_from": "2021-07-09T13:19:53.498Z",
+      "name": "Wishful Woodchuck sample (SHA-256: 740b27fc5552e5ac3c3655e9c598ed5711cfce442cc64e39af7dca8c468aad09)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7d67f40c-a760-4a40-b05f-54d116702d7d",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'hlpapi.dll']",
+      "description": "Keylogger DLL for x86 ",
+      "valid_from": "2021-07-09T13:19:53.499Z",
+      "name": "Wishful Woodchuck sample (Filename: hlpapi.dll)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3e456715-235c-4417-aae2-58186de79352",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = 'ca578729316f35db156849ba397df0a8']",
+      "description": "Keylogger DLL for x86 ",
+      "valid_from": "2021-07-09T13:19:53.499Z",
+      "name": "Wishful Woodchuck sample (MD5: ca578729316f35db156849ba397df0a8)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9d73e28b-353b-4fa0-9b1b-79526229b530",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bc306619-1b03-45b0-81dd-22055db6d953",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = 'bc14776cd0b4f1cf7b42f2dd1ab931143ace9efb']",
+      "description": "Keylogger DLL for x86 ",
+      "valid_from": "2021-07-09T13:19:53.499Z",
+      "name": "Wishful Woodchuck sample (SHA-1: bc14776cd0b4f1cf7b42f2dd1ab931143ace9efb)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0c60bfd6-a607-4cd2-87a6-3ab01c80b842",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909",
+      "created": "2021-07-09T13:19:53.499Z",
+      "modified": "2021-07-09T13:19:53.499Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '3b7060063814ff7dbdda98b30d35282a5686e0b965e79ee89b1d9d279b5c125a']",
+      "description": "Keylogger DLL for x86 ",
+      "valid_from": "2021-07-09T13:19:53.499Z",
+      "name": "Wishful Woodchuck sample (SHA-256: 3b7060063814ff7dbdda98b30d35282a5686e0b965e79ee89b1d9d279b5c125a)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fe5f7623-a63c-4b43-a6ab-4b9bdd9e9b67",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'Manualmap_injector.exe']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.500Z",
+      "name": "Wishful Woodchuck sample (Filename: Manualmap_injector.exe)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b2435ef8-0913-4acd-9109-6d23949dff8e",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c2daf984-f76d-462d-b74c-fa8063a69815",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = 'f7570b7ec498bcd086a5318d9a9bcb0f']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.500Z",
+      "name": "Wishful Woodchuck sample (MD5: f7570b7ec498bcd086a5318d9a9bcb0f)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c64789a3-d27e-4694-8ddb-1deb5be046eb",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '24abbcc1a326249d2e0f4ba159edbba43b15345b']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.500Z",
+      "name": "Wishful Woodchuck sample (SHA-1: 24abbcc1a326249d2e0f4ba159edbba43b15345b)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b8642632-2c0d-4d41-b8c5-eae7eaf0d5f5",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--79716690-149c-44ed-b3c6-250953fde774",
+      "created": "2021-07-09T13:19:53.500Z",
+      "modified": "2021-07-09T13:19:53.500Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = 'dd40335044873fef29fca893a06eac4da0b1750651251c118b40e558c767c993']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.500Z",
+      "name": "Wishful Woodchuck sample (SHA-256: dd40335044873fef29fca893a06eac4da0b1750651251c118b40e558c767c993)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8c580fa0-c101-45bc-9358-bb5e96a32f24",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'lMM64.dll']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.501Z",
+      "name": "Wishful Woodchuck sample (Filename: lMM64.dll)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c09a1661-0910-4200-bee0-cb00d419f206",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ecf70860-76bf-435b-8f99-82c483a23afb",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '59b57bdabee2ce1fb566de51dd92ec94']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.501Z",
+      "name": "Wishful Woodchuck sample (MD5: 59b57bdabee2ce1fb566de51dd92ec94)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0dc555a8-740d-47bb-9aa7-5057eeb54fc6",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '9eb3c79dc361022a9d6ce3e2aa4962f240baf6f2']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.501Z",
+      "name": "Wishful Woodchuck sample (SHA-1: 9eb3c79dc361022a9d6ce3e2aa4962f240baf6f2)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--723fd3ed-eb18-402d-bce7-c47c522da7e8",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--95827c11-4403-4266-aee6-b67e945cad6d",
+      "created": "2021-07-09T13:19:53.501Z",
+      "modified": "2021-07-09T13:19:53.501Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = 'b7b5d28be983c774ef83a8960a68134732a79818c572e8800cea6428f27fb114']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.501Z",
+      "name": "Wishful Woodchuck sample (SHA-256: b7b5d28be983c774ef83a8960a68134732a79818c572e8800cea6428f27fb114)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--76f7166d-183c-4819-94c4-cc104e0f05c9",
+      "created": "2021-07-09T13:19:53.510Z",
+      "modified": "2021-07-09T13:19:53.510Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--95827c11-4403-4266-aee6-b67e945cad6d",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'Manualmap_injector.vmp.exe']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.502Z",
+      "name": "Wishful Woodchuck sample (Filename: Manualmap_injector.vmp.exe)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--38f7ca22-8655-4102-bfef-fddbc71d5604",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d3bc366c-2891-46b7-85b5-2112b4808210",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = 'cd141c202737af15cac2612e0659aeb1']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.502Z",
+      "name": "Wishful Woodchuck sample (MD5: cd141c202737af15cac2612e0659aeb1)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b0fe5850-eca3-44fd-879d-0937336c37d5",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = 'd5a7aaab836dcc539a3224bbb43a7f71f1aed37c']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.502Z",
+      "name": "Wishful Woodchuck sample (SHA-1: d5a7aaab836dcc539a3224bbb43a7f71f1aed37c)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7e42e2c2-f8d4-4046-92e8-87ab4097ea31",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = 'd76fe44316171dbed42265be0af798ce21ac917b42b3b5d01372e67781e579b3']",
+      "description": "Keylogger DLL for x64 ",
+      "valid_from": "2021-07-09T13:19:53.502Z",
+      "name": "Wishful Woodchuck sample (SHA-256: d76fe44316171dbed42265be0af798ce21ac917b42b3b5d01372e67781e579b3)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e162b66e-3a79-49e0-9595-5ca74d404f76",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1a07ceec-622c-4f7f-90f9-c7bb0fd4b4da",
+      "created": "2021-07-09T13:19:53.502Z",
+      "modified": "2021-07-09T13:19:53.502Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '1d9fbd02954d4be1dfb0ff2fd27a6500']",
+      "description": "Keylogger DLL for x86 ",
+      "valid_from": "2021-07-09T13:19:53.502Z",
+      "name": "Wishful Woodchuck sample (MD5: 1d9fbd02954d4be1dfb0ff2fd27a6500)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1a1c01d9-8213-44e5-9a47-c8f9e4cae863",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--1a07ceec-622c-4f7f-90f9-c7bb0fd4b4da",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--812292d7-2566-4df9-bb1b-559658b6a943",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '32ea80d2fc3c8db986d0eaa16fbfc8127b1a4936']",
+      "description": "Keylogger DLL for x86 ",
+      "valid_from": "2021-07-09T13:19:53.503Z",
+      "name": "Wishful Woodchuck sample (SHA-1: 32ea80d2fc3c8db986d0eaa16fbfc8127b1a4936)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1d551a3b-fb4b-4b85-a58d-6802dee48014",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--812292d7-2566-4df9-bb1b-559658b6a943",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--eb6ff01c-0908-4a93-95d9-3e51dccff216",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '05e045490c80c4464f3c6fb6c0c48bf040a0c482d6792e9e11471f1566e96ec6']",
+      "description": "Keylogger DLL for x86 ",
+      "valid_from": "2021-07-09T13:19:53.503Z",
+      "name": "Wishful Woodchuck sample (SHA-256: 05e045490c80c4464f3c6fb6c0c48bf040a0c482d6792e9e11471f1566e96ec6)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a76ed538-5a36-499d-982b-86cff88cd2b2",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--eb6ff01c-0908-4a93-95d9-3e51dccff216",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'WEXTRACT.EXE']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.503Z",
+      "name": "Wishful Woodchuck sample (Filename: WEXTRACT.EXE)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1c600310-91b3-4ba8-88cf-093f5c410be1",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = '792c4348c6a2d6f055b374beded31379']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.503Z",
+      "name": "Wishful Woodchuck sample (MD5: 792c4348c6a2d6f055b374beded31379)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--714b4fc4-21bc-4fe3-9b60-f06a35d386ee",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T18:01:37.426Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '4c83a37489ff370523166b08159885fa245db83c']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.503Z",
+      "name": "Wishful Woodchuck sample (SHA-1: 4c83a37489ff370523166b08159885fa245db83c)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1afaa67b-21aa-441c-bb1d-dea6eab77962",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c5e47578-c366-4437-912b-b120f747058c",
+      "created": "2021-07-09T13:19:53.503Z",
+      "modified": "2021-07-09T13:19:53.503Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = 'c4a1cd6916646aa502413d42e6e7441c6e7268926484f19d9acbf5113fc52fc8']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.503Z",
+      "name": "Wishful Woodchuck sample (SHA-256: c4a1cd6916646aa502413d42e6e7441c6e7268926484f19d9acbf5113fc52fc8)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--98a4dd05-32be-4ddc-afcf-9306d99be3d4",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c5e47578-c366-4437-912b-b120f747058c",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'WEXTRACT.EXE']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.509Z",
+      "name": "Wishful Woodchuck sample (Filename: WEXTRACT.EXE)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e6abd080-d85b-4c82-8fe0-ffe753615b5f",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = 'a864cb7c29991475187968ad0ac5cd54']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.509Z",
+      "name": "Wishful Woodchuck sample (MD5: a864cb7c29991475187968ad0ac5cd54)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b091b291-9f8e-47f3-9d41-281af9699027",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = 'ec52ebda5c82084e797c275e76f5002b89b74fc4']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.509Z",
+      "name": "Wishful Woodchuck sample (SHA-1: ec52ebda5c82084e797c275e76f5002b89b74fc4)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fa1946ea-c204-43fc-ace1-5f1b9e6a793d",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--083d1a2c-3153-4b16-b03d-35f668761031",
+      "created": "2021-07-09T13:19:53.509Z",
+      "modified": "2021-07-09T13:19:53.509Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = 'e302a4cafd2d92fa99a79fd45cfc43b015f8ce444528fb78f32a88a874a52779']",
+      "description": "Keylogger executable for x86 ",
+      "valid_from": "2021-07-09T13:19:53.509Z",
+      "name": "Wishful Woodchuck sample (SHA-256: e302a4cafd2d92fa99a79fd45cfc43b015f8ce444528fb78f32a88a874a52779)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--81c82a2a-9f81-4660-855c-0f4faba04936",
+      "created": "2021-07-09T13:19:53.511Z",
+      "modified": "2021-07-09T13:19:53.511Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--083d1a2c-3153-4b16-b03d-35f668761031",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'msimm.dat']",
+      "description": "Log file dropped to disk by keylogger DLL to same location from which it runs.",
+      "valid_from": "2021-07-09T13:19:53.512Z",
+      "name": "Filename: msimm.dat",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1d527809-9d91-48a3-936d-51d0c0b5cf9b",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--57615507-a0d6-429f-a699-78608612ae51",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "attack-pattern--9603b5bc-4f2d-4fff-9338-22efc9931ac7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7e1686dd-11f9-4b19-b14c-4c21fe96734e",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ff723bc5-cb42-4fc1-8ab5-daf2a28bf362",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9b362d36-5b31-49f1-b0f9-77e14b400848",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--2df5296e-ee8b-4562-bbca-09344d505492"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--24b69c38-5dc5-455d-ac46-fc2003dba3c6",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--c096130c-62dc-469e-9efa-8b7f9df29362"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9c1e6a23-25a3-45ab-a41e-e7a1c8283af3",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fbb22b29-b9f6-4d1a-9476-231bd15dc1fc",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--79716690-149c-44ed-b3c6-250953fde774"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bde16723-862d-4f60-9d60-0811f440d5b0",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--104ec74e-ccb2-4179-8c35-d4fec1ff008d",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--bc306619-1b03-45b0-81dd-22055db6d953"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6e06dc29-a707-44dc-b142-a97f6c3030e7",
+      "created": "2021-07-09T13:19:53.512Z",
+      "modified": "2021-07-09T13:19:53.512Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+      "target_ref": "indicator--ebee3d03-1b04-42da-925a-e05fb977b909"
+    },
+    {
+      "type": "marking-definition", 
+      "spec_version": "2.1", 
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487", 
+      "created": "2022-10-01T00:00:00.000Z",
+      "modified": "2022-10-01T00:00:00.000Z", 
+      "name": "TLP:CLEAR",
+      "extensions": {
+      "extension-definition--60a3c5c5-0d10-413e-aab3-9e08dde9e88d": {
+         "extension_type": "property-extension",
+         "tlp_2_0" : "clear"
+         }
+      }
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "created": "2021-05-20T12:00:00.000Z",
+      "modified": "2021-05-20T12:00:00.000Z",
+      "name": "NCSC",
+      "contact_information": "https://ncsc.gov.uk/section/about-this-website/contact-us"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--09a60ea3-a8d1-4ae5-976e-5783248b72a4",
+      "created": "2020-02-11T18:58:11.791Z",
+      "modified": "2020-10-21T01:30:56.227Z",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.001",
+          "url": "https://attack.mitre.org/techniques/T1056/001"
+        },
+        {
+          "external_id": "CAPEC-568",
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/568.html"
+        },
+        {
+          "url": "http://opensecuritytraining.info/Keylogging_files/The%20Adventures%20of%20a%20Keystroke.pdf",
+          "description": "Tinaztepe,  E. (n.d.). The Adventures of a Keystroke:  An in-depth look into keyloggers on Windows. Retrieved April 27, 2016.",
+          "source_name": "Adventures of a Keystroke"
+        },
+        {
+          "source_name": "Cisco Blog Legacy Device Attacks",
+          "url": "https://community.cisco.com/t5/security-blogs/attackers-continue-to-target-legacy-devices/ba-p/4169954",
+          "description": "Omar Santos. (2020, October 19). Attackers Continue to Target Legacy Devices. Retrieved October 20, 2020."
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Keylogging",
+      "description": "Adversaries may log user keystrokes to intercept credentials as the user types them. Keylogging is likely to be used to acquire credentials for new access opportunities when [OS Credential Dumping](https://attack.mitre.org/techniques/T1003) efforts are not effective, and may require an adversary to intercept keystrokes on a system for a substantial period of time before credentials can be successfully captured.\n\nKeylogging is the most prevalent type of input capture, with many different ways of intercepting keystrokes.(Citation: Adventures of a Keystroke) Some methods include:\n\n* Hooking API callbacks used for processing keystrokes. Unlike [Credential API Hooking](https://attack.mitre.org/techniques/T1056/004), this focuses solely on API functions intended for processing keystroke data.\n* Reading raw keystroke data from the hardware buffer.\n* Windows Registry modifications.\n* Custom drivers.\n* [Modify System Image](https://attack.mitre.org/techniques/T1601) may provide adversaries with hooks into the operating system of network devices to read raw keystrokes for login sessions.(Citation: Cisco Blog Legacy Device Attacks) ",
+      "x_mitre_data_sources": [
+        "Windows Registry: Windows Registry Key Modification",
+        "Driver: Driver Load",
+        "Process: OS API Execution"
+      ],
+      "x_mitre_permissions_required": [
+        "Administrator",
+        "root",
+        "SYSTEM",
+        "User"
+      ],
+      "x_mitre_detection": "Keyloggers may take many forms, possibly involving modification to the Registry and installation of a driver, setting a hook, or polling to intercept keystrokes. Commonly used API calls include `SetWindowsHook`, `GetKeyState`, and `GetAsyncKeyState`.(Citation: Adventures of a Keystroke) Monitor the Registry and file system for such changes, monitor driver installs, and look for common keylogging API calls. API calls alone are not an indicator of keylogging, but may provide behavioral data that is useful when combined with other information such as new files written to disk and unusual processes.",
+      "x_mitre_version": "1.1",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_platforms": [
+        "Windows",
+        "macOS",
+        "Linux",
+        "Network"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b3d682b6-98f2-4fb0-aa3b-b4df007ca70a",
+      "created": "2017-05-31T21:30:32.662Z",
+      "modified": "2021-04-24T13:19:18.594Z",
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027",
+          "url": "https://attack.mitre.org/techniques/T1027"
+        },
+        {
+          "external_id": "CAPEC-267",
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/267.html"
+        },
+        {
+          "url": "https://www.volexity.com/blog/2016/11/09/powerduke-post-election-spear-phishing-campaigns-targeting-think-tanks-and-ngos/",
+          "description": "Adair, S.. (2016, November 9). PowerDuke: Widespread Post-Election Spear Phishing Campaigns Targeting Think Tanks and NGOs. Retrieved January 11, 2017.",
+          "source_name": "Volexity PowerDuke November 2016"
+        },
+        {
+          "url": "https://www.welivesecurity.com/2013/04/26/linuxcdorked-new-apache-backdoor-in-the-wild-serves-blackhole/",
+          "description": "Pierre-Marc Bureau. (2013, April 26). Linux/Cdorked.A: New Apache backdoor being used in the wild to serve Blackhole. Retrieved September 10, 2017.",
+          "source_name": "Linux/Cdorked.A We Live Security Analysis"
+        },
+        {
+          "url": "https://www.carbonblack.com/2016/09/23/security-advisory-variants-well-known-adware-families-discovered-include-sophisticated-obfuscation-techniques-previously-associated-nation-state-attacks/",
+          "description": "Tedesco, B. (2016, September 23). Security Alert Summary. Retrieved February 12, 2018.",
+          "source_name": "Carbon Black Obfuscation Sept 2016"
+        },
+        {
+          "url": "https://www.fireeye.com/blog/threat-research/2017/06/obfuscation-in-the-wild.html",
+          "description": "Bohannon, D. & Carr N. (2017, June 30). Obfuscation in the Wild: Targeted Attackers Lead the Way in Evasion Techniques. Retrieved February 12, 2018.",
+          "source_name": "FireEye Obfuscation June 2017"
+        },
+        {
+          "url": "https://www.fireeye.com/content/dam/fireeye-www/blog/pdfs/revoke-obfuscation-report.pdf",
+          "description": "Bohannon, D. & Holmes, L. (2017, July 27). Revoke-Obfuscation: PowerShell Obfuscation Detection Using Science. Retrieved February 12, 2018.",
+          "source_name": "FireEye Revoke-Obfuscation July 2017"
+        },
+        {
+          "url": "https://researchcenter.paloaltonetworks.com/2017/03/unit42-pulling-back-the-curtains-on-encodedcommand-powershell-attacks/",
+          "description": "White, J. (2017, March 10). Pulling Back the Curtains on EncodedCommand PowerShell Attacks. Retrieved February 12, 2018.",
+          "source_name": "PaloAlto EncodedCommand March 2017"
+        },
+        {
+          "url": "https://github.com/danielbohannon/Revoke-Obfuscation",
+          "description": "Bohannon, D. (2017, July 27). Revoke-Obfuscation. Retrieved February 12, 2018.",
+          "source_name": "GitHub Revoke-Obfuscation"
+        },
+        {
+          "url": "https://github.com/itsreallynick/office-crackros",
+          "description": "Carr, N. (2016, August 14). OfficeCrackros. Retrieved February 12, 2018.",
+          "source_name": "GitHub Office-Crackros Aug 2016"
+        }
+      ],
+      "description": "Adversaries may attempt to make an executable or file difficult to discover or analyze by encrypting, encoding, or otherwise obfuscating its contents on the system or in transit. This is common behavior that can be used across different platforms and the network to evade defenses. \n\nPayloads may be compressed, archived, or encrypted in order to avoid detection. These payloads may be used during Initial Access or later to mitigate detection. Sometimes a user's action may be required to open and [Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140) for [User Execution](https://attack.mitre.org/techniques/T1204). The user may also be required to input a password to open a password protected compressed/encrypted file that was provided by the adversary. (Citation: Volexity PowerDuke November 2016) Adversaries may also used compressed or archived scripts, such as JavaScript. \n\nPortions of files can also be encoded to hide the plain-text strings that would otherwise help defenders with discovery. (Citation: Linux/Cdorked.A We Live Security Analysis) Payloads may also be split into separate, seemingly benign files that only reveal malicious functionality when reassembled. (Citation: Carbon Black Obfuscation Sept 2016)\n\nAdversaries may also obfuscate commands executed from payloads or directly via a [Command and Scripting Interpreter](https://attack.mitre.org/techniques/T1059). Environment variables, aliases, characters, and other platform/language specific semantics can be used to evade signature based detections and application control mechanisms. (Citation: FireEye Obfuscation June 2017) (Citation: FireEye Revoke-Obfuscation July 2017)(Citation: PaloAlto EncodedCommand March 2017) ",
+      "name": "Obfuscated Files or Information",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_version": "1.1",
+      "x_mitre_contributors": [
+        "Red Canary",
+        "Christiaan Beek, @ChristiaanBeek"
+      ],
+      "x_mitre_data_sources": [
+        "File: File Content",
+        "File: File Metadata",
+        "File: File Creation",
+        "Process: Process Creation",
+        "Command: Command Execution",
+        "Command: Command Execution"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Host forensic analysis",
+        "Signature-based detection",
+        "Host intrusion prevention systems",
+        "Application control",
+        "Log analysis",
+        "Application control by file name or path"
+      ],
+      "x_mitre_detection": "Detection of file obfuscation is difficult unless artifacts are left behind by the obfuscation process that are uniquely detectable with a signature. If detection of the obfuscation itself is not possible, it may be possible to detect the malicious activity that caused the obfuscated file (for example, the method that was used to write, read, or modify the file on the file system). \n\nFlag and analyze commands containing indicators of obfuscation and known suspicious syntax such as uninterpreted escape characters like '''^''' and '''\"'''. Windows' Sysmon and Event ID 4688 displays command-line arguments for processes. Deobfuscation tools can be used to detect these indicators in files/payloads. (Citation: GitHub Revoke-Obfuscation) (Citation: FireEye Revoke-Obfuscation July 2017) (Citation: GitHub Office-Crackros Aug 2016) \n\nObfuscation used in payloads for Initial Access can be detected at the network. Use network intrusion detection systems and email gateway filtering to identify compressed and encrypted attachments and scripts. Some email attachment detonation systems can open compressed and encrypted attachments. Payloads delivered over an encrypted connection from a website require encrypted network traffic inspection. \n\nThe first detection of a malicious tool may trigger an anti-virus or other security tool alert. Similar events may also occur at the boundary through network IDS, email scanning appliance, etc. The initial detection should be treated as an indication of a potentially more invasive intrusion. The alerting system should be thoroughly investigated beyond that initial alert for activity that was not detected. Adversaries may continue with an operation, assuming that individual events like an anti-virus detect will not be investigated or that an analyst will not be able to conclusively link that event to other activity occurring on the network. ",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1c4e5d32-1fe9-4116-9d9d-59e3925bd6a2",
+      "created": "2020-02-10T20:43:10.239Z",
+      "modified": "2021-04-20T19:23:37.762Z",
+      "description": "Adversaries may match or approximate the name or location of legitimate files or resources when naming/placing them. This is done for the sake of evading defenses and observation. This may be done by placing an executable in a commonly trusted directory (ex: under System32) or giving it the name of a legitimate, trusted program (ex: svchost.exe). In containerized environments, this may also be done by creating a resource in a namespace that matches the naming convention of a container pod or cluster. Alternatively, a file or container image name given may be a close approximation to legitimate programs/images or something innocuous.\n\nAdversaries may also use the same icon of the file they are trying to mimic.",
+      "name": "Match Legitimate Name or Location",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005",
+          "url": "https://attack.mitre.org/techniques/T1036/005"
+        },
+        {
+          "external_id": "CAPEC-177",
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/177.html"
+        },
+        {
+          "source_name": "Elastic Masquerade Ball",
+          "description": "Ewing, P. (2016, October 31). How to Hunt: The Masquerade Ball. Retrieved October 31, 2016.",
+          "url": "http://pages.endgame.com/rs/627-YBU-612/images/EndgameJournal_The%20Masquerade%20Ball_Pages_R2.pdf"
+        },
+        {
+          "source_name": "Twitter ItsReallyNick Masquerading Update",
+          "url": "https://twitter.com/ItsReallyNick/status/1055321652777619457",
+          "description": "Carr, N.. (2018, October 25). Nick Carr Status Update Masquerading. Retrieved April 22, 2019."
+        },
+        {
+          "source_name": "Docker Images",
+          "url": "https://docs.docker.com/engine/reference/commandline/images/",
+          "description": "Docker. (n.d.). Docker Images. Retrieved April 6, 2021."
+        }
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Containers"
+      ],
+      "x_mitre_data_sources": [
+        "Image: Image Metadata",
+        "File: File Metadata",
+        "Process: Process Metadata"
+      ],
+      "x_mitre_detection": "Collect file hashes; file names that do not match their expected hash are suspect. Perform file monitoring; files with known names but in unusual locations are suspect. Likewise, files that are modified outside of an update or patch are suspect.\n\nIf file names are mismatched between the file name on disk and that of the binary's PE metadata, this is a likely indicator that a binary was renamed after it was compiled. Collecting and comparing disk and resource filenames for binaries by looking to see if the InternalName, OriginalFilename, and/or ProductName match what is expected could provide useful leads, but may not always be indicative of malicious activity. (Citation: Elastic Masquerade Ball) Do not focus on the possible names a file could have, but instead on the command-line arguments that are known to be used and are distinct because it will have a better rate of detection.(Citation: Twitter ItsReallyNick Masquerading Update)\n\nIn containerized environments, use image IDs and layer hashes to compare images instead of relying only on their names.(Citation: Docker Images) Monitor for the unexpected creation of new resources within your cluster in Kubernetes, especially those created by atypical users.",
+      "x_mitre_defense_bypassed": [
+        "Application control by file name or path"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "1.1",
+      "x_mitre_contributors": [
+        "Yossi Weizman, Azure Defender Research Team",
+        "Vishwas Manral, McAfee"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c35baf82-d3e5-4f84-b3a2-5f5e293d94e8",
+      "created": "2021-07-09T13:19:53.513Z",
+      "modified": "2021-07-09T16:59:22.563Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Malware Analysis Report: Wishful Woodchuck",
+      "description": "Wishful Woodchuck is a non-persistent Windows keylogger which utilises Windows API calls to hook the keyboard and log the keystrokes to a file on disk. The log file is XOR-encoded with a multi-byte key which is embedded in the binary. This keylogger contains no communications functionality.",
+      "published": "2021-07-09T16:59:22.563Z",
+      "external_references": [
+        {
+          "source_name": "NCSC",
+          "external_id": "NCSC/MAR/Wishful-Woodchuck"
+        }
+      ],
+      "report_types": [
+        "malware"
+      ],
+      "object_refs": [
+        "malware--a87f8ea7-c5c8-4a6a-a5c3-d00464abcf6c",
+        "attack-pattern--9603b5bc-4f2d-4fff-9338-22efc9931ac7",
+        "relationship--384c295f-7114-483c-9411-0cf15f9b7ddd",
+        "relationship--3aa6f45e-c779-40a2-b186-523d464f0dce",
+        "attack-pattern--a5fce9d7-b6c6-43e4-8800-df51d5a33041",
+        "relationship--43b2fff4-50a6-4c94-be72-65552b58193e",
+        "relationship--58591bf3-ad64-4e8e-8e26-36b71a1c2e85",
+        "attack-pattern--ec794528-dac6-4041-82ab-2982f31d7f49",
+        "relationship--432ece2d-c07b-4c8b-85c3-e71ebb41db8c",
+        "relationship--01e03da7-a2d4-4664-b854-b41f8c3595cb",
+        "attack-pattern--7de29a0c-4db0-4217-b73e-40ec3eeb5fc4",
+        "relationship--3bbeb48b-5695-4672-ac46-d8490c809bb8",
+        "relationship--c56e53d4-5413-4733-86fd-fd3372dc108f",
+        "indicator--fbca9f12-1ec2-41b3-9f6e-75bfdc4fa9a8",
+        "relationship--0d04ca85-393a-448b-974c-94a8af2ba8ef",
+        "relationship--967485a1-0400-4e04-ae5b-5aaa20f120ec",
+        "indicator--3f1c29ee-c6f8-4f7a-bd89-79e2a17081f4",
+        "relationship--89d9d735-1eb4-46ea-b7aa-226f947c96ea",
+        "relationship--7bfcbc5c-e582-4f4f-92e0-e2ee5d2ec6c1",
+        "indicator--c41f19ed-9618-4084-92ec-4f8f8374a95b",
+        "relationship--547dfca4-925f-459f-9d42-fed7877cff99",
+        "relationship--98d89fbe-cb81-4e23-946a-c8a529ac5c81",
+        "indicator--dd9b9353-16da-4f6d-bcac-323387985f81",
+        "relationship--bb545ced-f5ec-4413-8e23-0827be99d32d",
+        "relationship--02c4e73f-e2bb-4fbb-a995-9e5ce6ef260a",
+        "indicator--356565cf-3dfb-4948-8421-32f6ab75dc5d",
+        "relationship--c7c2aa98-4cf6-4661-8404-aa7947ca686e",
+        "relationship--a8ad5e9b-36af-44cd-9d5d-717286d97886",
+        "relationship--8259b701-2653-4c97-ad8b-6e7f72983a8e",
+        "relationship--f4172d19-6097-4b82-8313-f37ff9e71448",
+        "relationship--63fef0c7-2f39-403b-a14f-8f88ab5ef8a5",
+        "relationship--7ef91466-3112-479f-9671-430b92e85b31",
+        "relationship--d8616a34-ae92-4291-ac08-ab1c6b507b39",
+        "relationship--3ae2f070-2e66-412f-975a-3244ac20db65",
+        "relationship--1efaa29b-86c6-40b1-a94e-559dfa7bb3dc",
+        "relationship--8752d119-44bf-42c4-966b-e0fe25a7afa7",
+        "relationship--59d1f79e-1659-4176-90fe-e939e77791b1",
+        "relationship--72120c88-bd69-4a29-a975-29799ebaa55d",
+        "relationship--df87290f-8dbe-47be-b4fa-b7dc55e6a308",
+        "relationship--25f600ac-e3f4-4aa6-9f91-fe6b193d921c",
+        "relationship--34dc6846-114d-41b8-9a3a-78a0bbd2fd81",
+        "relationship--fada4de2-a797-4870-bb7e-af5c5a80a481",
+        "relationship--4c249468-f312-468d-b5d4-3c83d9ded8a4",
+        "relationship--cfe088a3-86ac-4562-b9b9-ee4eda20d701",
+        "relationship--52e6e479-671a-43af-a6aa-5ec3efe47922",
+        "relationship--1aaa7854-bbd4-454f-9ebb-8191f50c6ee8",
+        "relationship--b5d0df86-bdaf-4a5a-8b9c-b0c53b0b495c",
+        "relationship--b7db9be6-32e8-44f7-a9fc-99b7161f1f57",
+        "relationship--580d8492-cd4d-4234-a8b4-92065a29e7d3",
+        "relationship--29858dcb-58b3-4357-8609-da331d470d7e",
+        "relationship--6fd5816f-290c-4c15-a9d5-d9a0e7e5abe8",
+        "relationship--13bbf4d5-24be-406a-a3ca-6c8a1bf78d1f",
+        "relationship--ce004618-19e3-483c-8e43-8e178912b6ac",
+        "relationship--8f14233d-8ea1-413e-b8db-d6cd73ab9c31",
+        "relationship--2bae781e-383c-43f6-af4d-002e3743df8d",
+        "relationship--1e204f5b-9dcb-4922-92e0-3eb13ec023ea",
+        "relationship--1c937e61-453d-4020-961b-d5268f3ae64f",
+        "relationship--0522abcb-5796-4f91-818b-06b4258936cf",
+        "relationship--b35c51fa-cbec-446d-b75a-a6e95f14b3f7",
+        "relationship--e99726b6-3dda-4b53-b215-1a43113d1447",
+        "relationship--b72ee85b-e40a-4fe6-8f86-cd47b38e1615",
+        "relationship--1673208a-292d-4c44-a472-0923a91ee1d7",
+        "relationship--49096aa1-7870-4a46-92ac-17fc7ed7ba6a",
+        "relationship--5c10a5f3-8b42-4861-bc28-a2a4f9593a97",
+        "relationship--cb9f6052-62bb-4e2d-8ce3-5d30fdec9f27",
+        "relationship--22d9c04e-8ed9-4dd1-8627-2ab48c15c729",
+        "relationship--796b6e6b-0443-4adb-b3de-11a8aba73caa",
+        "relationship--1f07f0b2-6508-4d40-bdcd-e45244c932d2",
+        "relationship--4b2a9cc8-3428-4646-8aea-7ae22a69091f",
+        "relationship--156b5801-8373-4f81-91c3-3d1159b7252b",
+        "relationship--04eef04f-a20b-48e2-8f34-c723ef6f4c87",
+        "relationship--310d3113-c177-43be-8e8e-a1c6b9fe4836",
+        "relationship--c75449c4-ff5e-44d7-b54a-b6af4012ff7d",
+        "relationship--6f9498ae-ebef-4fd4-a7fe-b9e889c0b9c2",
+        "relationship--d1c658bb-a4fe-4f9a-9337-ff9dc0c22b16",
+        "relationship--3ad66539-35c9-4316-a36c-1d4c6b58d0b3",
+        "relationship--7d1cd53f-5689-4f5b-8b4a-db4718d19be7",
+        "relationship--66034b3f-861e-4f44-9012-094fe20605e3",
+        "relationship--9598b3c9-3450-4d1d-9d30-3c2525636623",
+        "relationship--c75d6a0a-10ae-4ab8-8946-910df027abad",
+        "relationship--4b7b5a6e-ae11-49e4-b252-1f9476275da0",
+        "relationship--1996d034-d493-4d81-852f-400f730c19f1",
+        "relationship--81eb40be-3055-468e-9f8b-246b3452f6f1",
+        "relationship--2614fb74-2641-4502-b1ce-2939096202db",
+        "relationship--b5d04e01-9b45-44ce-8c71-5ce951f201b4",
+        "relationship--2606ef97-f764-47fb-a198-de813bf77045",
+        "relationship--5bc9e22e-2654-45fb-ba07-c710c01dd57b",
+        "relationship--4d5f3fac-f71f-4923-a590-b5b0e71f9c45",
+        "relationship--217ca8c1-58ff-41df-8144-be44beca7b19",
+        "relationship--cd94741f-9cd2-4f71-a9aa-cce71c750dc2",
+        "relationship--607c3116-4e2d-4e2e-9be3-dd18421f5245",
+        "relationship--7e7b61f3-8028-469d-8540-f62907829e14",
+        "relationship--e10f7736-16a5-41d4-8f08-d3cfa5094fb4",
+        "relationship--a3041055-13a7-4214-86be-535bf66b3c88",
+        "relationship--785aec2f-c36b-453f-a18c-8e8357854dcb",
+        "relationship--b9d1d26d-962d-409d-bc2e-cef88412fa9a",
+        "relationship--a43ae0c6-03ed-44b5-acd9-837e1afdd703",
+        "relationship--5df004bf-f399-4b29-9597-b0ba4e7f002f",
+        "relationship--b5d5dd57-bbcc-4917-8057-0a8fa85a66bc",
+        "relationship--c83c207c-e468-41aa-aeb8-49a9373fa309",
+        "relationship--ff74c432-0777-460e-9368-c07fcceebc3b",
+        "relationship--84b4fd13-c5ae-41cf-8da1-c62507ce1d43",
+        "relationship--cb31bc30-5f43-46fa-b8b8-e117fddd6cb5",
+        "relationship--d6777584-989d-41f2-88b9-20789740f22e",
+        "relationship--9f6d3017-3278-4229-9432-c5139dc2c1e0",
+        "relationship--7bddd62f-8e16-4b08-9168-4fe6b9f9127e",
+        "relationship--6d7e7023-c2e0-4b4e-8e27-4b3883663a3d",
+        "relationship--9b7087a4-411a-4aa8-a81a-530a8679167e",
+        "relationship--205d4a02-24a3-40a4-b2ea-0854d3cb6820",
+        "relationship--20065914-3016-42ce-adeb-b8bf97804903",
+        "relationship--9f213edc-cf62-4a9d-8ba7-cc8d6a7ec1f3",
+        "relationship--e23716a9-9365-429d-9e5f-0a92dac2489a",
+        "relationship--da274a96-c427-49db-b102-1e4287046c1e",
+        "relationship--022aac0b-1c1f-4619-97ac-b9ad0ba8e190",
+        "relationship--71e22190-35ee-45f0-9f72-e48864d1d09e",
+        "relationship--fe8eb87a-7666-4c41-9188-823cc3253cf9",
+        "relationship--e63e4f96-1a24-480a-954b-a43d20c1d3ff",
+        "relationship--6d1adca9-a068-40b4-bb30-3c737163cc1c",
+        "relationship--f7d93bc9-7142-4c24-a7bd-5a7d51ae627e",
+        "relationship--dd346d81-5b44-4327-8ed2-f4873f27abe4",
+        "relationship--ae085a0c-55bb-4992-9d14-578b2ea6e2e5",
+        "relationship--ec36a288-958b-45a8-b676-dd2bfc5c7e70",
+        "relationship--ca911c06-cfa4-4281-bb6a-11d8013d128a",
+        "relationship--28dd24a2-0e02-4fc4-ad69-36e6520a2940",
+        "relationship--79160fbb-d220-4632-9d7d-e3a86d22ff44",
+        "relationship--bc0af1ba-4f3d-4197-926e-8569d216d7b7",
+        "relationship--a5e18a7d-5830-4b35-aed4-902fe7055698",
+        "relationship--e4ce9dd9-cd48-444d-807c-67392b4a25e6",
+        "relationship--3ad8a45d-6d45-4c11-910b-c85cf64a2fbb",
+        "relationship--69ed1135-bef1-4492-ad25-76754bf33018",
+        "indicator--64a3ee57-c5df-41c0-9856-e3a67ab33a9e",
+        "relationship--9e40e854-e51d-4596-ab8e-04493f78920e",
+        "indicator--a90ccb67-268c-4572-84b2-5c2ecb24e401",
+        "relationship--0af953fe-b43b-4f46-9f33-e2242363a49d",
+        "indicator--500ad87a-7d5b-4be3-8e0b-e90608e2c2f3",
+        "relationship--ccef9a25-ad6d-4d78-882e-34437dda0d6e",
+        "indicator--7d5608fe-310c-4d26-aad5-5621e83b0752",
+        "relationship--ea3d53b4-e03c-4976-9dd5-938536388ee3",
+        "indicator--070ad2ac-3a55-45c7-9005-8c14d8918131",
+        "relationship--f68ad7de-a414-4251-a848-8f114f140afb",
+        "indicator--e97a6aaa-d8cf-4a61-bf20-02d9e6044571",
+        "relationship--630117f2-46b1-4a94-884f-b0738e3fcc47",
+        "indicator--eb9c56b6-2d66-495d-8b46-641d61f397df",
+        "relationship--6d772901-bc7c-4312-ae6c-5c6fafcf5cd8",
+        "indicator--2df5296e-ee8b-4562-bbca-09344d505492",
+        "relationship--7d67f40c-a760-4a40-b05f-54d116702d7d",
+        "indicator--588bb880-ea1c-4185-9ab8-3f7396b7c811",
+        "relationship--3e456715-235c-4417-aae2-58186de79352",
+        "indicator--ec3799c3-9c9c-45a8-9967-7de63b72c3d8",
+        "relationship--9d73e28b-353b-4fa0-9b1b-79526229b530",
+        "indicator--bc306619-1b03-45b0-81dd-22055db6d953",
+        "relationship--0c60bfd6-a607-4cd2-87a6-3ab01c80b842",
+        "indicator--ebee3d03-1b04-42da-925a-e05fb977b909",
+        "relationship--fe5f7623-a63c-4b43-a6ab-4b9bdd9e9b67",
+        "indicator--c2daf984-f76d-462d-b74c-fa8063a69815",
+        "relationship--b2435ef8-0913-4acd-9109-6d23949dff8e",
+        "indicator--c096130c-62dc-469e-9efa-8b7f9df29362",
+        "relationship--c64789a3-d27e-4694-8ddb-1deb5be046eb",
+        "indicator--82d8f050-72f8-47d5-a4d7-3358bb889487",
+        "relationship--b8642632-2c0d-4d41-b8c5-eae7eaf0d5f5",
+        "indicator--79716690-149c-44ed-b3c6-250953fde774",
+        "relationship--8c580fa0-c101-45bc-9358-bb5e96a32f24",
+        "indicator--ecf70860-76bf-435b-8f99-82c483a23afb",
+        "relationship--c09a1661-0910-4200-bee0-cb00d419f206",
+        "indicator--d32143cc-09dd-473a-85b0-7147c5a61e38",
+        "relationship--0dc555a8-740d-47bb-9aa7-5057eeb54fc6",
+        "indicator--c990ed88-0b4b-4a4e-b2c4-b0e918877e38",
+        "relationship--723fd3ed-eb18-402d-bce7-c47c522da7e8",
+        "indicator--95827c11-4403-4266-aee6-b67e945cad6d",
+        "relationship--76f7166d-183c-4819-94c4-cc104e0f05c9",
+        "indicator--d3bc366c-2891-46b7-85b5-2112b4808210",
+        "relationship--38f7ca22-8655-4102-bfef-fddbc71d5604",
+        "indicator--fc8fa99f-98ce-4f0a-acad-b4abf0dcb656",
+        "relationship--b0fe5850-eca3-44fd-879d-0937336c37d5",
+        "indicator--8f8bee1d-8ed9-4f8c-bb74-3b5677a70a71",
+        "relationship--7e42e2c2-f8d4-4046-92e8-87ab4097ea31",
+        "indicator--fa13376c-b4a4-4442-9a7c-a2cfd56570b9",
+        "relationship--e162b66e-3a79-49e0-9595-5ca74d404f76",
+        "indicator--1a07ceec-622c-4f7f-90f9-c7bb0fd4b4da",
+        "relationship--1a1c01d9-8213-44e5-9a47-c8f9e4cae863",
+        "indicator--812292d7-2566-4df9-bb1b-559658b6a943",
+        "relationship--1d551a3b-fb4b-4b85-a58d-6802dee48014",
+        "indicator--eb6ff01c-0908-4a93-95d9-3e51dccff216",
+        "relationship--a76ed538-5a36-499d-982b-86cff88cd2b2",
+        "indicator--0492a9ea-fc29-4196-8d4c-45d933939b94",
+        "relationship--1c600310-91b3-4ba8-88cf-093f5c410be1",
+        "indicator--0fdc89b4-7c0d-4b75-a8f2-dd1dd93658c1",
+        "relationship--714b4fc4-21bc-4fe3-9b60-f06a35d386ee",
+        "indicator--5fdfb146-cba8-4d63-a10e-69a63316072d",
+        "relationship--1afaa67b-21aa-441c-bb1d-dea6eab77962",
+        "indicator--c5e47578-c366-4437-912b-b120f747058c",
+        "relationship--98a4dd05-32be-4ddc-afcf-9306d99be3d4",
+        "indicator--bbba2adb-b30a-4c49-b06e-5758331859dd",
+        "relationship--e6abd080-d85b-4c82-8fe0-ffe753615b5f",
+        "indicator--1e65afad-09cc-4bae-8f78-43d2dffadc97",
+        "relationship--b091b291-9f8e-47f3-9d41-281af9699027",
+        "indicator--f0e0fbac-7f31-4d2b-8bf4-2eb9526c2967",
+        "relationship--fa1946ea-c204-43fc-ace1-5f1b9e6a793d",
+        "indicator--083d1a2c-3153-4b16-b03d-35f668761031",
+        "relationship--81c82a2a-9f81-4660-855c-0f4faba04936",
+        "indicator--2c487959-dc40-458c-b235-2c96ae1fc01f",
+        "relationship--1d527809-9d91-48a3-936d-51d0c0b5cf9b",
+        "relationship--57615507-a0d6-429f-a699-78608612ae51",
+        "relationship--7e1686dd-11f9-4b19-b14c-4c21fe96734e",
+        "relationship--ff723bc5-cb42-4fc1-8ab5-daf2a28bf362",
+        "relationship--9b362d36-5b31-49f1-b0f9-77e14b400848",
+        "relationship--24b69c38-5dc5-455d-ac46-fc2003dba3c6",
+        "relationship--9c1e6a23-25a3-45ab-a41e-e7a1c8283af3",
+        "relationship--fbb22b29-b9f6-4d1a-9476-231bd15dc1fc",
+        "relationship--bde16723-862d-4f60-9d60-0811f440d5b0",
+        "relationship--104ec74e-ccb2-4179-8c35-d4fec1ff008d",
+        "relationship--6e06dc29-a707-44dc-b142-a97f6c3030e7"
+      ]
+    }
+  ]
+}

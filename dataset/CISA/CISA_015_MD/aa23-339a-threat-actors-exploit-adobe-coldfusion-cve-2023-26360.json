@@ -1,0 +1,468 @@
+{
+    "type": "bundle",
+    "id": "bundle--6b2793ac-0812-48ad-a8d5-f2708819e23a",
+    "objects": [
+        {
+            "id": "location--a7a889e7-977a-4400-a5c4-9517aefcc6f9",
+            "spec_version": "2.1",
+            "type": "location",
+            "country": "US",
+            "administrative_area": "US-DC",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+            "created": "2023-03-02T16:48:57.959Z",
+            "extensions": {
+                "extension-definition--3a65884d-005a-4290-8335-cb2d778a83ce": {
+                    "extension_type": "property-extension",
+                    "identifier": "isa:guide.19001.ACS3-9e0cd50e-6efc-45b3-8a3d-b6376541c9c5",
+                    "create_date_time": "2023-03-02T16:48:57.959Z",
+                    "responsible_entity_custodian": "USA.DHS.NCCIC",
+                    "responsible_entity_originator": "USA.DHS.NCCIC",
+                    "policy_reference": "urn:isa:policy:acs:ns:v3.0?privdefault=deny&sharedefault=permit",
+                    "control_set": {
+                        "classification": "U",
+                        "formal_determination": [
+                            "INFORMATION-DIRECTLY-RELATED-TO-CYBERSECURITY-THREAT",
+                            "PUBREL"
+                        ]
+                    },
+                    "authority_reference": [
+                        "urn:isa:authority:ais"
+                    ],
+                    "access_privilege": [
+                        {
+                            "privilege_action": "CISAUSES",
+                            "rule_effect": "permit",
+                            "privilege_scope": {
+                                "entity": [
+                                    "ALL"
+                                ],
+                                "permitted_nationalities": [
+                                    "ALL"
+                                ],
+                                "permitted_organizations": [
+                                    "ALL"
+                                ],
+                                "shareability": [
+                                    "ALL"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "attack-pattern--f0a904f4-b3f5-4e42-b565-418dc6932d44",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Initial Access - Exploit Public-Facing Application [T1190]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--e8b9ef62-f34a-4d8c-8095-196c7e6f607d",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Execution - Command and Scripting Interpreter: JavaScript [T1059.007]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--84783d50-c513-428f-b288-17b4bd24821b",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Persistence - Server Software Component: Web Shell [T1505.003]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--2d41cc0d-be1b-47e5-8491-ada86f624ec4",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Privilege Escalation - Domain Policy Modification: Group Policy Modification [T1484.001]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--a1fe1a1c-ae50-4812-a064-dbec116d1fc3",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Defense Evasion - Deobfuscate/Decode Files or Information [T1140]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--4ff7e674-9bdb-43bf-bce4-406351ac1188",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Defense Evasion - Hide Artifacts: Hidden Files and Directories [T1564.001]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--4c312255-f721-4a07-b49a-006387d79a2d",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Defense Evasion - Indicator Removal: File Deletion [T1070.004]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--7a388102-a1e3-4f69-99a0-23d4d2344312",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Defense Evasion - Masquerading: Masquerade File Type [T1036.008]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--23a9ad16-95c1-4b7d-98b8-049fdd9ef8b2",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Defense Evasion - Masquerading: Match Legitimate Name or Location [T1036.005]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--75868d94-271e-4dac-8885-b51843a4c9d4",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Credential Access - OS Credential Dumping: LSASS Memory [T1003.001]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--2fd37eac-035a-48f7-83da-cefa8937d859",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Credential Access - OS Credential Dumping: Security Account Manager [T1003.002]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--be2cdeb0-048c-4aa2-8cee-0dba9687e975",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - Account Discovery: Domain Account [T1087.002]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--d6d7c433-a139-43b7-9f6c-8cc6e97b8a72",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - Account Discovery: Local Account [T1087.001]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--c31d692e-0be1-4678-abf0-2e64dfb24890",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - Domain Trust Discovery [T1482]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--a6c90d18-9b9d-4bdf-9cfa-b0abb5889f86",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - File and Directory Discovery [T1083]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--f8695dd5-3fa7-40c8-941f-ee8f7d8d0080",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - Network Service Discovery[T1046]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--9a9fd346-3ca7-42ee-874b-ba706dbdcb03",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - Process Discovery [T1057]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--22b606d1-33c8-4182-9ad1-9d5c7fbd7daf",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - Software Discovery [T1518]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--96115b0f-f094-4ae6-bad4-e5a6715f48e0",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - System Information Discovery [T1082]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--9c44b26b-ebfa-402b-bf16-10fe3551bbc7",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Discovery - System Network Configuration Discovery: Internet Connection Discovery [T1016.001]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--11d0fed1-9205-4d0f-85e5-d8b76cc3b3c1",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Command and Control - Application Layer Protocol: Web Protocols [T1071.001]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "attack-pattern--351cb297-4ddc-4ee1-8e65-40b054834106",
+            "type": "attack-pattern",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Command and Control - Remote File Copy [T1105]",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "indicator--d267f6c6-a29b-47f6-8646-84496be09fa6",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-06-02T00:00:00Z",
+            "pattern": "[(file:name = 'fscan.exe') AND file:hashes.'SHA-1' = 'BE332B6E2E2ED9E1E57D8AAFA0C00AA77D4B8656']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e10f5ebe-8c4d-4ec9-8a17-63e07348efa5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-06-02T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '125.227.50.97']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--2c455592-2569-4ca6-b6e1-a7ac9dd2745e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2023-06-02T00:00:00Z",
+            "pattern": "[(file:name = 'eee.exe') AND file:hashes.MD5 = 'BA69669818EF9CCEC174D647A8021A7B' AND file:hashes.'SHA-1' = 'B6818D2D5CBD902CE23461F24FC47E24937250E6' AND file:hashes.'SHA-256' = 'A3ACB9F79647F813671C1A21097A51836B0B95397EBC9CD178BC806E1773C864']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--e0f6b74d-7fa5-44ca-acbd-d9dfd0bef6f4",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "source_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "relationship_type": "located-at",
+            "target_ref": "location--a7a889e7-977a-4400-a5c4-9517aefcc6f9",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "report--c98a638f-29c5-4233-a283-34ddbcc40be4",
+            "type": "report",
+            "spec_version": "2.1",
+            "created": "2023-12-04T21:01:50.000Z",
+            "modified": "2023-12-04T21:01:50.000Z",
+            "name": "AA23-339A Threat Actors Exploit Adobe ColdFusion CVE- 2023-26360 for Initial Access to Government Servers",
+            "description": "The Cybersecurity and Infrastructure Security Agency (CISA) and co-sealers are releasing a Cybersecurity Advisory (CSA) in response to confirmed exploitation of CVE-2023-26360 by unidentified threat actors at a Federal Civilian Executive Branch (FCEB) agency. This CVE is an improper access control issue that impacts ColdFusion 2021 version 5 and earlier, as well as ColdFusion 2018 version 15 and earlier.  Exploitation of this CVE can result in arbitrary code execution. Following the agency\\u2019s investigation, analysis of network logs confirmed the compromise of at least two public-facing servers within the environment between June and July 2023.\r\n\r\nThis CSA provides network defenders with tactics, techniques, and procedures (TTPs), IOCs, and methods to detect and protect against similar exploitation.\r\n",
+            "published": "2023-11-17T00:00:00Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "attack-pattern--f0a904f4-b3f5-4e42-b565-418dc6932d44",
+                "attack-pattern--e8b9ef62-f34a-4d8c-8095-196c7e6f607d",
+                "attack-pattern--84783d50-c513-428f-b288-17b4bd24821b",
+                "attack-pattern--2d41cc0d-be1b-47e5-8491-ada86f624ec4",
+                "attack-pattern--a1fe1a1c-ae50-4812-a064-dbec116d1fc3",
+                "attack-pattern--4ff7e674-9bdb-43bf-bce4-406351ac1188",
+                "attack-pattern--4c312255-f721-4a07-b49a-006387d79a2d",
+                "attack-pattern--7a388102-a1e3-4f69-99a0-23d4d2344312",
+                "attack-pattern--23a9ad16-95c1-4b7d-98b8-049fdd9ef8b2",
+                "attack-pattern--75868d94-271e-4dac-8885-b51843a4c9d4",
+                "attack-pattern--2fd37eac-035a-48f7-83da-cefa8937d859",
+                "attack-pattern--be2cdeb0-048c-4aa2-8cee-0dba9687e975",
+                "attack-pattern--d6d7c433-a139-43b7-9f6c-8cc6e97b8a72",
+                "attack-pattern--c31d692e-0be1-4678-abf0-2e64dfb24890",
+                "attack-pattern--a6c90d18-9b9d-4bdf-9cfa-b0abb5889f86",
+                "attack-pattern--f8695dd5-3fa7-40c8-941f-ee8f7d8d0080",
+                "attack-pattern--9a9fd346-3ca7-42ee-874b-ba706dbdcb03",
+                "attack-pattern--22b606d1-33c8-4182-9ad1-9d5c7fbd7daf",
+                "attack-pattern--96115b0f-f094-4ae6-bad4-e5a6715f48e0",
+                "attack-pattern--9c44b26b-ebfa-402b-bf16-10fe3551bbc7",
+                "attack-pattern--11d0fed1-9205-4d0f-85e5-d8b76cc3b3c1",
+                "attack-pattern--351cb297-4ddc-4ee1-8e65-40b054834106",
+                "indicator--d267f6c6-a29b-47f6-8646-84496be09fa6",
+                "indicator--e10f5ebe-8c4d-4ec9-8a17-63e07348efa5",
+                "indicator--2c455592-2569-4ca6-b6e1-a7ac9dd2745e",
+                "relationship--e0f6b74d-7fa5-44ca-acbd-d9dfd0bef6f4"
+            ],
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}

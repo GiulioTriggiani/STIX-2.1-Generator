@@ -1,0 +1,2227 @@
+{
+  "type": "bundle",
+  "spec_version": "2.1",
+  "id": "bundle--2380714a-bb40-4e38-817a-5d82476d6c99",
+  "created": "2025-04-03T13:04:32.549Z",
+  "modified": "2025-04-03T13:36:45.573Z",
+  "object_marking_refs": [
+    "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+  ],
+  "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+  "objects": [
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "DAMASCENED PEACOCK",
+      "description": "•\tDAMASCENED PEACOCK is a lightweight downloader targeting Windows. \n•\tThe analysed sample was for 32-bit (x86) Windows. It supports downloading a 64-bit onward stage. \n•\tThe malware was observed in a spear-phishing campaign which took place in the autumn of 2024.\n•\tDAMASCENED PEACOCK is downloaded and executed by a code signed first stage.\n•\tDAMASCENED PEACOCK is the second of 3 stages and is responsible for downloading the final stage and executing it via a COM Hijack.\n•\tDAMASCENED PEACOCK implements Defence Evasion techniques such as XOR based string obfuscation and dynamic resolution of Win32 APIs.",
+      "malware_types": [
+        "downloader"
+      ],
+      "is_family": false,
+      "architecture_execution_envs": [
+        "x86"
+      ],
+      "implementation_languages": [
+        "c++"
+      ],
+      "x_operating_systems": [
+        "windows"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c92641d6-549f-4639-abe9-094ca37e2a50",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Gather Victim Identity Information as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "description": "DAMASCENED PEACOCK checks whether the victim host is 32-bit or 64-bit to determine the appropriate next stage to download."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d1900dca-e8f4-451b-ab99-acf04dbe9d9c",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--c92641d6-549f-4639-abe9-094ca37e2a50",
+      "target_ref": "attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fe29ded8-e188-4497-8db6-0cdfc0cbaa88",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--c92641d6-549f-4639-abe9-094ca37e2a50"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c95f7f36-d004-49f4-8e82-78557c00aabb",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Phishing: Spearphishing Link as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "description": "DAMASCENED PEACOCK is executed by a first stage that is delivered via a link in an email."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c23394ca-a0b7-4d3a-94c8-25c2f4e20eb9",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--c95f7f36-d004-49f4-8e82-78557c00aabb",
+      "target_ref": "attack-pattern--2b742742-28c3-4e1b-bab7-8350d6300fa7"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--93509f7f-c2b5-48a3-9804-d1882659441d",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--c95f7f36-d004-49f4-8e82-78557c00aabb"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--41e2ccfa-56d3-4f01-a56e-c792ef14db8a",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "User Execution: Malicious File as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "description": "DAMASCENED PEACOCK is executed by a first stage which is reliant upon the user running the file."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d079f68b-0719-40c6-b0ff-b7f7d8a33990",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--41e2ccfa-56d3-4f01-a56e-c792ef14db8a",
+      "target_ref": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3ab9e697-4a2d-4607-a68a-d916bdd2a0ed",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--41e2ccfa-56d3-4f01-a56e-c792ef14db8a"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--dc3989b7-99bd-4260-9659-4502354bd07d",
+      "created": "2025-04-03T13:36:45.569Z",
+      "modified": "2025-04-03T13:36:45.569Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Inter-Process Communication: Component Object Model as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "description": "MASCENED PEACOCK achieves execution for the 3rd stage it downloads by COM Hijacking explorer.exe."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9cf0b79d-dd78-4968-aaf4-ce390853cc6b",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--dc3989b7-99bd-4260-9659-4502354bd07d",
+      "target_ref": "attack-pattern--2f6b4ed7-fef1-44ba-bcb8-1b4beb610b64"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d15484e1-3d66-435c-b98f-d9f443cb48f0",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--dc3989b7-99bd-4260-9659-4502354bd07d"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--49d6f74d-4f2a-483e-9fa9-1f7c4ee8d2e5",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Deobfuscate/Decode Files or Information as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "DAMASCENED PEACOCK XOR encodes configuration strings used throughout."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fbfe7870-61ca-421a-9d4c-81de5d74b6d9",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--49d6f74d-4f2a-483e-9fa9-1f7c4ee8d2e5",
+      "target_ref": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8b4e9f46-74b0-4503-8a49-63ec08178f78",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--49d6f74d-4f2a-483e-9fa9-1f7c4ee8d2e5"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--70f29cef-4a26-451a-abfe-f7355ec47683",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Obfuscated Files or Information: Dynamic API Resolution as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "DAMASCENED PEACOCK uses an API hashing algorithm combined with Dynamic Resolution of Win32 APIs to obfuscate functionality."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d7b0fcd1-4c6b-4009-87a7-d7bf9600b8ad",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--70f29cef-4a26-451a-abfe-f7355ec47683",
+      "target_ref": "attack-pattern--ea4c2f9c-9df1-477c-8c42-6da1118f2ac4"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6bb76d28-becf-425e-b86d-05bdecd9d809",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--70f29cef-4a26-451a-abfe-f7355ec47683"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d09fcb08-1480-439a-b90b-df028114def2",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Subvert Trust Controls: Code Signing as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "The first stage of the malware is signed, meaning DAMASCENED PEACOCK executes within a signed, malicious process."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--03be75d4-ebb3-4b22-908b-11f7dc045ded",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--d09fcb08-1480-439a-b90b-df028114def2",
+      "target_ref": "attack-pattern--32901740-b42c-4fdd-bc02-345b5dc57082"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--adad82cf-31cf-4d14-8ae4-2c5c7b763dc3",
+      "created": "2025-04-03T13:36:45.570Z",
+      "modified": "2025-04-03T13:36:45.570Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--d09fcb08-1480-439a-b90b-df028114def2"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8d558684-075b-49c3-a3f3-34c01fecfb13",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Masquerading as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "description": "The first stage of DAMASCENED PEACOCK is an executable with an icon and filename indicating it is a PDF."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c219ce16-1488-4014-8c19-10f34207389b",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--8d558684-075b-49c3-a3f3-34c01fecfb13",
+      "target_ref": "attack-pattern--42e8de7b-37b2-4258-905a-6897815e58e0"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cf578c76-4dfe-4526-9b2a-cdcb728c21bf",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--8d558684-075b-49c3-a3f3-34c01fecfb13"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--936b4554-1e42-461b-9d5d-1e1d346dfa54",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Application Layer Protocol: Web Protocols as used by DAMASCENED PEACOCK",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "description": "DAMASCENED PEACOCK communicates with the command and control server over HTTP."
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--71bb2ed9-9d37-4e32-b7bb-4a20eea6fad0",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "attack-pattern--936b4554-1e42-461b-9d5d-1e1d346dfa54",
+      "target_ref": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c70c796a-b788-464e-bcd7-b1c6eff3e8da",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "uses",
+      "source_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+      "target_ref": "attack-pattern--936b4554-1e42-461b-9d5d-1e1d346dfa54"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f0dd1ed7-37d1-40f1-b63f-f97cc7972031",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d",
+      "target_ref": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bd47fe65-3f96-473f-9ea7-31c2cf8aab60",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d",
+      "target_ref": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e7bcbe48-bb96-4824-b637-953bcf7890be",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9",
+      "target_ref": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--925a008f-516c-4d9c-8cb8-c5832891b5a4",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9",
+      "target_ref": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--86213da3-e4f0-4405-a8b3-c6281aa58107",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2",
+      "target_ref": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--12fa1fd0-1801-41cb-9639-e2a1a9eb47ac",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2",
+      "target_ref": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--70825e4b-473d-4897-b11f-01afc49e388e",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--204b9fce-57cb-49a1-9ac9-f628d862d84e",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--99abfb0f-9efb-4b66-ad95-908b2c7bd375",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--77a0bb99-40df-4060-a76a-017b34e643c9",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c8ee3755-2a4c-468e-9a59-ba55bb08fa5d",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f31d4667-d41f-4808-a7df-fea0915f2cae",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = 'e0c48d62c4d484b6dd4a601970df5d0e']",
+      "description": "1st stage, Original Filename (PE Metadata): PortDocFormat.exe",
+      "valid_from": "2025-04-03T13:36:45.571Z",
+      "name": "DAMASCENED PEACOCK sample (MD5: e0c48d62c4d484b6dd4a601970df5d0e Filename: 'Doc_03.10.24.298133.exe')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c9da64c8-5263-485a-9684-f938990f3a84",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '1bd5b9fec7ccc29144989203c3b15a10c9c22a76']",
+      "description": "1st stage, Original Filename (PE Metadata): PortDocFormat.exe",
+      "valid_from": "2025-04-03T13:36:45.571Z",
+      "name": "DAMASCENED PEACOCK sample (SHA-1: e0c48d62c4d484b6dd4a601970df5d0e Filename: 'Doc_03.10.24.298133.exe')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e0b91e34-a3fe-4fb8-bc96-645ad4aefef2",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '31a8a2762b42a1fe4be2aed9d112a169f791bd86a85e68d738aea51312096442']",
+      "description": "1st stage, Original Filename (PE Metadata): PortDocFormat.exe",
+      "valid_from": "2025-04-03T13:36:45.571Z",
+      "name": "DAMASCENED PEACOCK sample (SHA-256: e0c48d62c4d484b6dd4a601970df5d0e Filename: 'Doc_03.10.24.298133.exe')",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a1a44618-0b9e-4eb6-89ff-410236589ea4",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--befe8ce8-d755-4f26-9ea9-942469439643",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'MD5' = 'e400ec98fc8a6b7212fc18cf8321ba16']",
+      "description": "DAMASCENED PEACOCK, Original Filename (PE Metadata): XcsExplorerDll_x86.dll",
+      "valid_from": "2025-04-03T13:36:45.571Z",
+      "name": "DAMASCENED PEACOCK sample (MD5: e400ec98fc8a6b7212fc18cf8321ba16)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--782bec47-0947-4be6-ab8e-b534e982e52f",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-1' = '8c25b982e5e4b3418b779c85b8ac8a6acf393063']",
+      "description": "DAMASCENED PEACOCK, Original Filename (PE Metadata): XcsExplorerDll_x86.dll",
+      "valid_from": "2025-04-03T13:36:45.571Z",
+      "name": "DAMASCENED PEACOCK sample (SHA-1: e400ec98fc8a6b7212fc18cf8321ba16)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--aef3da50-c2df-45f9-9b3d-e665559cd602",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:hashes.'SHA-256' = '804dc9c037e9d0e5426cb1f0df8dde61cd43cf6ea4c27cf526c2d6ac50ba3e95']",
+      "description": "DAMASCENED PEACOCK, Original Filename (PE Metadata): XcsExplorerDll_x86.dll",
+      "valid_from": "2025-04-03T13:36:45.571Z",
+      "name": "DAMASCENED PEACOCK sample (SHA-256: e400ec98fc8a6b7212fc18cf8321ba16)",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b49e20ad-0611-4cba-a3e3-7bdf2eddb02a",
+      "created": "2025-04-03T13:36:45.571Z",
+      "modified": "2025-04-03T13:36:45.571Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c927c5c8-6bf3-4ba4-9a0b-bb5a57302b78",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule DAMASCENED_PEACOCK_resolve_apis {\n    meta:\n        author = \"NCSC\"\n        description = \"Targets a code pattern which is used to resolve APIs in the first stage which loads DAMASCENED PEACOCK.\"\n        hash1 = \"1bd5b9fec7ccc29144989203c3b15a10c9c22a76\"\n        \n    strings:\n\t    $ = {56 31 C0 85 D2 74 1D 0F B6 31 41 4A 69 F6 [4] 0F AF F6 C1 C6 10 31 C6 0F AF F6 C1 C6 10 89 F0 EB DF 5E C3}\n    condition:\n\t    (uint16(0) == 0x5A4D) and uint32(uint32(0x3C)) == 0x00004550 and all of them\n}",
+      "description": "Targets a code pattern which is used to resolve APIs in the first stage which loads DAMASCENED PEACOCK.",
+      "valid_from": "2025-04-03T13:36:45.572Z",
+      "name": "YARA: DAMASCENED_PEACOCK_resolve_apis ",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3a736678-ed8f-4355-a58b-45f84f367992",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c927c5c8-6bf3-4ba4-9a0b-bb5a57302b78",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--88a94a08-5862-4d3a-891f-c1da90be9f9b",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c927c5c8-6bf3-4ba4-9a0b-bb5a57302b78",
+      "target_ref": "attack-pattern--70f29cef-4a26-451a-abfe-f7355ec47683"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--01fa8c4b-48b3-4bb4-8c71-9c15aa45b674",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--c927c5c8-6bf3-4ba4-9a0b-bb5a57302b78",
+      "target_ref": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6f90667c-a273-4d01-87b6-90af02bf2f97",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--c927c5c8-6bf3-4ba4-9a0b-bb5a57302b78",
+      "target_ref": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--62f6dc06-bea1-407e-8ff1-3b301b349ec7",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--c927c5c8-6bf3-4ba4-9a0b-bb5a57302b78",
+      "target_ref": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--f217d562-04cf-4c11-8801-43507c564f37",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule DAMASCENED_PEACOCK_winhttpconnect {\n    meta:\n        author = \"NCSC\"\n        description = \"This rule targets a code pattern in DAMASCENED PEACOCK which sees the resolved pointer for WinHttpConnect retrieved from a struct, arguments pushed e.g. 8080 as the port, and then a call.\"\n        hash1 = \"8c25b982e5e4b3418b779c85b8ac8a6acf393063\"\n        \n    strings:\n        $ = {8B 85 90 00 00 00 6A 00 68 90 1F 00 00 FF 76 34 FF 33 FF D0}\n    condition:\n        (uint16(0) == 0x5A4D) and uint32(uint32(0x3C)) == 0x00004550 and all of them\n}\n",
+      "description": "This rule targets a code pattern in DAMASCENED PEACOCK which sees the resolved pointer for WinHttpConnect retrieved from a struct, arguments pushed e.g. 8080 as the port, and then a call.",
+      "valid_from": "2025-04-03T13:36:45.572Z",
+      "name": "YARA: DAMASCENED_PEACOCK_winhttpconnect ",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f7d46286-ea80-4392-aadd-838a1c17ad28",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f217d562-04cf-4c11-8801-43507c564f37",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c7baf734-a4a4-4eb3-8489-07b826ae3a82",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f217d562-04cf-4c11-8801-43507c564f37",
+      "target_ref": "attack-pattern--936b4554-1e42-461b-9d5d-1e1d346dfa54"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--15628dd8-4249-4fab-a2e3-6eac9ff4c32f",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--f217d562-04cf-4c11-8801-43507c564f37",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5ff72354-7642-444a-b9e5-c159bf5dadbc",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--f217d562-04cf-4c11-8801-43507c564f37",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dc81b262-fc6e-4168-af34-8ec2dd04e77a",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--f217d562-04cf-4c11-8801-43507c564f37",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--35ea2365-cfd7-49cb-8f82-584a27547ed3",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule DAMASCENED_PEACOCK_API_hashes {\n    meta:\n        author = \"NCSC\"\n        description = \"This rule targets code patterns for pushing the hash onto the stack and then moving the returned pointer into a structure in DAMASCENED PEACOCK.\"\n        hash1 = \"8c25b982e5e4b3418b779c85b8ac8a6acf393063\"\n        \n    strings:\n        $ = {68 1A 81 A8 01} // push hash\n        $ = {83 C4 04 89 46 04} // move result into struct\n\n        $ = {68 7D 53 AE 52}\n        $ = {83 C4 04 89 46 08}\n\n        $ = {68 59 6F 3C 00}\n        $ = {83 C4 04 89 46 0C}\n\n        $ = {68 6B 9A C6 E1}\n        $ = {83 C4 04 89 46 10}\n\n        $ = {68 32 A9 7C 08}\n        $ = {83 C4 04 89 46 14}\n\n        $ = {68 76 EE 30 8A}\n        $ = {83 C4 04 89 46 18}\n\t    \n    condition:\n        (uint16(0) == 0x5A4D) and uint32(uint32(0x3C)) == 0x00004550 and all of them\n\n}",
+      "description": "This rule targets code patterns for pushing the hash onto the stack and then moving the returned pointer into a structure in DAMASCENED PEACOCK.",
+      "valid_from": "2025-04-03T13:36:45.572Z",
+      "name": "YARA: DAMASCENED_PEACOCK_API_hashes ",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ea686a80-5133-473c-9a15-596d4e64fd29",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35ea2365-cfd7-49cb-8f82-584a27547ed3",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--953ec5de-8fc5-4680-a8d1-156e094a2068",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35ea2365-cfd7-49cb-8f82-584a27547ed3",
+      "target_ref": "attack-pattern--70f29cef-4a26-451a-abfe-f7355ec47683"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b2e89fbe-350b-44bf-a5db-655f3525ed8f",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--35ea2365-cfd7-49cb-8f82-584a27547ed3",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9756f21b-f40c-4e5a-be90-9422eaeb5542",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--35ea2365-cfd7-49cb-8f82-584a27547ed3",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--75c03c58-c06e-444e-ae23-0607e02665d0",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--35ea2365-cfd7-49cb-8f82-584a27547ed3",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--b49967a3-ec4b-4329-927d-e1269f16d8ac",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule DAMASCENED_PEACOCK_API_hashing_algorithm {\n    meta:\n        author = \"NCSC\"\n        description = \"This rule targets the code in DAMASCENED PEACOCK used for generating an API hash. The rule is agnostic of the constants used to generate the hash.\"\n        hash1 = \"8c25b982e5e4b3418b779c85b8ac8a6acf393063\"\n        \n    strings:\n        $ = {8D0C0669C9[4]8D5201C1C9??81C1[4]03C1C1C8??0FAFC60FBE3203C08BC8C1C8??C1C9??85F6}\n    condition:\n        any of them\n}",
+      "description": "This rule targets the code in DAMASCENED PEACOCK used for generating an API hash. The rule is agnostic of the constants used to generate the hash.",
+      "valid_from": "2025-04-03T13:36:45.572Z",
+      "name": "YARA: DAMASCENED_PEACOCK_API_hashing_algorithm ",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9351169f-c090-46ef-89d9-6e213330e7a7",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b49967a3-ec4b-4329-927d-e1269f16d8ac",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d1e98c83-2f83-49f0-a578-d73a432be23c",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b49967a3-ec4b-4329-927d-e1269f16d8ac",
+      "target_ref": "attack-pattern--70f29cef-4a26-451a-abfe-f7355ec47683"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b3d769e9-4e8e-48a4-8bc4-5caef779679a",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--b49967a3-ec4b-4329-927d-e1269f16d8ac",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e6a5d34b-02a3-49b5-b8f7-7d0e6264f117",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--b49967a3-ec4b-4329-927d-e1269f16d8ac",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6b9f9b6f-540b-456c-8151-dcc5744f8687",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--b49967a3-ec4b-4329-927d-e1269f16d8ac",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--02767b71-076c-4ecf-9831-6475366f6dc8",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "rule DAMASCENED_PEACOCK_strings {\n    meta:\n        author = \"NCSC\"\n        description = \"This rule targets the original name and export name in DAMASCENED PEACOCK.\"\n        hash1 = \"8c25b982e5e4b3418b779c85b8ac8a6acf393063\"\n        \n    strings:\n        $ = \"XcsExplorerDll_x86.dll\"\n        $ = \"DllExport\"\n    condition:\t   \n        (uint16(0) == 0x5A4D) and uint32(uint32(0x3C)) == 0x00004550 and all of them\n}",
+      "description": "This rule targets the original name and export name in DAMASCENED PEACOCK.",
+      "valid_from": "2025-04-03T13:36:45.572Z",
+      "name": "YARA: DAMASCENED_PEACOCK_strings ",
+      "pattern_type": "yara"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--012e421e-2134-4293-9d5d-d4cba59c7711",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--02767b71-076c-4ecf-9831-6475366f6dc8",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9d2af74b-c918-4dd8-aed5-8902beb5847c",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--02767b71-076c-4ecf-9831-6475366f6dc8",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d651f9c8-8233-467f-91d3-191b1d1e22b7",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--02767b71-076c-4ecf-9831-6475366f6dc8",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e65127d9-626a-4cab-9aa3-064c74921c2a",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--02767b71-076c-4ecf-9831-6475366f6dc8",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--230a62e1-651f-4148-a299-dbedf33247a1",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[domain-name:value = 'apimonger.com']",
+      "description": "C2 Domain",
+      "valid_from": "2025-04-03T13:36:45.572Z",
+      "name": "Domain Name: apimonger.com",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--905eb8b3-2177-4846-bfd8-ff46b719792c",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--230a62e1-651f-4148-a299-dbedf33247a1",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bc96301a-51b8-47b5-b312-9988673a1c32",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--230a62e1-651f-4148-a299-dbedf33247a1",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--73e11ff7-1ea3-45c0-9ca2-9c19324a8165",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--230a62e1-651f-4148-a299-dbedf33247a1",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--deb41d99-d51d-43ae-a8e0-b0516d2d3864",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--230a62e1-651f-4148-a299-dbedf33247a1",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--c45409f6-8a31-477c-90d4-95e14b5e5a62",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[url:value = 'http://journalctl.website/asldajEPqew']",
+      "description": "URL Serving DAMASCENED PEACOCK",
+      "valid_from": "2025-04-03T13:36:45.572Z",
+      "name": "URL: http://journalctl.website/asldajEPqew",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b4ff3c92-e229-4fa5-9b72-2b1897138711",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c45409f6-8a31-477c-90d4-95e14b5e5a62",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--52944825-ab2e-43c5-b82b-038b53b22fc7",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--c45409f6-8a31-477c-90d4-95e14b5e5a62",
+      "target_ref": "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4a2b69f9-3cdd-4ec1-91e5-5c5b4d78565b",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--c45409f6-8a31-477c-90d4-95e14b5e5a62",
+      "target_ref": "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--51205851-e876-4b4c-9034-3518879165e4",
+      "created": "2025-04-03T13:36:45.572Z",
+      "modified": "2025-04-03T13:36:45.572Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--c45409f6-8a31-477c-90d4-95e14b5e5a62",
+      "target_ref": "indicator--74e2b02e-0406-4075-a074-1a38a45883e2"
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--1d08d4b7-f0a8-4ed1-9273-851acb7d6673",
+      "created": "2025-04-03T13:36:45.573Z",
+      "modified": "2025-04-03T13:36:45.573Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "pattern": "[file:name = 'KeyProv.dll' AND file:parent_directory_ref.path LIKE '\\\\KeyStore']",
+      "description": "Malware downloads 3rd stage to here.",
+      "valid_from": "2025-04-03T13:36:45.573Z",
+      "name": "Path: %LOCALAPPDATA%\\KeyStore\\KeyProv.dll",
+      "pattern_type": "stix"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0857e2a8-4d10-4724-969b-de7cf86baaee",
+      "created": "2025-04-03T13:36:45.573Z",
+      "modified": "2025-04-03T13:36:45.573Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--1d08d4b7-f0a8-4ed1-9273-851acb7d6673",
+      "target_ref": "malware--1af076d3-54b4-4153-ace3-3a864c16a45f"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--793b3f47-b013-4b91-916b-a4eaa1cb7187",
+      "created": "2025-04-03T13:36:45.573Z",
+      "modified": "2025-04-03T13:36:45.573Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--1d08d4b7-f0a8-4ed1-9273-851acb7d6673",
+      "target_ref": "indicator--befe8ce8-d755-4f26-9ea9-942469439643"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f485f1c3-1df5-4c46-acf9-b618b62704e4",
+      "created": "2025-04-03T13:36:45.573Z",
+      "modified": "2025-04-03T13:36:45.573Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--1d08d4b7-f0a8-4ed1-9273-851acb7d6673",
+      "target_ref": "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0ab4c466-e33d-45d9-bd28-93ed2db00399",
+      "created": "2025-04-03T13:36:45.573Z",
+      "modified": "2025-04-03T13:36:45.573Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "relationship_type": "derived-from",
+      "source_ref": "indicator--1d08d4b7-f0a8-4ed1-9273-851acb7d6673",
+      "target_ref": "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794"
+    },
+    {
+      "type": "marking-definition", 
+      "spec_version": "2.1", 
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487", 
+      "created": "2022-10-01T00:00:00.000Z",
+      "modified": "2022-10-01T00:00:00.000Z", 
+      "name": "TLP:CLEAR",
+      "extensions": {
+      "extension-definition--60a3c5c5-0d10-413e-aab3-9e08dde9e88d": {
+         "extension_type": "property-extension",
+         "tlp_2_0" : "clear"
+         }
+      }
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "created": "2021-05-20T12:00:00.000Z",
+      "modified": "2021-05-20T12:00:00.000Z",
+      "name": "NCSC",
+      "contact_information": "https://ncsc.gov.uk/section/about-this-website/contact-us"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5282dd9a-d26d-4e16-88b7-7c0f4553daf4",
+      "created": "2020-10-02T14:54:59.263Z",
+      "modified": "2022-04-21T14:39:39.857Z",
+      "x_mitre_platforms": [
+        "PRE"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Jannie Li, Microsoft Threat Intelligence Center (MSTIC)"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.2",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1589",
+          "url": "https://attack.mitre.org/techniques/T1589"
+        },
+        {
+          "source_name": "OPM Leak",
+          "url": "https://www.opm.gov/cybersecurity/cybersecurity-incidents/",
+          "description": "Cybersecurity Resource Center. (n.d.). CYBERSECURITY INCIDENTS. Retrieved October 20, 2020."
+        },
+        {
+          "source_name": "Detectify Slack Tokens",
+          "url": "https://labs.detectify.com/2016/04/28/slack-bot-token-leakage-exposing-business-critical-information/",
+          "description": "Detectify. (2016, April 28). Slack bot token leakage exposing business critical information. Retrieved October 19, 2020."
+        },
+        {
+          "source_name": "GitHub truffleHog",
+          "url": "https://github.com/dxa4481/truffleHog",
+          "description": "Dylan Ayrey. (2016, December 31). truffleHog. Retrieved October 19, 2020."
+        },
+        {
+          "source_name": "GrimBlog UsernameEnum",
+          "url": "https://grimhacker.com/2017/07/24/office365-activesync-username-enumeration/",
+          "description": "GrimHacker. (2017, July 24). Office365 ActiveSync Username Enumeration. Retrieved December 9, 2021."
+        },
+        {
+          "source_name": "Register Uber",
+          "url": "https://www.theregister.com/2015/02/28/uber_subpoenas_github_for_hacker_details/",
+          "description": "McCarthy, K. (2015, February 28). FORK ME! Uber hauls GitHub into court to find who hacked database of 50,000 drivers. Retrieved October 19, 2020."
+        },
+        {
+          "source_name": "GitHub Gitrob",
+          "url": "https://github.com/michenriksen/gitrob",
+          "description": "Michael Henriksen. (2018, June 9). Gitrob: Putting the Open Source in OSINT. Retrieved October 19, 2020."
+        },
+        {
+          "source_name": "CNET Leaks",
+          "url": "https://www.cnet.com/news/massive-breach-leaks-773-million-emails-21-million-passwords/",
+          "description": "Ng, A. (2019, January 17). Massive breach leaks 773 million email addresses, 21 million passwords. Retrieved October 20, 2020."
+        },
+        {
+          "source_name": "Forbes GitHub Creds",
+          "url": "https://www.forbes.com/sites/runasandvik/2014/01/14/attackers-scrape-github-for-cloud-service-credentials-hijack-account-to-mine-virtual-currency/#242c479d3196",
+          "description": "Sandvik, R. (2014, January 14). Attackers Scrape GitHub For Cloud Service Credentials, Hijack Account To Mine Virtual Currency. Retrieved October 19, 2020."
+        },
+        {
+          "source_name": "Register Deloitte",
+          "url": "https://www.theregister.com/2017/09/26/deloitte_leak_github_and_google/",
+          "description": "Thomson, I. (2017, September 26). Deloitte is a sitting duck: Key systems with RDP open, VPN and proxy 'login details leaked'. Retrieved October 19, 2020."
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may gather information about the victim's identity that can be used during targeting. Information about identities may include a variety of details, including personal data (ex: employee names, email addresses, etc.) as well as sensitive details such as credentials.\n\nAdversaries may gather this information in various ways, such as direct elicitation via [Phishing for Information](https://attack.mitre.org/techniques/T1598). Information about users could also be enumerated via other active means (i.e. [Active Scanning](https://attack.mitre.org/techniques/T1595)) such as probing and analyzing responses from authentication services that may reveal valid usernames in a system.(Citation: GrimBlog UsernameEnum) Information about victims may also be exposed to adversaries via online or other accessible data sets (ex: [Social Media](https://attack.mitre.org/techniques/T1593/001) or [Search Victim-Owned Websites](https://attack.mitre.org/techniques/T1594)).(Citation: OPM Leak)(Citation: Register Deloitte)(Citation: Register Uber)(Citation: Detectify Slack Tokens)(Citation: Forbes GitHub Creds)(Citation: GitHub truffleHog)(Citation: GitHub Gitrob)(Citation: CNET Leaks)\n\nGathering this information may reveal opportunities for other forms of reconnaissance (ex: [Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593) or [Phishing for Information](https://attack.mitre.org/techniques/T1598)), establishing operational resources (ex: [Compromise Accounts](https://attack.mitre.org/techniques/T1586)), and/or initial access (ex: [Phishing](https://attack.mitre.org/techniques/T1566) or [Valid Accounts](https://attack.mitre.org/techniques/T1078)).",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Gather Victim Identity Information",
+      "x_mitre_detection": "Monitor for suspicious network traffic that could be indicative of probing for user information, such as large/iterative quantities of authentication requests originating from a single source (especially if the source is known to be associated with an adversary/botnet). Analyzing web metadata may also reveal artifacts that can be attributed to potentially malicious activity, such as referer or user-agent string HTTP/S fields.\n\nMuch of this activity may have a very high occurrence and associated false positive rate, as well as potentially taking place outside the visibility of the target organization, making detection difficult for defenders.\n\nDetection efforts may be focused on related stages of the adversary lifecycle, such as during Initial Access.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_data_sources": [
+        "Network Traffic: Network Traffic Content"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2b742742-28c3-4e1b-bab7-8350d6300fa7",
+      "created": "2020-03-02T19:15:44.182Z",
+      "modified": "2022-10-21T16:01:45.500Z",
+      "name": "Spearphishing Link",
+      "description": "Adversaries may send spearphishing emails with a malicious link in an attempt to gain access to victim systems. Spearphishing with a link is a specific variant of spearphishing. It is different from other forms of spearphishing in that it employs the use of links to download malware contained in email, instead of attaching malicious files to the email itself, to avoid defenses that may inspect email attachments. Spearphishing may also involve social engineering techniques, such as posing as a trusted source.\n\nAll forms of spearphishing are electronically delivered social engineering targeted at a specific individual, company, or industry. In this case, the malicious emails contain links. Generally, the links will be accompanied by social engineering text and require the user to actively click or copy and paste a URL into a browser, leveraging [User Execution](https://attack.mitre.org/techniques/T1204). The visited website may compromise the web browser using an exploit, or the user will be prompted to download applications, documents, zip files, or even executables depending on the pretext for the email in the first place. Adversaries may also include links that are intended to interact directly with an email reader, including embedded images intended to exploit the end system directly or verify the receipt of an email (i.e. web bugs/web beacons). Additionally, adversaries may use seemingly benign links that abuse special characters to mimic legitimate websites (known as an \"IDN homograph attack\").(Citation: CISA IDN ST05-016)\n\nAdversaries may also utilize links to perform consent phishing, typically with OAuth 2.0 request URLs that when accepted by the user provide permissions/access for malicious applications, allowing adversaries to  [Steal Application Access Token](https://attack.mitre.org/techniques/T1528)s.(Citation: Trend Micro Pawn Storm OAuth 2017) These stolen access tokens allow the adversary to perform various actions on behalf of the user via API calls. (Citation: Microsoft OAuth 2.0 Consent Phishing 2021)",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "x_mitre_detection": "URL inspection within email (including expanding shortened links) can help detect links leading to known malicious sites as well as links redirecting to adversary infrastructure based by upon suspicious OAuth patterns with unusual TLDs.(Citation: Microsoft OAuth 2.0 Consent Phishing 2021). Detonation chambers can be used to detect these links and either automatically go to these sites to determine if they're potentially malicious, or wait and capture the content if a user visits the link.\n\nFiltering based on DKIM+SPF or header analysis can help detect when the email sender is spoofed.(Citation: Microsoft Anti Spoofing)(Citation: ACSC Email Spoofing)\n\nBecause this technique usually involves user interaction on the endpoint, many of the possible detections take place once [User Execution](https://attack.mitre.org/techniques/T1204) occurs.",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Office 365",
+        "SaaS",
+        "Google Workspace"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_deprecated": false,
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_version": "2.3",
+      "x_mitre_contributors": [
+        "Philip Winther",
+        "Shailesh Tiwary (Indian Army)",
+        "Mark Wee",
+        "Jeff Sakowicz, Microsoft Identity Developer Platform Services (IDPM Services)",
+        "Saisha Agrawal, Microsoft Threat Intelligent Center (MSTIC)",
+        "Kobi Haimovich, CardinalOps",
+        "Menachem Goldstein"
+      ],
+      "x_mitre_data_sources": [
+        "Application Log: Application Log Content",
+        "Network Traffic: Network Traffic Flow",
+        "Network Traffic: Network Traffic Content"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "revoked": false,
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1566/002",
+          "external_id": "T1566.002"
+        },
+        {
+          "source_name": "ACSC Email Spoofing",
+          "description": "Australian Cyber Security Centre. (2012, December). Mitigating Spoofed Emails Using Sender Policy Framework. Retrieved October 19, 2020.",
+          "url": "https://www.cyber.gov.au/sites/default/files/2019-03/spoof_email_sender_policy_framework.pdf"
+        },
+        {
+          "source_name": "CISA IDN ST05-016",
+          "description": "CISA. (2019, September 27). Security Tip (ST05-016): Understanding Internationalized Domain Names. Retrieved October 20, 2020.",
+          "url": "https://us-cert.cisa.gov/ncas/tips/ST05-016"
+        },
+        {
+          "source_name": "Trend Micro Pawn Storm OAuth 2017",
+          "description": "Hacquebord, F.. (2017, April 25). Pawn Storm Abuses Open Authentication in Advanced Social Engineering Attacks. Retrieved October 4, 2019.",
+          "url": "https://blog.trendmicro.com/trendlabs-security-intelligence/pawn-storm-abuses-open-authentication-advanced-social-engineering-attacks"
+        },
+        {
+          "source_name": "Microsoft OAuth 2.0 Consent Phishing 2021",
+          "description": "Microsoft 365 Defender Threat Intelligence Team. (2021, June 14). Microsoft delivers comprehensive solution to battle rise in consent phishing emails. Retrieved December 13, 2021.",
+          "url": "https://www.microsoft.com/security/blog/2021/07/14/microsoft-delivers-comprehensive-solution-to-battle-rise-in-consent-phishing-emails/"
+        },
+        {
+          "source_name": "Microsoft Anti Spoofing",
+          "description": "Microsoft. (2020, October 13). Anti-spoofing protection in EOP. Retrieved October 19, 2020.",
+          "url": "https://docs.microsoft.com/en-us/microsoft-365/security/office-365-security/anti-spoofing-protection?view=o365-worldwide"
+        },
+        {
+          "source_name": "capec",
+          "url": "https://capec.mitre.org/data/definitions/163.html",
+          "external_id": "CAPEC-163"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--232b7f21-adf9-4b42-b936-b9d6f7df856e",
+      "created": "2020-03-11T14:49:36.954Z",
+      "modified": "2022-05-20T17:19:50.801Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "TruKno"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.2",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002",
+          "url": "https://attack.mitre.org/techniques/T1204/002"
+        },
+        {
+          "source_name": "Password Protected Word Docs",
+          "url": "https://www.bleepingcomputer.com/news/security/psa-dont-open-spam-containing-password-protected-word-docs/",
+          "description": "Lawrence Abrams. (2017, July 12). PSA: Don't Open SPAM Containing Password Protected Word Docs. Retrieved January 5, 2022."
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "An adversary may rely upon a user opening a malicious file in order to gain execution. Users may be subjected to social engineering to get them to open a file that will lead to code execution. This user action will typically be observed as follow-on behavior from [Spearphishing Attachment](https://attack.mitre.org/techniques/T1566/001). Adversaries may use several types of files that require a user to execute them, including .doc, .pdf, .xls, .rtf, .scr, .exe, .lnk, .pif, and .cpl.\n\nAdversaries may employ various forms of [Masquerading](https://attack.mitre.org/techniques/T1036) and [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027) to increase the likelihood that a user will open and successfully execute a malicious file. These methods may include using a familiar naming convention and/or password protecting the file and supplying instructions to a user on how to open it.(Citation: Password Protected Word Docs) \n\nWhile [Malicious File](https://attack.mitre.org/techniques/T1204/002) frequently occurs shortly after Initial Access it may occur at other phases of an intrusion, such as when an adversary places a file in a shared directory or on a user's desktop hoping that a user will click on it. This activity may also be seen shortly after [Internal Spearphishing](https://attack.mitre.org/techniques/T1534).",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Malicious File",
+      "x_mitre_detection": "Monitor the execution of and command-line arguments for applications that may be used by an adversary to gain initial access that require user interaction. This includes compression applications, such as those for zip files, that can be used to [Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140) in payloads.\n\nAnti-virus can potentially detect malicious documents and files that are downloaded and executed on the user's computer. Endpoint sensing or network sensing can potentially detect malicious events once the file is opened (such as a Microsoft Word document or PDF reaching out to the internet or spawning powershell.exe).",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_data_sources": [
+        "Process: Process Creation",
+        "File: File Creation"
+      ],
+      "x_mitre_remote_support": false,
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2f6b4ed7-fef1-44ba-bcb8-1b4beb610b64",
+      "created": "2020-02-12T14:09:53.107Z",
+      "modified": "2021-07-26T22:51:20.448Z",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1559.001",
+          "url": "https://attack.mitre.org/techniques/T1559/001"
+        },
+        {
+          "source_name": "Fireeye Hunting COM June 2019",
+          "url": "https://www.fireeye.com/blog/threat-research/2019/06/hunting-com-objects.html",
+          "description": "Hamilton, C. (2019, June 4). Hunting COM Objects. Retrieved June 10, 2019."
+        },
+        {
+          "url": "https://msdn.microsoft.com/library/windows/desktop/ms680573.aspx",
+          "description": "Microsoft. (n.d.). Component Object Model (COM). Retrieved November 22, 2017.",
+          "source_name": "Microsoft COM"
+        },
+        {
+          "url": "https://googleprojectzero.blogspot.com/2018/04/windows-exploitation-tricks-exploiting.html",
+          "description": "Forshaw, J. (2018, April 18). Windows Exploitation Tricks: Exploiting Arbitrary File Writes for Local Elevation of Privilege. Retrieved May 3, 2018.",
+          "source_name": "ProjectZero File Write EoP Apr 2018"
+        },
+        {
+          "url": "https://enigma0x3.net/2017/11/16/lateral-movement-using-outlooks-createobject-method-and-dotnettojscript/",
+          "description": "Nelson, M. (2017, November 16). Lateral Movement using Outlook's CreateObject Method and DotNetToJScript. Retrieved November 21, 2017.",
+          "source_name": "Enigma Outlook DCOM Lateral Movement Nov 2017"
+        },
+        {
+          "url": "https://enigma0x3.net/2017/01/05/lateral-movement-using-the-mmc20-application-com-object/",
+          "description": "Nelson, M. (2017, January 5). Lateral Movement using the MMC20 Application COM Object. Retrieved November 21, 2017.",
+          "source_name": "Enigma MMC20 COM Jan 2017"
+        }
+      ],
+      "name": "Component Object Model",
+      "description": "Adversaries may use the Windows Component Object Model (COM) for local code execution. COM is an inter-process communication (IPC) component of the native Windows application programming interface (API) that enables interaction between software objects, or executable code that implements one or more interfaces.(Citation: Fireeye Hunting COM June 2019) Through COM, a client object can call methods of server objects, which are typically binary Dynamic Link Libraries (DLL) or executables (EXE).(Citation: Microsoft COM) Remote COM execution is facilitated by [Remote Services](https://attack.mitre.org/techniques/T1021) such as  [Distributed Component Object Model](https://attack.mitre.org/techniques/T1021/003) (DCOM).(Citation: Fireeye Hunting COM June 2019)\n\nVarious COM interfaces are exposed that can be abused to invoke arbitrary execution via a variety of programming languages such as C, C++, Java, and [Visual Basic](https://attack.mitre.org/techniques/T1059/005).(Citation: Microsoft COM) Specific COM objects also exist to directly perform functions beyond code execution, such as creating a [Scheduled Task/Job](https://attack.mitre.org/techniques/T1053), fileless download/execution, and other adversary behaviors related to privilege escalation and persistence.(Citation: Fireeye Hunting COM June 2019)(Citation: ProjectZero File Write EoP Apr 2018)",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "x_mitre_detection": "Monitor for COM objects loading DLLs and other modules not typically associated with the application.(Citation: Enigma Outlook DCOM Lateral Movement Nov 2017) Enumeration of COM objects, via [Query Registry](https://attack.mitre.org/techniques/T1012) or [PowerShell](https://attack.mitre.org/techniques/T1059/001), may also proceed malicious use.(Citation: Fireeye Hunting COM June 2019)(Citation: Enigma MMC20 COM Jan 2017)\n\nMonitor for spawning of processes associated with COM objects, especially those invoked by a user different than the one currently logged on. ",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "1.1",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Script: Script Execution",
+        "Module: Module Load",
+        "Process: Process Creation"
+      ],
+      "x_mitre_remote_support": true,
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3ccef7ae-cb5e-48f6-8302-897105fbf55c",
+      "created": "2017-12-14T16:46:06.044Z",
+      "modified": "2022-05-05T04:05:42.508Z",
+      "x_mitre_platforms": [
+        "Windows",
+        "Linux",
+        "macOS"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Matthew Demaske, Adaptforward",
+        "Red Canary"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.1",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140",
+          "url": "https://attack.mitre.org/techniques/T1140"
+        },
+        {
+          "source_name": "Volexity PowerDuke November 2016",
+          "url": "https://www.volexity.com/blog/2016/11/09/powerduke-post-election-spear-phishing-campaigns-targeting-think-tanks-and-ngos/",
+          "description": "Adair, S.. (2016, November 9). PowerDuke: Widespread Post-Election Spear Phishing Campaigns Targeting Think Tanks and NGOs. Retrieved January 11, 2017."
+        },
+        {
+          "source_name": "Malwarebytes Targeted Attack against Saudi Arabia",
+          "url": "https://blog.malwarebytes.com/cybercrime/social-engineering-cybercrime/2017/03/new-targeted-attack-saudi-arabia-government/",
+          "description": "Malwarebytes Labs. (2017, March 27). New targeted attack against Saudi Arabia Government. Retrieved July 3, 2017."
+        },
+        {
+          "source_name": "Carbon Black Obfuscation Sept 2016",
+          "url": "https://www.carbonblack.com/2016/09/23/security-advisory-variants-well-known-adware-families-discovered-include-sophisticated-obfuscation-techniques-previously-associated-nation-state-attacks/",
+          "description": "Tedesco, B. (2016, September 23). Security Alert Summary. Retrieved February 12, 2018."
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may use [Obfuscated Files or Information](https://attack.mitre.org/techniques/T1027) to hide artifacts of an intrusion from analysis. They may require separate mechanisms to decode or deobfuscate that information depending on how they intend to use it. Methods for doing that include built-in functionality of malware or by using utilities present on the system.\n\nOne such example is use of [certutil](https://attack.mitre.org/software/S0160) to decode a remote access tool portable executable file that has been hidden inside a certificate file. (Citation: Malwarebytes Targeted Attack against Saudi Arabia) Another example is using the Windows <code>copy /b</code> command to reassemble binary fragments into a malicious payload. (Citation: Carbon Black Obfuscation Sept 2016)\n\nSometimes a user's action may be required to open it for deobfuscation or decryption as part of [User Execution](https://attack.mitre.org/techniques/T1204). The user may also be required to input a password to open a password protected compressed/encrypted file that was provided by the adversary. (Citation: Volexity PowerDuke November 2016)",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Deobfuscate/Decode Files or Information",
+      "x_mitre_detection": "Detecting the action of deobfuscating or decoding files or information may be difficult depending on the implementation. If the functionality is contained within malware and uses the Windows API, then attempting to detect malicious behavior before or after the action may yield better results than attempting to perform analysis on loaded libraries or API calls. If scripts are used, then collecting the scripts for analysis may be necessary. Perform process and command-line monitoring to detect potentially malicious behavior related to scripts and system utilities such as [certutil](https://attack.mitre.org/software/S0160).\n\nMonitor the execution file paths and command-line arguments for common archive file applications and extensions, such as those for Zip and RAR archive tools, and correlate with other suspicious behavior to reduce false positives from normal user and administrator behavior.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_data_sources": [
+        "Process: Process Creation",
+        "File: File Modification",
+        "Script: Script Execution"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Anti-virus",
+        "Host Intrusion Prevention Systems",
+        "Signature-based Detection",
+        "Network Intrusion Detection System"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ea4c2f9c-9df1-477c-8c42-6da1118f2ac4",
+      "created": "2022-08-22T20:42:08.498Z",
+      "modified": "2022-08-23T18:32:46.899Z",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.0",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.007",
+          "url": "https://attack.mitre.org/techniques/T1027/007"
+        },
+        {
+          "source_name": "Huntress API Hash",
+          "url": "https://www.huntress.com/blog/hackers-no-hashing-randomizing-api-hashes-to-evade-cobalt-strike-shellcode-detection",
+          "description": "Brennan, M. (2022, February 16). Hackers No Hashing: Randomizing API Hashes to Evade Cobalt Strike Shellcode Detection. Retrieved August 22, 2022."
+        },
+        {
+          "source_name": "BlackHat API Packers",
+          "url": "https://www.blackhat.com/docs/us-15/materials/us-15-Choi-API-Deobfuscator-Resolving-Obfuscated-API-Functions-In-Modern-Packers.pdf",
+          "description": "Choi, S. (2015, August 6). Obfuscated API Functions in Modern Packers. Retrieved August 22, 2022."
+        },
+        {
+          "source_name": "Drakonia HInvoke",
+          "url": "https://dr4k0nia.github.io/dotnet/coding/2022/08/10/HInvoke-and-avoiding-PInvoke.html?s=03",
+          "description": "drakonia. (2022, August 10). HInvoke and avoiding PInvoke. Retrieved August 22, 2022."
+        },
+        {
+          "source_name": "IRED API Hashing",
+          "url": "https://www.ired.team/offensive-security/defense-evasion/windows-api-hashing-in-malware",
+          "description": "spotheplanet. (n.d.). Windows API Hashing in Malware. Retrieved August 22, 2022."
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may obfuscate then dynamically resolve API functions called by their malware in order to conceal malicious functionalities and impair defensive analysis. Malware commonly uses various [Native API](https://attack.mitre.org/techniques/T1106) functions provided by the OS to perform various tasks such as those involving processes, files, and other system artifacts.\n\nAPI functions called by malware may leave static artifacts such as strings in payload files. Defensive analysts may also uncover which functions a binary file may execute via an import address table (IAT) or other structures that help dynamically link calling code to the shared modules that provide functions.(Citation: Huntress API Hash)(Citation: IRED API Hashing)\n\nTo avoid static or other defensive analysis, adversaries may use dynamic API resolution to conceal malware characteristics and functionalities. Similar to [Software Packing](https://attack.mitre.org/techniques/T1027/002), dynamic API resolution may change file signatures and obfuscate malicious API function calls until they are resolved and invoked during runtime.\n\nVarious methods may be used to obfuscate malware calls to API functions. For example, hashes of function names are commonly stored in malware in lieu of literal strings. Malware can use these hashes (or other identifiers) to manually reproduce the linking and loading process using functions such as `GetProcAddress()` and `LoadLibrary()`. These hashes/identifiers can also be further obfuscated using encryption or other string manipulation tricks (requiring various forms of [Deobfuscate/Decode Files or Information](https://attack.mitre.org/techniques/T1140) during execution).(Citation: BlackHat API Packers)(Citation: Drakonia HInvoke)(Citation: Huntress API Hash)",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Dynamic API Resolution",
+      "x_mitre_detection": "",
+      "kill_chain_phases": [
+        {
+          "phase_name": "defense-evasion",
+          "kill_chain_name": "mitre-attack"
+        }
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_data_sources": [
+        "Module: Module Load",
+        "File: File Metadata",
+        "Process: OS API Execution"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--32901740-b42c-4fdd-bc02-345b5dc57082",
+      "created": "2020-02-05T16:27:37.784Z",
+      "modified": "2022-09-22T19:13:52.548Z",
+      "name": "Code Signing",
+      "description": "Adversaries may create, acquire, or steal code signing materials to sign their malware or tools. Code signing provides a level of authenticity on a binary from the developer and a guarantee that the binary has not been tampered with. (Citation: Wikipedia Code Signing) The certificates used during an operation may be created, acquired, or stolen by the adversary. (Citation: Securelist Digital Certificates) (Citation: Symantec Digital Certificates) Unlike [Invalid Code Signature](https://attack.mitre.org/techniques/T1036/001), this activity will result in a valid signature.\n\nCode signing to verify software on first run can be used on modern Windows and macOS systems. It is not used on Linux due to the decentralized nature of the platform. (Citation: Wikipedia Code Signing)(Citation: EclecticLightChecksonEXECodeSigning)\n\nCode signing certificates may be used to bypass security policies that require signed code to execute on a system. ",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_detection": "Collect and analyze signing certificate metadata on software that executes within the environment to look for unusual certificate characteristics and outliers.",
+      "x_mitre_platforms": [
+        "macOS",
+        "Windows"
+      ],
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_deprecated": false,
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_version": "1.1",
+      "x_mitre_data_sources": [
+        "File: File Metadata"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Windows User Account Control"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "revoked": false,
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1553/002",
+          "external_id": "T1553.002"
+        },
+        {
+          "source_name": "EclecticLightChecksonEXECodeSigning",
+          "description": "Howard Oakley. (2020, November 16). Checks on executable code in Catalina and Big Sur: a first draft. Retrieved September 21, 2022.",
+          "url": "https://eclecticlight.co/2020/11/16/checks-on-executable-code-in-catalina-and-big-sur-a-first-draft/"
+        },
+        {
+          "source_name": "Securelist Digital Certificates",
+          "description": "Ladikov, A. (2015, January 29). Why You Shouldn’t Completely Trust Files Signed with Digital Certificates. Retrieved March 31, 2016.",
+          "url": "https://securelist.com/why-you-shouldnt-completely-trust-files-signed-with-digital-certificates/68593/"
+        },
+        {
+          "source_name": "Symantec Digital Certificates",
+          "description": "Shinotsuka, H. (2013, February 22). How Attackers Steal Private Keys from Digital Certificates. Retrieved March 31, 2016.",
+          "url": "http://www.symantec.com/connect/blogs/how-attackers-steal-private-keys-digital-certificates"
+        },
+        {
+          "source_name": "Wikipedia Code Signing",
+          "description": "Wikipedia. (2015, November 10). Code Signing. Retrieved March 31, 2016.",
+          "url": "https://en.wikipedia.org/wiki/Code_signing"
+        }
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--42e8de7b-37b2-4258-905a-6897815e58e0",
+      "created": "2017-05-31T21:30:38.511Z",
+      "modified": "2022-05-05T04:56:08.978Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows",
+        "Containers"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "x_mitre_contributors": [
+        "Oleg Kolesnikov, Securonix",
+        "Nick Carr, Mandiant",
+        "David Lu, Tripwire",
+        "Felipe Espósito, @Pr0teus",
+        "Elastic",
+        "Bartosz Jerzman"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "x_mitre_version": "1.4",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036",
+          "url": "https://attack.mitre.org/techniques/T1036"
+        },
+        {
+          "source_name": "Twitter ItsReallyNick Masquerading Update",
+          "url": "https://twitter.com/ItsReallyNick/status/1055321652777619457",
+          "description": "Carr, N.. (2018, October 25). Nick Carr Status Update Masquerading. Retrieved April 22, 2019."
+        },
+        {
+          "source_name": "Elastic Masquerade Ball",
+          "url": "http://pages.endgame.com/rs/627-YBU-612/images/EndgameJournal_The%20Masquerade%20Ball_Pages_R2.pdf",
+          "description": "Ewing, P. (2016, October 31). How to Hunt: The Masquerade Ball. Retrieved October 31, 2016."
+        },
+        {
+          "source_name": "LOLBAS Main Site",
+          "url": "https://lolbas-project.github.io/",
+          "description": "LOLBAS. (n.d.). Living Off The Land Binaries and Scripts (and also Libraries). Retrieved February 10, 2020."
+        },
+        {
+          "url": "https://capec.mitre.org/data/definitions/177.html",
+          "source_name": "capec",
+          "external_id": "CAPEC-177"
+        }
+      ],
+      "x_mitre_deprecated": false,
+      "revoked": false,
+      "description": "Adversaries may attempt to manipulate features of their artifacts to make them appear legitimate or benign to users and/or security tools. Masquerading occurs when the name or location of an object, legitimate or malicious, is manipulated or abused for the sake of evading defenses and observation. This may include manipulating file metadata, tricking users into misidentifying the file type, and giving legitimate task or service names.\n\nRenaming abusable system utilities to evade security monitoring is also a form of [Masquerading](https://attack.mitre.org/techniques/T1036).(Citation: LOLBAS Main Site)",
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "name": "Masquerading",
+      "x_mitre_detection": "Collect file hashes; file names that do not match their expected hash are suspect. Perform file monitoring; files with known names but in unusual locations are suspect. Likewise, files that are modified outside of an update or patch are suspect.\n\nIf file names are mismatched between the file name on disk and that of the binary's PE metadata, this is a likely indicator that a binary was renamed after it was compiled. Collecting and comparing disk and resource filenames for binaries by looking to see if the InternalName, OriginalFilename, and/or ProductName match what is expected could provide useful leads, but may not always be indicative of malicious activity. (Citation: Elastic Masquerade Ball) Do not focus on the possible names a file could have, but instead on the command-line arguments that are known to be used and are distinct because it will have a better rate of detection.(Citation: Twitter ItsReallyNick Masquerading Update)\n\nLook for indications of common characters that may indicate an attempt to trick users into misidentifying the file type, such as a space as the last character of a file name or the right-to-left override characters\"\\u202E\", \"[U+202E]\", and \"%E2%80%AE”.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "x_mitre_is_subtechnique": false,
+      "x_mitre_data_sources": [
+        "Service: Service Creation",
+        "Scheduled Job: Scheduled Job Metadata",
+        "Scheduled Job: Scheduled Job Modification",
+        "Service: Service Metadata",
+        "File: File Metadata",
+        "Image: Image Metadata",
+        "Command: Command Execution",
+        "Process: Process Metadata",
+        "File: File Modification"
+      ],
+      "x_mitre_defense_bypassed": [
+        "Application Control"
+      ],
+      "x_mitre_attack_spec_version": "2.1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--df8b2a25-8bdf-4856-953c-a04372b1c161",
+      "created": "2020-03-15T16:13:46.151Z",
+      "modified": "2020-03-26T20:15:35.821Z",
+      "x_mitre_platforms": [
+        "Linux",
+        "macOS",
+        "Windows"
+      ],
+      "x_mitre_domains": [
+        "enterprise-attack"
+      ],
+      "object_marking_refs": [
+        "marking-definition--fa42a846-8d90-4e51-bc29-71d5b4802168"
+      ],
+      "created_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001",
+          "url": "https://attack.mitre.org/techniques/T1071/001"
+        },
+        {
+          "url": "https://arxiv.org/ftp/arxiv/papers/1408/1408.1136.pdf",
+          "description": "Gardiner, J.,  Cova, M., Nagaraja, S. (2014, February). Command & Control Understanding, Denying and Detecting. Retrieved April 20, 2016.",
+          "source_name": "University of Birmingham C2"
+        }
+      ],
+      "name": "Web Protocols",
+      "description": "Adversaries may communicate using application layer protocols associated with web traffic to avoid detection/network filtering by blending in with existing traffic. Commands to the remote system, and often the results of those commands, will be embedded within the protocol traffic between the client and server. \n\nProtocols such as HTTP and HTTPS that carry web traffic may be very common in environments. HTTP/S packets have many fields and headers in which data can be concealed. An adversary may abuse these protocols to communicate with systems under their control within a victim network while also mimicking normal, expected traffic. ",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "x_mitre_detection": "Analyze network data for uncommon data flows (e.g., a client sending significantly more data than it receives from a server). Processes utilizing the network that do not normally have network communication or have never been seen before are suspicious. Analyze packet contents to detect application layer protocols that do not follow the expected protocol standards regarding syntax, structure, or any other variable adversaries could leverage to conceal data.(Citation: University of Birmingham C2)\n\nMonitor for web traffic to/from known-bad or suspicious domains. ",
+      "x_mitre_is_subtechnique": true,
+      "x_mitre_version": "1.0",
+      "x_mitre_modified_by_ref": "identity--c78cb6e5-0c4b-4611-8297-d1b8b55e40b5",
+      "x_mitre_data_sources": [
+        "Network Traffic: Network Traffic Flow",
+        "Network Traffic: Network Traffic Content"
+      ],
+      "x_killchain": "mitre-attack"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--352cbe20-d250-470d-a6d9-3c4ae142f350",
+      "created": "2025-04-03T13:36:45.573Z",
+      "modified": "2025-04-03T13:36:45.573Z",
+      "object_marking_refs": [
+        "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+      ],
+      "created_by_ref": "identity--a2c0f893-512d-4dff-bd00-4e7c6f78fda4",
+      "name": "Malware Analysis Report: DAMASCENED PEACOCK",
+      "description": "A lightweight, staged downloader targeting Windows delivered via spear-phishing.\n•\tDAMASCENED PEACOCK is a lightweight downloader targeting Windows. \n•\tThe analysed sample was for 32-bit (x86) Windows. It supports downloading a 64-bit onward stage. \n•\tThe malware was observed in a spear-phishing campaign which took place in late 2024.\n•\tDAMASCENED PEACOCK is downloaded and executed by a code signed first stage.\n•\tDAMASCENED PEACOCK is the second of 3 stages and is responsible for downloading the final stage and executing it via a COM Hijack.\n•\tDAMASCENED PEACOCK implements Defence Evasion techniques such as XOR based string obfuscation and dynamic resolution of Win32 APIs.",
+      "published": "2025-04-03T13:36:45.573Z",
+      "external_references": [
+        {
+          "source_name": "NCSC",
+          "external_id": "NCSC/MAR/DAMASCENED_PEACOCK"
+        }
+      ],
+      "report_types": [
+        "malware"
+      ],
+      "object_refs": [
+        "malware--1af076d3-54b4-4153-ace3-3a864c16a45f",
+        "attack-pattern--c92641d6-549f-4639-abe9-094ca37e2a50",
+        "relationship--d1900dca-e8f4-451b-ab99-acf04dbe9d9c",
+        "relationship--fe29ded8-e188-4497-8db6-0cdfc0cbaa88",
+        "attack-pattern--c95f7f36-d004-49f4-8e82-78557c00aabb",
+        "relationship--c23394ca-a0b7-4d3a-94c8-25c2f4e20eb9",
+        "relationship--93509f7f-c2b5-48a3-9804-d1882659441d",
+        "attack-pattern--41e2ccfa-56d3-4f01-a56e-c792ef14db8a",
+        "relationship--d079f68b-0719-40c6-b0ff-b7f7d8a33990",
+        "relationship--3ab9e697-4a2d-4607-a68a-d916bdd2a0ed",
+        "attack-pattern--dc3989b7-99bd-4260-9659-4502354bd07d",
+        "relationship--9cf0b79d-dd78-4968-aaf4-ce390853cc6b",
+        "relationship--d15484e1-3d66-435c-b98f-d9f443cb48f0",
+        "attack-pattern--49d6f74d-4f2a-483e-9fa9-1f7c4ee8d2e5",
+        "relationship--fbfe7870-61ca-421a-9d4c-81de5d74b6d9",
+        "relationship--8b4e9f46-74b0-4503-8a49-63ec08178f78",
+        "attack-pattern--70f29cef-4a26-451a-abfe-f7355ec47683",
+        "relationship--d7b0fcd1-4c6b-4009-87a7-d7bf9600b8ad",
+        "relationship--6bb76d28-becf-425e-b86d-05bdecd9d809",
+        "attack-pattern--d09fcb08-1480-439a-b90b-df028114def2",
+        "relationship--03be75d4-ebb3-4b22-908b-11f7dc045ded",
+        "relationship--adad82cf-31cf-4d14-8ae4-2c5c7b763dc3",
+        "attack-pattern--8d558684-075b-49c3-a3f3-34c01fecfb13",
+        "relationship--c219ce16-1488-4014-8c19-10f34207389b",
+        "relationship--cf578c76-4dfe-4526-9b2a-cdcb728c21bf",
+        "attack-pattern--936b4554-1e42-461b-9d5d-1e1d346dfa54",
+        "relationship--71bb2ed9-9d37-4e32-b7bb-4a20eea6fad0",
+        "relationship--c70c796a-b788-464e-bcd7-b1c6eff3e8da",
+        "relationship--f0dd1ed7-37d1-40f1-b63f-f97cc7972031",
+        "relationship--bd47fe65-3f96-473f-9ea7-31c2cf8aab60",
+        "relationship--e7bcbe48-bb96-4824-b637-953bcf7890be",
+        "relationship--925a008f-516c-4d9c-8cb8-c5832891b5a4",
+        "relationship--86213da3-e4f0-4405-a8b3-c6281aa58107",
+        "relationship--12fa1fd0-1801-41cb-9639-e2a1a9eb47ac",
+        "relationship--70825e4b-473d-4897-b11f-01afc49e388e",
+        "relationship--204b9fce-57cb-49a1-9ac9-f628d862d84e",
+        "relationship--99abfb0f-9efb-4b66-ad95-908b2c7bd375",
+        "relationship--77a0bb99-40df-4060-a76a-017b34e643c9",
+        "relationship--c8ee3755-2a4c-468e-9a59-ba55bb08fa5d",
+        "relationship--f31d4667-d41f-4808-a7df-fea0915f2cae",
+        "indicator--4c05f9a8-7873-4de6-933a-45f828a2602d",
+        "relationship--c9da64c8-5263-485a-9684-f938990f3a84",
+        "indicator--8497b4f9-bae5-481e-895e-ef4ddd657db9",
+        "relationship--e0b91e34-a3fe-4fb8-bc96-645ad4aefef2",
+        "indicator--74e2b02e-0406-4075-a074-1a38a45883e2",
+        "relationship--a1a44618-0b9e-4eb6-89ff-410236589ea4",
+        "indicator--befe8ce8-d755-4f26-9ea9-942469439643",
+        "relationship--782bec47-0947-4be6-ab8e-b534e982e52f",
+        "indicator--6e4eabd7-1fa1-4fb6-9b7d-b1ea49cc3d69",
+        "relationship--aef3da50-c2df-45f9-9b3d-e665559cd602",
+        "indicator--776bcb5b-08f7-4a68-b362-e13a5c66c794",
+        "relationship--b49e20ad-0611-4cba-a3e3-7bdf2eddb02a",
+        "indicator--c927c5c8-6bf3-4ba4-9a0b-bb5a57302b78",
+        "relationship--3a736678-ed8f-4355-a58b-45f84f367992",
+        "relationship--88a94a08-5862-4d3a-891f-c1da90be9f9b",
+        "relationship--01fa8c4b-48b3-4bb4-8c71-9c15aa45b674",
+        "relationship--6f90667c-a273-4d01-87b6-90af02bf2f97",
+        "relationship--62f6dc06-bea1-407e-8ff1-3b301b349ec7",
+        "indicator--f217d562-04cf-4c11-8801-43507c564f37",
+        "relationship--f7d46286-ea80-4392-aadd-838a1c17ad28",
+        "relationship--c7baf734-a4a4-4eb3-8489-07b826ae3a82",
+        "relationship--15628dd8-4249-4fab-a2e3-6eac9ff4c32f",
+        "relationship--5ff72354-7642-444a-b9e5-c159bf5dadbc",
+        "relationship--dc81b262-fc6e-4168-af34-8ec2dd04e77a",
+        "indicator--35ea2365-cfd7-49cb-8f82-584a27547ed3",
+        "relationship--ea686a80-5133-473c-9a15-596d4e64fd29",
+        "relationship--953ec5de-8fc5-4680-a8d1-156e094a2068",
+        "relationship--b2e89fbe-350b-44bf-a5db-655f3525ed8f",
+        "relationship--9756f21b-f40c-4e5a-be90-9422eaeb5542",
+        "relationship--75c03c58-c06e-444e-ae23-0607e02665d0",
+        "indicator--b49967a3-ec4b-4329-927d-e1269f16d8ac",
+        "relationship--9351169f-c090-46ef-89d9-6e213330e7a7",
+        "relationship--d1e98c83-2f83-49f0-a578-d73a432be23c",
+        "relationship--b3d769e9-4e8e-48a4-8bc4-5caef779679a",
+        "relationship--e6a5d34b-02a3-49b5-b8f7-7d0e6264f117",
+        "relationship--6b9f9b6f-540b-456c-8151-dcc5744f8687",
+        "indicator--02767b71-076c-4ecf-9831-6475366f6dc8",
+        "relationship--012e421e-2134-4293-9d5d-d4cba59c7711",
+        "relationship--9d2af74b-c918-4dd8-aed5-8902beb5847c",
+        "relationship--d651f9c8-8233-467f-91d3-191b1d1e22b7",
+        "relationship--e65127d9-626a-4cab-9aa3-064c74921c2a",
+        "indicator--230a62e1-651f-4148-a299-dbedf33247a1",
+        "relationship--905eb8b3-2177-4846-bfd8-ff46b719792c",
+        "relationship--bc96301a-51b8-47b5-b312-9988673a1c32",
+        "relationship--73e11ff7-1ea3-45c0-9ca2-9c19324a8165",
+        "relationship--deb41d99-d51d-43ae-a8e0-b0516d2d3864",
+        "indicator--c45409f6-8a31-477c-90d4-95e14b5e5a62",
+        "relationship--b4ff3c92-e229-4fa5-9b72-2b1897138711",
+        "relationship--52944825-ab2e-43c5-b82b-038b53b22fc7",
+        "relationship--4a2b69f9-3cdd-4ec1-91e5-5c5b4d78565b",
+        "relationship--51205851-e876-4b4c-9034-3518879165e4",
+        "indicator--1d08d4b7-f0a8-4ed1-9273-851acb7d6673",
+        "relationship--0857e2a8-4d10-4724-969b-de7cf86baaee",
+        "relationship--793b3f47-b013-4b91-916b-a4eaa1cb7187",
+        "relationship--f485f1c3-1df5-4c46-acf9-b618b62704e4",
+        "relationship--0ab4c466-e33d-45d9-bd28-93ed2db00399"
+      ],
+      "x_version": ""
+    }
+  ]
+}

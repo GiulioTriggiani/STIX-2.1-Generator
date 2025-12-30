@@ -1,0 +1,953 @@
+{
+    "type": "bundle",
+    "id": "bundle--cfd5f2b4-74c3-44f8-a424-bb1fbe0b4912",
+    "objects": [
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771",
+            "created": "2023-08-11T15:46:15.983Z",
+            "extensions": {
+                "extension-definition--3a65884d-005a-4290-8335-cb2d778a83ce": {
+                    "access_privilege": [
+                        {
+                            "privilege_action": "CISAUSES",
+                            "privilege_scope": {
+                                "entity": [
+                                    "ALL"
+                                ],
+                                "permitted_nationalities": [
+                                    "ALL"
+                                ],
+                                "permitted_organizations": [
+                                    "ALL"
+                                ],
+                                "shareability": [
+                                    "ALL"
+                                ]
+                            },
+                            "rule_effect": "permit"
+                        }
+                    ],
+                    "authority_reference": [
+                        "urn:isa:authority:ais"
+                    ],
+                    "control_set": {
+                        "classification": "U",
+                        "formal_determination": [
+                            "INFORMATION-DIRECTLY-RELATED-TO-CYBERSECURITY-THREAT",
+                            "PUBREL"
+                        ]
+                    },
+                    "create_date_time": "2023-08-11T15:46:15.983Z",
+                    "extension_type": "property-extension",
+                    "further_sharing": [
+                        {
+                            "sharing_scope": [
+                                "USA.USG"
+                            ],
+                            "rule_effect": "permit"
+                        }
+                    ],
+                    "identifier": "isa:guide.19001.GEMINI-a9bdb603-7f4f-44c6-acb0-d47f614e64b2",
+                    "policy_reference": "urn:isa:policy:acs:ns:v3.0?privdefault=deny&sharedefault=deny",
+                    "responsible_entity_custodian": "USA.DHS.CISA.CSD.TH.CMA",
+                    "responsible_entity_originator": "USA.DHS.CISA.CSD.TH.CMA"
+                }
+            }
+        },
+        {
+            "type": "identity",
+            "spec_version": "2.1",
+            "id": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created_by_ref": "identity--42ac3c92-60d2-418f-ba8e-838944e6110b",
+            "created": "2023-04-12T17:53:09.646Z",
+            "modified": "2023-04-12T17:53:09.646Z",
+            "name": "GeminiProduction_CMA",
+            "description": "Cybersecurity and Infrastructure Security Agency Production Identity. Code and Media Analysis.",
+            "identity_class": "system",
+            "confidence": 100,
+            "lang": "en",
+            "object_marking_refs": [
+                "marking-definition--bab4a63c-aed9-4cf5-a766-dfca5abac2bb"
+            ]
+        },
+        {
+            "type": "file",
+            "spec_version": "2.1",
+            "id": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f",
+            "hashes": {
+                "MD5": "fd41134e8ead1c18ccad27c62a260aa6",
+                "SHA-1": "04423659f175a6878b26ac7d6b6e47c6fd9194d1",
+                "SHA-256": "edc0c63065e88ec96197c8d7a40662a15a812a9583dc6c82b18ecd7e43b13b70",
+                "SHA-512": "df55591e730884470afba688e17c83fafb157ecf94c9f10a20e21f229434ea58b59f8eb771f8f9e29993f43f4969fe66dd913128822b534c9b1a677453dbb93c",
+                "SSDEEP": "49152:99z0w/qP1dKPzeietmd64H9QaIG0aYkn0GzkWVISaJUET6qyxASuOszP7hn+S6wB:v0R9dKSiekd68ZIQ0obVI9UG6qyuhF6"
+            },
+            "size": 2840064,
+            "name": "BrightmetricAgent.exe",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ]
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--8d2798fd-e132-4329-8f73-25f182870491",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "adaware",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Generic.Trojan.Volt.Marte.A.05F91E9C",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--362dae3e-714d-4d1c-bb0c-2e00d23d302e",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "antiy",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "GrayWare/Win32.Kryptik.ffp",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--30fb0f7a-0175-4166-8a34-8611ae46480b",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "bitdefender",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Generic.Trojan.Volt.Marte.A.05F91E9C",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--8a6c18e4-0113-43f9-8449-dd1457556ffa",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "eset",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "a variant of WinGo/HackTool.Agent.Y trojan",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--6f07941c-229c-4dc5-a8d5-ca6e943f304b",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "emsisoft",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Generic.Trojan.Volt.Marte.A.05F91E9C (B)",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--ec923639-4eb5-44c2-8e1b-ae944dfbf97e",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "ikarus",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Trojan.WinGo.Rozena",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--f01dad62-28ec-482a-9345-8e8b7dee926e",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "microsoftdefender",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Malware",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--32676cc5-af5b-4ce7-9cc0-032e3a006045",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "sophos",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "App/FRProxy-F",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--3751d849-580c-4957-962a-797fce936b59",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "varist",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "W64/Agent.FXW.gen!Eldorado",
+            "result": "unknown",
+            "sample_ref": "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--d27d9d36-b2e4-4731-aa2b-64a74719accc",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "description": "This artifact is a cross platform full featured FRP that is written in GO language (Golang) and packed using Ultimate Packer for Executables (UPX). This utility can be used to locate servers behind a network firewall or obscured through NAT. It includes the KCP (no acronym) network protocol that allows for error-checked and anonymous delivery of data streams using the User Datagram Protocol (UDP) with packet level encryption support.\r\n\r\nThe program contains two different multiplexer libraries that can bi-directionally stream data over a NAT\u2019d network. It also contains a command line interface (CLI) library that can leverage command shells such as PowerShell, Windows Management Instrumentation (WMI), and Z Shell (zsh). In addition, the utility features a unique capability that detects if the utility is executed from the command line or by double-clicking. \r\n\r\nBy default it is configured to connect to an Internet Protocol (IP) address on Transmission Control Protocol (TCP) port 1080. It must receive a specially formed packet from the C2 for the utility to deploy on the system.",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": false,
+            "sample_refs": [
+                "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--d90030c2-8118-468d-a22e-6c62a5a3eb59",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "name": "BrightmetricAgent.exe",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='fd41134e8ead1c18ccad27c62a260aa6' OR file:hashes.'SHA-1'='04423659f175a6878b26ac7d6b6e47c6fd9194d1' OR file:hashes.'SHA-256'='edc0c63065e88ec96197c8d7a40662a15a812a9583dc6c82b18ecd7e43b13b70' OR file:hashes.'SHA-512'='df55591e730884470afba688e17c83fafb157ecf94c9f10a20e21f229434ea58b59f8eb771f8f9e29993f43f4969fe66dd913128822b534c9b1a677453dbb93c']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-05-17T12:34:39.727206Z"
+        },
+        {
+            "type": "file",
+            "spec_version": "2.1",
+            "id": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c",
+            "hashes": {
+                "MD5": "3a97d9b6f17754dcd38ca7fc89caab04",
+                "SHA-1": "ffb1d8ea3039d3d5eb7196d27f5450cac0ea4f34",
+                "SHA-256": "eaef901b31b5835035b75302f94fee27288ce46971c6db6221ecbea9ba7ff9d0",
+                "SHA-512": "d99941e4445efed5d4e407f91a9e5bba08d1be3f0dab065d1bfb4e70ab48d6526a730233d6889ba58de449f622e6a14e99dab853d40fc30a508627fd2735c973",
+                "SSDEEP": "384:ahXoLj9Zez0Bm4SUZa8WLLXyjSL2RtfAwj/yneIMUogQ:ahXoLhZez0m4SIabLLCmL2Rvj/yeIEg"
+            },
+            "size": 20480,
+            "name": "eaef901b31b5835035b75302f94fee27288ce46971c6db6221ecbea9ba7ff9d0",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ]
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--8f059731-8288-44fc-aa8a-060d37c8286a",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "adaware",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Unavailable (production)",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--0582d192-e0a7-40e0-8346-bc1f805d18a1",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "ahnlab",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Unwanted/Win32.Foundstone",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--86fe939c-1b4e-4426-812e-358e242b4228",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "antiy",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "HackTool[NetTool]/Win32.Portscan",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--6903ca2a-fd6c-41f7-9036-29287bead79a",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "bitdefender",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Unavailable (production)",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--acb07bf4-e8d6-4d5d-8da0-ba9e113ea92a",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "clamav",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Win.Trojan.Scanline-1",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--cbae47b7-fbb6-4c61-ad59-170562ec268c",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "comodo",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "ApplicUnwnt",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--ea7037a9-5cfd-49d4-9847-29d4bf7ccbee",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "cylance",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Malware",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--10720f7a-eb44-46b4-8c5b-63b1203df0a6",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "filseclab",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Hacktool.ScanLine.a.fsff",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--6046fdce-3c8e-4e1c-a282-239c9126c9d0",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "ikarus",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Virtool",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--fa271c1d-e32b-4db0-9807-b35d83de8722",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "mcafee",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Unavailable (production)",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--cd73bc51-74da-47a7-9429-c7f65b200c90",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "microsoftdefender",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Malware",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--d077a8dc-5cde-4d3d-807e-db71b9d8a059",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "nanoav",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Riskware.Win32.ScanLine.dhhus",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--080723ff-13d1-44d0-9edb-51feb62b68c0",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "quickheal",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Trojan.Win32",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--c5128bdb-0948-433a-ab9d-76b7da72c6b7",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "scrutiny",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Malware",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--86e7665d-d701-49e8-a43b-c45d4030ef83",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "sophos",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "App/ScanLn-A",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--3972107f-fc3b-4478-ac34-48b455980ec3",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "virusblokada",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Trojan.Genome.fl",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--6c7ff339-5ec9-442c-bb35-f9d08d1da13d",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "webrootsmd",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Unavailable (production)",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--6060020e-a491-4899-a782-d328b22f2426",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "zillya",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Tool.Portscan.Win32.77",
+            "result": "unknown",
+            "sample_ref": "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--5cfa5465-9db1-472b-bb22-fde56e7856cb",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "description": "This artifact is a command-line port scanning utility from Foundstone, Inc. called ScanLine, which is packed using UPX. It is used to scan for open UDP and TCP ports, grab banners from open ports, resolve IP addresses to host names, and bind to specified ports and IP addresses.",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": false,
+            "sample_refs": [
+                "file--70bfcb9c-8313-5dac-a096-ff7f5578721c"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--116914c0-8916-4a90-8d65-008307592c59",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "name": "eaef901b31b5835035b75302f94fee27288ce46971c6db6221ecbea9ba7ff9d0",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='3a97d9b6f17754dcd38ca7fc89caab04' OR file:hashes.'SHA-1'='ffb1d8ea3039d3d5eb7196d27f5450cac0ea4f34' OR file:hashes.'SHA-256'='eaef901b31b5835035b75302f94fee27288ce46971c6db6221ecbea9ba7ff9d0' OR file:hashes.'SHA-512'='d99941e4445efed5d4e407f91a9e5bba08d1be3f0dab065d1bfb4e70ab48d6526a730233d6889ba58de449f622e6a14e99dab853d40fc30a508627fd2735c973']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-05-17T12:34:40.54419Z"
+        },
+        {
+            "type": "file",
+            "spec_version": "2.1",
+            "id": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436",
+            "hashes": {
+                "MD5": "b1de37bf229890ac181bdef1ad8ee0c2",
+                "SHA-1": "ffdb3cc7ab5b01d276d23ac930eb21ffe3202d11",
+                "SHA-256": "99b80c5ac352081a64129772ed5e1543d94cad708ba2adc46dc4ab7a0bd563f1",
+                "SHA-512": "e41df636a36ac0cce38e7db5c2ce4d04a1a7f9bc274bdf808912d14067dc1ef478268035521d0d4b7bcf96facce7f515560b38a7ebe47995d861b9c482e07e25",
+                "SSDEEP": "98304:z2eyMq4PuR5d7wgdo0OFfnFJkEUCGdaQLhpYYEfRTl6sysy:ryxzbdo0ifnoEOdz9pY7j5"
+            },
+            "size": 3712512,
+            "name": "SMSvcService.exe",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "extensions": {
+                "windows-pebinary-ext": {
+                    "pe_type": "exe",
+                    "number_of_sections": 4,
+                    "time_date_stamp": "1970-01-01T00:00:00Z",
+                    "size_of_optional_header": 512,
+                    "sections": [
+                        {
+                            "name": "header",
+                            "size": 512,
+                            "entropy": 2.499747,
+                            "hashes": {
+                                "MD5": "7f8e8722da728b6e834260b5a314cbac"
+                            }
+                        },
+                        {
+                            "name": "UPX0",
+                            "size": 0,
+                            "entropy": 0.0,
+                            "hashes": {
+                                "MD5": "d41d8cd98f00b204e9800998ecf8427e"
+                            }
+                        },
+                        {
+                            "name": "UPX1",
+                            "size": 3711488,
+                            "entropy": 7.890727,
+                            "hashes": {
+                                "MD5": "f9943591918adeeeee7da80e4d985a49"
+                            }
+                        },
+                        {
+                            "name": "UPX2",
+                            "size": 512,
+                            "entropy": 1.371914,
+                            "hashes": {
+                                "MD5": "5c0061445ac2f8e6cadf694e54146914"
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--fed73fab-a24d-4c71-8e56-12f57d8d7280",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "adaware",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Generic.Trojan.Volt.Marte.A.105C517F",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--1a05e5d6-3f1e-4adb-8c0b-8d06247c7584",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "ahnlab",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "HackTool/Win.Frpc",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--953441ce-b7e4-4e26-8468-2fb6fe7f5962",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "antiy",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "GrayWare/Win32.Kryptik.ffp",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--648eb0f5-7fc1-47bc-bd7d-0cc7b483924b",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "bitdefender",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Generic.Trojan.Volt.Marte.A.105C517F",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--2951e4e4-ee53-41a6-808e-8be0c44ab599",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "eset",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "a variant of WinGo/Riskware.Frp.U application",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--ab4ca7ef-c130-4b9f-86e9-c78a1b511825",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "emsisoft",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Generic.Trojan.Volt.Marte.A.105C517F (B)",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--d6a2d0ae-daab-48bc-b0d2-7f178fdb7418",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "ikarus",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Trojan.WinGo.Shellcoderunner",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--724c26ac-692d-4d32-a4da-0908ad46493b",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "microsoftdefender",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "Malware",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--8259e2cd-9857-4ae4-8c4b-959a771eb885",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "sophos",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "App/FRProxy-F",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware-analysis",
+            "spec_version": "2.1",
+            "id": "malware-analysis--fee4eaa9-3d47-481c-83c8-a2f937fc0369",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "product": "varist",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "result_name": "W64/Agent.FXW.gen!Eldorado",
+            "result": "unknown",
+            "sample_ref": "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+        },
+        {
+            "type": "malware",
+            "spec_version": "2.1",
+            "id": "malware--964c61ba-97b1-4c4b-a075-02df40002076",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "description": "This artifact is a 64-bit Windows executable file that is packed using UPX. This packed file contains a compiled version of an open-source tool published on GitHub called \"FRPC\". The \"FRPC\" is a command-line tool written in Golang that is designed to open a reverse proxy between the compromised system and the TA's C2 server. \r\n\r\nWhen the \"FRPC\" is installed and executed on the compromised system, it attempts to establish a connection with the Fast Reverse Proxy Server (FRPS) using the reverse proxy method to allow the TA to control the compromised system. This \"FRPC\" application supports encryption, compression, and allows easy token authentication. It also supports the protocols below:\r\n\r\n--Begin protocols--\r\nTransmission Control Protocol (TCP)\r\nUser Datagram Protocol (UDP)\r\nAn alternative Hypertext Transfer Protocol (HTTP)\r\nAn alternative Hypertext Transfer Protocol Secure (HTTPS)\r\n--End protocols--\r\n\r\nDisplayed below is the \"FRPC\" tool configuration that contains the network communication method, the remote \"FRPS\" server's public Internet Protocol (IP) address and port numbers:  \r\n\r\n--Begin configuration--\r\n[common]\r\n\tserver_addr = 192.168.18.111\r\n\tserver_port = 8081\r\n\tserver_addrs = [Default IP addresses]\r\n\tserver_ports = 8443,8443,8443\r\n\ttoken = 1kyRdFmuk0i25JbCJmtift1c9VA05VBS\r\n\tprotocol = tcp\r\n\ttls_enable = true\r\n\tdisable_custom_tls_first_byte = true\r\n\tlog_level = debug\r\n\t\r\n\t[plugin_socks5]\r\n\ttype = tcp\r\n\tremote_port = 1080\r\n\tplugin = socks5\r\n\tuse_encryption = true\r\n\tuse_compression = true\r\n--End configuration--\r\n\r\nDisplayed below are the command-line usages and flags of the \"FRPC\" tool:\r\n\r\n--Begin usages and flags--\r\n\r\nUsage:\r\n  frpc [flags]\r\n  frpc [command]\r\n\r\nAvailable Commands:\r\n  help        Help about any command\r\n  tcp         Run frpc with a single tcp proxy\r\n  udp         Run frpc with a single udp proxy\r\n  verify      Verify that the configures is valid\r\n\r\nFlags:\r\n  -c, --config string   config file of frpc (default \"./frpc.ini\")\r\n  -h, --help            help for frpc\r\n  -v, --version         version of frpc\r\n\r\nUse \"frpc [command] --help\" for more information about a command.\r\n\r\n--------------------------------------------------------------------------------------------\r\nRun frpc with a single tcp proxy\r\n\r\nUsage:\r\n  frpc tcp [flags]\r\n\r\nFlags:\r\n      --disable_log_color    disable log color in console\r\n  -h, --help                 help for tcp\r\n  -i, --local_ip string      local ip (default \"127.0.0.1\")\r\n  -l, --local_port int       local port\r\n      --log_file string      console or file path (default \"console\")\r\n      --log_level string     log level (default \"info\")\r\n      --log_max_days int     log file reversed days (default 3)\r\n  -p, --protocol string      tcp or kcp or websocket (default \"tcp\")\r\n  -n, --proxy_name string    proxy name\r\n  -r, --remote_port int      remote port\r\n  -s, --server_addr string   frp server's address (default \"127.0.0.1:7000\")\r\n      --tls_enable           enable frpc tls\r\n  -t, --token string         auth token\r\n      --uc                   use compression\r\n      --ue                   use encryption\r\n  -u, --user string          user\r\n\r\nGlobal Flags:\r\n  -c, --config string   config file of frpc (default \"./frpc.ini\")\r\n  -v, --version         version of frpc\r\n\r\n-------------------------------------------------------------------------------------------------------------------\r\nRun frpc with a single udp proxy\r\n\r\nUsage:\r\n  frpc udp [flags]\r\n\r\nFlags:\r\n      --disable_log_color    disable log color in console\r\n  -h, --help                 help for udp\r\n  -i, --local_ip string      local ip (default \"127.0.0.1\")\r\n  -l, --local_port int       local port\r\n      --log_file string      console or file path (default \"console\")\r\n      --log_level string     log level (default \"info\")\r\n      --log_max_days int     log file reversed days (default 3)\r\n  -p, --protocol string      tcp or kcp or websocket (default \"tcp\")\r\n  -n, --proxy_name string    proxy name\r\n  -r, --remote_port int      remote port\r\n  -s, --server_addr string   frp server's address (default \"127.0.0.1:7000\")\r\n      --tls_enable           enable frpc tls\r\n  -t, --token string         auth token\r\n      --uc                   use compression\r\n      --ue                   use encryption\r\n  -u, --user string          user\r\n\r\nGlobal Flags:\r\n  -c, --config string   config file of frpc (default \"./frpc.ini\")\r\n  -v, --version         version of frpc\r\n----------------------------------------------------------------------------------------------------------------------------\r\nVerify that the configures is valid\r\n\r\nUsage:\r\n  frpc verify [flags]\r\n\r\nFlags:\r\n  -h, --help   help for verify\r\n\r\nGlobal Flags:\r\n  -c, --config string   config file of frpc (default \"./frpc.ini\")\r\n  -v, --version         version of frpc\r\n\r\n--End usages and flags--",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "malware_types": [
+                "trojan"
+            ],
+            "is_family": false,
+            "sample_refs": [
+                "file--6ee289fa-fe03-5ca5-bbdf-451603a31436"
+            ]
+        },
+        {
+            "type": "indicator",
+            "spec_version": "2.1",
+            "id": "indicator--af1df709-6ca1-46de-bf89-f67d6fc379d5",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "name": "SMSvcService.exe",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "pattern": "[file:hashes.'MD5'='b1de37bf229890ac181bdef1ad8ee0c2' OR file:hashes.'SHA-1'='ffdb3cc7ab5b01d276d23ac930eb21ffe3202d11' OR file:hashes.'SHA-256'='99b80c5ac352081a64129772ed5e1543d94cad708ba2adc46dc4ab7a0bd563f1' OR file:hashes.'SHA-512'='e41df636a36ac0cce38e7db5c2ce4d04a1a7f9bc274bdf808912d14067dc1ef478268035521d0d4b7bcf96facce7f515560b38a7ebe47995d861b9c482e07e25']",
+            "pattern_type": "stix",
+            "pattern_version": "2.1",
+            "valid_from": "2024-05-17T12:34:40.637321Z"
+        },
+        {
+            "type": "report",
+            "spec_version": "2.1",
+            "id": "report--25563b64-7e0b-4a6c-b8a3-ccddc41ae422",
+            "created_by_ref": "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+            "created": "2024-04-24T18:34:26.000Z",
+            "modified": "2024-04-24T18:34:26.000Z",
+            "name": "MAR-10448362.c1.v2",
+            "object_marking_refs": [
+                "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+                "marking-definition--d896763f-3f6f-4917-86e8-1a4b043d9771"
+            ],
+            "description": "CISA received three files for analysis obtained from a critical infrastructure compromised by the People\u2019s Republic of China (PRC) state-sponsored cyber group known as Volt Typhoon.\r\n\r\nThe submitted files enable discovery and command-and-control (C2): (1) An open source Fast Reverse Proxy Client (FRPC) tool used to open a reverse proxy between the compromised system and a Volt Typhoon C2 server; (2) a Fast Reverse Proxy (FRP) that can be used to reveal servers situated behind a network firewall or obscured through Network Address Translation (NAT); and (3) a publicly available port scanner called ScanLine.\r\n\r\nFor more information on Volt Typhoon see, joint Cybersecurity Advisory PRC State-Sponsored Actors Compromise, and Maintain Persistent Access to, U.S. Critical Infrastructure. For more information on PRC state-sponsored malicious cyber activity, see CISA\u2019s China Cyber Threat Overview and Advisories, webpage.",
+            "report_types": [
+                "observed-data",
+                "malware",
+                "indicator"
+            ],
+            "published": "2024-04-24T18:34:26Z",
+            "object_refs": [
+                "identity--8e112e72-aa8f-4190-a359-28a9abae2896",
+                "file--6f60abb6-c78c-5fa5-8275-08ed20ad058f",
+                "malware-analysis--8d2798fd-e132-4329-8f73-25f182870491",
+                "malware-analysis--362dae3e-714d-4d1c-bb0c-2e00d23d302e",
+                "malware-analysis--30fb0f7a-0175-4166-8a34-8611ae46480b",
+                "malware-analysis--8a6c18e4-0113-43f9-8449-dd1457556ffa",
+                "malware-analysis--6f07941c-229c-4dc5-a8d5-ca6e943f304b",
+                "malware-analysis--ec923639-4eb5-44c2-8e1b-ae944dfbf97e",
+                "malware-analysis--f01dad62-28ec-482a-9345-8e8b7dee926e",
+                "malware-analysis--32676cc5-af5b-4ce7-9cc0-032e3a006045",
+                "malware-analysis--3751d849-580c-4957-962a-797fce936b59",
+                "malware--d27d9d36-b2e4-4731-aa2b-64a74719accc",
+                "indicator--d90030c2-8118-468d-a22e-6c62a5a3eb59",
+                "file--70bfcb9c-8313-5dac-a096-ff7f5578721c",
+                "malware-analysis--8f059731-8288-44fc-aa8a-060d37c8286a",
+                "malware-analysis--0582d192-e0a7-40e0-8346-bc1f805d18a1",
+                "malware-analysis--86fe939c-1b4e-4426-812e-358e242b4228",
+                "malware-analysis--6903ca2a-fd6c-41f7-9036-29287bead79a",
+                "malware-analysis--acb07bf4-e8d6-4d5d-8da0-ba9e113ea92a",
+                "malware-analysis--cbae47b7-fbb6-4c61-ad59-170562ec268c",
+                "malware-analysis--ea7037a9-5cfd-49d4-9847-29d4bf7ccbee",
+                "malware-analysis--10720f7a-eb44-46b4-8c5b-63b1203df0a6",
+                "malware-analysis--6046fdce-3c8e-4e1c-a282-239c9126c9d0",
+                "malware-analysis--fa271c1d-e32b-4db0-9807-b35d83de8722",
+                "malware-analysis--cd73bc51-74da-47a7-9429-c7f65b200c90",
+                "malware-analysis--d077a8dc-5cde-4d3d-807e-db71b9d8a059",
+                "malware-analysis--080723ff-13d1-44d0-9edb-51feb62b68c0",
+                "malware-analysis--c5128bdb-0948-433a-ab9d-76b7da72c6b7",
+                "malware-analysis--86e7665d-d701-49e8-a43b-c45d4030ef83",
+                "malware-analysis--3972107f-fc3b-4478-ac34-48b455980ec3",
+                "malware-analysis--6c7ff339-5ec9-442c-bb35-f9d08d1da13d",
+                "malware-analysis--6060020e-a491-4899-a782-d328b22f2426",
+                "malware--5cfa5465-9db1-472b-bb22-fde56e7856cb",
+                "indicator--116914c0-8916-4a90-8d65-008307592c59",
+                "file--6ee289fa-fe03-5ca5-bbdf-451603a31436",
+                "malware-analysis--fed73fab-a24d-4c71-8e56-12f57d8d7280",
+                "malware-analysis--1a05e5d6-3f1e-4adb-8c0b-8d06247c7584",
+                "malware-analysis--953441ce-b7e4-4e26-8468-2fb6fe7f5962",
+                "malware-analysis--648eb0f5-7fc1-47bc-bd7d-0cc7b483924b",
+                "malware-analysis--2951e4e4-ee53-41a6-808e-8be0c44ab599",
+                "malware-analysis--ab4ca7ef-c130-4b9f-86e9-c78a1b511825",
+                "malware-analysis--d6a2d0ae-daab-48bc-b0d2-7f178fdb7418",
+                "malware-analysis--724c26ac-692d-4d32-a4da-0908ad46493b",
+                "malware-analysis--8259e2cd-9857-4ae4-8c4b-959a771eb885",
+                "malware-analysis--fee4eaa9-3d47-481c-83c8-a2f937fc0369",
+                "malware--964c61ba-97b1-4c4b-a075-02df40002076",
+                "indicator--af1df709-6ca1-46de-bf89-f67d6fc379d5"
+            ]
+        }
+    ]
+}

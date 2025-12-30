@@ -1,0 +1,4009 @@
+{
+    "type": "bundle",
+    "id": "bundle--5a398fac-9a3b-4d50-9a94-183a711e82b7",
+    "objects": [
+        {
+            "id": "location--0d598333-1b05-47e2-9438-da480f5ff76d",
+            "spec_version": "2.1",
+            "type": "location",
+            "country": "US",
+            "administrative_area": "US-DC",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+            "created": "2023-03-02T16:48:57.959Z",
+            "extensions": {
+                "extension-definition--3a65884d-005a-4290-8335-cb2d778a83ce": {
+                    "extension_type": "property-extension",
+                    "identifier": "isa:guide.19001.ACS3-9e0cd50e-6efc-45b3-8a3d-b6376541c9c5",
+                    "create_date_time": "2023-03-02T16:48:57.959Z",
+                    "responsible_entity_custodian": "USA.DHS.NCCIC",
+                    "responsible_entity_originator": "USA.DHS.NCCIC",
+                    "policy_reference": "urn:isa:policy:acs:ns:v3.0?privdefault=deny&sharedefault=permit",
+                    "control_set": {
+                        "classification": "U",
+                        "formal_determination": [
+                            "INFORMATION-DIRECTLY-RELATED-TO-CYBERSECURITY-THREAT",
+                            "PUBREL"
+                        ]
+                    },
+                    "authority_reference": [
+                        "urn:isa:authority:ais"
+                    ],
+                    "access_privilege": [
+                        {
+                            "privilege_action": "CISAUSES",
+                            "rule_effect": "permit",
+                            "privilege_scope": {
+                                "entity": [
+                                    "ALL"
+                                ],
+                                "permitted_nationalities": [
+                                    "ALL"
+                                ],
+                                "permitted_organizations": [
+                                    "ALL"
+                                ],
+                                "shareability": [
+                                    "ALL"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        {
+            "id": "attack-pattern--d5977c4b-d1ad-4f95-a814-3c6cc326e1e4",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Exploit Public-Facing Application",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1190",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1190"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--45e13a9e-cd0c-4f25-8efc-1dba4d2a94b9",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Phishing",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1566",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1566"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--7cc45930-905e-4726-aeef-67804e5122d4",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Valid Accounts",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1078",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1078"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--0f33624a-641c-4bb0-9208-a1cca3844e6d",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Command and Scripting Interpreter: PowerShell",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1059.001",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1059/001"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--34d7fa14-695a-4072-aef2-6715e69fc826",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Exploitation for Privilege Escalation",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1068",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1068"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--1b1cf167-98ec-433c-a7b9-d234765f0354",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Impair Defenses: Disable or Modify Tools",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1562.001",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1562/001"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--daea6874-45e5-4aa1-b284-0d69d19a0759",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Masquerading",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1036",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1036"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--186cc694-b514-4d3d-a25d-533b84546a0e",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Data Encrypted for Impact",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1486",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1486"
+                }
+            ]
+        },
+        {
+            "id": "attack-pattern--fb528209-9b6e-49d0-b4bc-513f9a52002d",
+            "type": "attack-pattern",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "spec_version": "2.1",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "name": "Inhibit System Recovery",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "external_references": [
+                {
+                    "external_id": "T1490",
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/techniques/T1490"
+                }
+            ]
+        },
+        {
+            "id": "indicator--f7b213b8-99e8-48d5-94fa-f19ccd7ea428",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "Url Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[url:value = 'fy9.36c44903529fa273afff3c9b7ef323432e223d22ae1d625c4a3957d57.015c16eff32356bf566c4fd3590c6ff9b2f6e8c587444ecbfc4bcae7.f71995aff9e6f22f8daffe9d2ad9050abc928b8f93bb0d42682fd3c3.445de2118.588027fa.dns.realbumblebee.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9769f8b0-8e85-495f-9b20-bdde5f246b85",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'literoved.ru']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8bf09c95-d58f-443d-a0c8-bc21f597c8e7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'winklen.ch']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--59738778-7414-4a4d-905e-673a6f8d5598",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'xkpal.1a4a64b6.dns.blocktoday.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--2e6bde48-edd0-4ac0-9a30-b52cb9d176c5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'nuher.1d67bbcf4.456d87aa6.2d84dfba.dns.specialdrills.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7710157e-bc4d-4886-9c0d-1da2c1df89b1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "Url Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[url:value = 'nuher.3577125d2a75f6a277fc5714ff536c5c6af5283d928a66daad6825b9a.7aaf8bba88534e88ec89251c57b01b322c7f52c7f1a5338930ae2a50.cbb47411f60fe58f76cf79d300c03bdecfb9e83379f59d80b8494951.e10c20f77.7fcc0eb6.dns.blocktoday.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9e616b2e-d585-4e97-881c-00b2dc1750d5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'blocktoday.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--47d392bc-dd8c-4bc7-8c5f-520d6c11a3b3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'xkpal.d6597fa.dns.blocktoday.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9be90b74-e0f3-48ad-b9c6-4258c678e8d7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "Url Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[url:value = 'fy9.39d9030e5d3a8e2352daae2f4cd3c417b36f64c6644a783b9629147a1.afd8b8a4615358e0313bad8c544a1af0d8efcec0e8056c2c8eee96c7.b06d1825c0247387e38851b06be0272b0bd619b7c9636bc17b09aa70.a46890f27.588027fa.dns.realbumblebee.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--c939e519-318d-4842-ab5a-023a17379a26",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'my.2a91c002002.588027fa.dns.realbumblebee.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5caafd2c-7980-4ab0-98eb-b26ece39d29e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'dns.artspathgroupe.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e0214ee6-c373-48e4-a263-770fce7c50fa",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'dns.trailshop.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--89d829c9-1b9b-4e39-9182-7dff215491b4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = '0gpw.588027fa.dns.realbumblebee.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--ec6a86d0-6105-4156-a80a-ce71cdbdda11",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '83.243.40.10']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b9c1767e-d428-4c1d-82df-cd51a43c80c1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '88.198.198.90']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--f71ee904-fd9a-44ac-9117-7ff955b7ad4d",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '183.181.86.147']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7e7e134c-f41e-4c5f-9cef-bba59e18f425",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '80.239.207.200']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e4c646a1-b348-4217-95aa-c11eb6fbf1ec",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '155.138.246.122']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5ae7fc5b-2fd5-4e35-ad3c-e52457bd3ed3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '46.8.10.134']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--93713814-1101-498d-a59d-ed20d31dbc18",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '188.130.137.181']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--558e3494-5935-4501-a8f3-1c87c8e209a2",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '188.130.218.39']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--c9212972-7d3b-4cd0-9990-d48dc6e44497",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '5.183.130.92']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--ed99045c-97c9-4add-a91f-f75e2d734a6c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '107.189.30.69']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1f6878da-6797-4a61-84cf-43b1a5f933b6",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '185.7.214.79']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--174949b2-9a20-480e-b752-d27eb33a2f69",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '46.8.16.77']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8d0e58a1-c713-451a-9392-2b8ecb40a7db",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '5.78.115.67']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--c1751505-51d2-49cc-b9aa-b06c2c62da41",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '185.219.221.136']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d300a1c9-ee90-406b-afdd-0eac32eb6ba3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '95.181.173.227']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--c2d1a34f-b9c1-4599-8299-1957a93f65e8",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.MD5 = 'B3FE23DD4701ED00D79C03043B0B952E')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--29b3e6ba-c6e5-4332-90ca-d27d81828516",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.MD5 = '2642EC377C0CEE3235571832CB472870')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--72c5d588-091d-4fe7-b028-03c116f9f21f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.MD5 = '4C897334E6391E7A2FA3CBCBF773D5A4')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--540b6f1c-1cfd-47c6-85af-8f3a207bc5ad",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'B32DAF27AA392D26BDF5FAAFBAAE6B21CD6C918D461FF59F548A73D447A96DD9')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--ad51259a-faf4-4922-96e0-2d061ac19027",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '3337A7A9CCDD06ACDD6E3CF4AF40D871172D0A0E96FC48787B574AC93689622A')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--a78d10e5-8bd9-40c0-b0bf-42bf6dd0a411",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '69192821F8CE4561CF9C9CB494A133584179116CB2E7409BEA3E18901A1CA944')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e6a447fe-210a-4960-a912-f55514bb3e86",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '0A8297B274AEAB986D6336B395B39B3AF1BB00464CF5735D1ECDB506FEF9098E')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1b88baf9-11cd-4ec1-826f-92d424df8903",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '42F05F5D4A2617B7AE0BC601DD6C053BF974F9A337A8FCC51F9338B108811B78')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--41af0d41-b78c-4bdd-91c8-6b79d08bbb23",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '17879ED48C2A2E324D4F5175112F51B75F4A8AB100B8833C82E6DDB7CD817F20')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--a9389816-8025-4130-b377-3968707eae72",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '3090A37E591554D7406107DF87B3DC21BDA059DF0BC66244E8ABEF6A5678AF35')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--911ceb90-dc0f-4452-8151-a493e814f1a0",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '37A5CD265F7F555F2FE320A68D70553B7AA9601981212921D1AC2C114E662004')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--fc4fb388-dfaa-4723-b563-e93a5647efd3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '3C50F6369F0938F42D47DB29A1F398E754ACB2A8D96FD4B366246AC2CCBE250A')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1d1e0a66-0c51-41fb-afbf-351c2cdc6f48",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '462BBB8FD7BE98129AA73EFA91E2D88FA9CAFC7B47431B8227D1957F5D0C8BA7')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1825a58b-049d-43c1-a19b-8014eea3e48a",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'F039EAACED72618EABA699D2985F9E10D252AC5FE85D609C217B45BC8C3614F4')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--37258b7b-8902-4922-9bea-90e613c584e7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'D73F6E240766DDD6C3C16EFF8DB50794AB8AB95C6A616D4AB2BC96780F13464D')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b870cfd9-6f66-4a84-8984-ef2e49364465",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'ACB60F0DD19A9A26AAAEFD3326DB8C28F546B6B0182ED2DCC23170BCB0AF6D8F')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9db1430e-e2c1-46e3-8d01-ddd55ee1ae1b",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'FAFAFF3D665B26B5C057E64B4238980589DEB0DFF0501497AC50BE1BC91B3E08')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1effbb7a-54bb-46d3-9d9c-402a5c7651b3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '90BA27750A04D1308115FA6A90F36503398A8F528C974C5ADC07AE8A6CD630E7')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1f7f1ee7-9fd4-46ce-ac07-cfb660ebe8ae",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '7AD4324EA241782EA859AF12094F89F9A182236542627E95B6416C8FB9757C59')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--fcd16d32-0a81-4fd5-b35a-83dd649998f0",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '62E63388953BB30669B403867A3AC2C8130332CF78133F7FD4A7F23CDC939087')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--760f2888-d5e1-46cb-a7a2-014559b2148d",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '0554EB2FFA3582B000D558B6950EC60E876F1259C41ACFF2EAC47AB78A53E94A')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--3e8ea8d4-2545-43cc-91f7-271316152b68",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '360C9C8F0A62010D455F35588EF27817AD35C715A5F291E43449CE6CB1986B98')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--cf96b3d8-a6a6-4007-bc19-8d3930febc50",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '1C1B2D7F790750D60A14BD661DAE5C5565F00C6CA7D03D062ADCECDA807E1779')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--58cb0791-cd8c-47ea-81f7-73190e4635a0",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '86A4DD6BE867846B251460D2A0874E6413589878D27F2C4482B54CEC134CC737')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8d6e1b5e-9d4a-4eed-a26c-36ad7e5d020c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'A7B36482BA5BCA7A143A795074C432ED627D6AFA5BC64DE97FA660FAA852F1A6')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--beeae9a5-8e96-4ac2-9a9d-80d7931e9bf3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '05EBAE760340FE44362AB7C8F70B2D89D6C9BA9B9EE8A9F747B2F19D326C3431')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d02980d8-f299-4c97-870f-e64e36b9c6a6",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '5942143614D8ED34567EA472C2B819777EDD25C00B3E1B13B1AE98D7F9E28D43')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--f1157052-6e0c-4045-b1e5-72587a76c822",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'D15BFBC181AAC8CE9FAA05C2063EF4695C09B718596F43EDC81CA02EF03110D1')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--cd6a461f-6e4c-49a6-a87b-c6013fb82f5e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '5B2178C7A0FD69AB00CEF041F446E04098BBB397946EDA3F6755F9D94D53C221')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--2d167717-285a-41da-8b2e-4e84dfd6265e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '39939EACFBC20A2607064994497E3E886C90CD97B25926478434F46C95BD8EAD')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7737e908-8874-4b9c-ae9f-513302b17a05",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '58DDBEA084CE18CFB3439219EBCF2FC5C1605D2F6271610B1C7AF77B8D0484BD')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--27534578-c356-4aa7-ab4f-33e53a62be03",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '88C8B472108E0D79D16A1634499C1B45048A10A38EE799054414613CC9DCCCCC')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--10562157-45ed-49ab-83d4-fc03c9f8862e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'B6A4F4097367D9C124F51154D8750EA036A812D5BADDE0BAF9C5F183BB53DD24')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e5f98aed-c271-4770-b522-0b1fac0bd86f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'F21240E0BF9F0A391D514E34D4FA24ECB997D939379D2260EBCE7C693E55F061')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--26047a30-17a0-4595-be53-3761dc870122",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '8501E14EE6EE142122746333B936C9AB0FC541328F37B5612B6804E6CDC2C2C6')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--801259db-e771-4d1b-8152-396922b8abd1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '034B5FE047920B2AE9493451623633B14A85176F5EEA0C7AADC110EA1730EE79')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--c268f14a-89db-41fc-aecd-37be3ed1150d",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'D503090431FDD99C9DF3451D9B73C5737C79EDA6EB80C148B8DC71E84623401F')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--bf064e47-8130-4821-8d15-0525a5aa17e6",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'C26A5CB62A78C467CC6B6867C7093FBB7B1A96D92121D4D6C3F0557EF9C881E0')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--26f7d44c-147f-483f-8ab4-70a31c7ddb99",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '819CB9BCF62BE7666DB5666A693524070B0DF589C58309B067191B30480B0C3A')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--520c5ec6-6fd2-4eb6-abb6-4b514013422a",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '4AC69411ED124DA06AD66EE8BFBCEA2F593B5B199A2C38496E1EE24F9D04F34A')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--efd30c1d-af93-42c9-b5d0-0364e73911f9",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '3A8FC07CADC08EEB8BE342452636A754158403C3D4EBFF379A4AE66F8298D9A6')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e0b95220-4629-4c60-9cc1-f54945117f60",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '808C96CB90B7DE7792A827C6946FF48123802959635A23BF9D98478AE6A259F9')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--08a30300-097d-407b-bea8-2e50a8855038",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = '3C65DA7F7BFDAF9ACC6445ABBEDD9C4E927D37BB9E3629F34AFC338058680407')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7d94ecd7-3d30-4f5e-8524-536eeca64ddb",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.'SHA-256' = 'D3683BECA3A40574E5FD68D30451137E4A8BBACA8C428EBB781D565D6A70385E')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--0afa0f8e-b648-4097-a8ff-1991e80e2505",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'artspathgroupe.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--bd3b2757-73ed-417a-9d8f-b17f53e54f0d",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'thetrailbig.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--801a992b-94da-4e7a-a3b4-03518485ccc9",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'rasapool.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--a389ead2-5fe3-4454-9ad5-2039d03deeb4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'specialdrills.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--4f11deb8-e76f-4a5a-bd28-6914e5ea6f8a",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'thesmartcloudusa.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--fd42ac23-4fd1-4593-8c1e-87efdcec42d2",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'tomlawcenter.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--fadac27e-1833-4cdf-a75a-452531795530",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'limitedtoday.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--6e484ea9-e9ef-4e09-951e-dfb9b94966c7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'realbumblebee.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--f99cb41a-a748-4280-9d02-ede5fb9a1bda",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'kekeoamigo.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5745fa91-bced-48b3-a6c8-fd87c5da4c59",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'recentbee.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8f9eb80c-f46c-43b7-8b46-ebc235b2a4a3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'myfinancialexperts.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--749ca53d-d25f-4e5a-bc85-136aa7bf18bd",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'childrensdolls.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8ce8a15e-0815-40e5-90b5-f28aac48ea3e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'buyblocknow.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e0290fa6-ff6c-4851-a092-c046ded09f1c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'artspathgroup.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7d37dc1b-2f2b-4647-b65d-b65a580509e5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'trailshop.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7f35359b-30e1-4822-93fa-8ecb0cc9b0ac",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'webnubee.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8b0f1662-71f9-460d-894d-ada473759473",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'investrealtydom.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--160f6236-73ce-4bad-ba98-7ec074e938d9",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'magentoengineers.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--fae92179-fd4e-489f-bdb7-956a37f90120",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '64.176.219.106']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--defcef1c-df9f-47dc-adb0-8e46e89b96f7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'nebraska-lawyers.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--23e0516f-4692-4ae5-93d1-a3109cea80d4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'adslsdfdsfmo.world']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--cfafb122-5f92-452d-a085-8899a89162f9",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'consulheartinc.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--34442a15-ac33-462b-be1b-c002d1c7c1e1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'businessprofessionalllc.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--bca8d209-63de-4158-8cdb-ce31e9356c46",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'otxcosmeticscare.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--ddf6c925-aa2c-4744-b65a-b75dcde083f2",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'otxcarecosmetics.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--a3930cdb-1a38-4cf0-9dd6-a453e86e5222",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'artstrailman.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d8ed5dfe-689f-4bb2-8e82-0bed50dbbad7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'ontexcare.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--cacba20f-97f3-477a-ae81-0c5896c63d18",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'securecloudmanage.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--03ce8b25-b261-4b60-9010-de6d9a0b7837",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'startupbuss.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--3b79e1d9-edcb-4c6f-ba18-7160cfc7e1e8",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'oneblackwood.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1c91fe5d-eb13-47fc-a5c1-c6d0cdf107e4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'recentbeelive.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--632652e0-e487-4cc0-9c0a-349b1f5a6e13",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'trailcosolutions.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--ae9b3942-4f96-4aed-8710-4fcf5dcee506",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'onedogsclub.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--631be8bd-5f12-482f-86f5-099d3f2064a4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'trailcocompany.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--75132e83-de17-48e9-9623-2334f9462905",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'artstrailreviews.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b5518a45-27f7-4185-81c8-1014c146dee3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'wipresolutions.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--da78676b-87c4-4e3b-8e16-98aaa553f4ab",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'trackgroup.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--ec25233b-cb4f-43f0-9050-0719f094af3c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'modernbeem.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--3af5f73a-0b69-41ee-9619-ae0a3404418b",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'currentbee.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--43cbe3c7-3cf0-4d16-922f-a30240e63c6c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'buygreenstudio.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--80d4d649-3c0c-4302-982f-11390deed147",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'topglobaltv.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--25e60f0e-80ef-4660-ac67-a4e8d8cc90b1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'usaglobalnews.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e2f9fb94-6145-4fb9-bdc4-b5731a5f6532",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'startupmartec.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5110530a-784d-4bcb-9071-a59328a118ba",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2017-04-20T00:00:00Z",
+            "pattern": "[(file:hashes.MD5 = '1BF171B1F388691C3985DF6FB6C3F0D1' OR file:hashes.'SHA-1' = 'FDB92FAC37232790839163A3CAE5F37372DB7235' OR file:hashes.'SHA-256' = '0112E3B20872760DDA5F658F6B546C85F126E803E27F0577B294F335FFA5A298')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--3784ad36-09a6-4cd1-af2d-15432b585cf5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'startupbusiness24.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--6cb7606d-59d9-4959-a965-995cbc5490c6",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'jenshol.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--a01fe486-8a28-43c4-a9c4-edfa316e6454",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'simorten.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--f71c695c-6641-4eb1-a1c4-e7274b67b69c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'investmentgblog.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--97f59a1e-61e3-469b-82d3-853272117f52",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'protectionek.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--4f4cfdb9-30bf-4b6c-842f-2a543fefe6a7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'technologgies.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1dfd8bc4-b494-40e0-8d67-2daa8ff8e9bf",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'unougn.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5eb95714-9ebf-453c-8f4a-2ffa6f998cba",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'getfnewsolutions.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d170d828-3a51-4f00-b354-333a34a290d4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'withclier.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d2d8d5ca-b71a-47b4-99e5-69c31fe2f159",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'bluenetworking.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--fcb565cb-6cdb-473a-b917-4dc818743dff",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'erihudeg.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--af62d0c3-b61b-4981-9d0c-b39a5521d256",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'seohomee.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d94b4c92-21fd-418a-925e-2247279c7853",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'allcompanycenter.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5f677529-96ca-473a-90e3-f07982a5416f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'taskthebox.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8027eb24-b938-4332-a6ae-d239044a890c",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'getfnewssolutions.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--f91f0306-0d2c-4a0f-aa80-4a10f9ddd37f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'softradar.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9901c9f2-abf0-4e48-bbcc-2a30eb28c5e9",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'businesforhome.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--4ff5cb4a-da00-4d04-b4ca-ccec96f9bad7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'gartenlofti.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9a786c6b-280d-4608-bc14-5f331c885fa6",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'karmafisker.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--579ffa9a-43c4-49fb-9dce-3faa336e76a4",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'cloudworldst.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--2a1103a3-ef2d-47e0-9a87-e32abfaa2f24",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'monitor-websystem.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5a458442-3372-4a43-8bd8-92e7b7767acf",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'prettyanimals.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b1a07c75-6d65-4e17-8f8c-d1be8f3fe2af",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'startuptechnologyw.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b17bc91b-b615-40f7-a570-94aa89566469",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'trailgroupl.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8fcd0984-9e33-4716-9aff-c3869ecef6f7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'monitorsystem.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--262abb22-b0fc-4112-8538-4c07ede42110",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'ionoslaba.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--27bcf2c2-e756-4c3d-8378-2bc85c52ce30",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'stockinvestlab.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--555bef5a-0c26-410a-86fc-a281a1d6c3e5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'airbusco.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--492693fb-1dd4-4da4-b00d-fb0459f76d02",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'jessvisser.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--f6844964-7706-45f8-84be-2c59cf31d184",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'maluisepaul.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d9fe6ac5-b7c2-4f12-acf6-5c920f382c6f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'mytrailinvest.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9c7edd03-bbf8-4caa-b96e-7d19bd3a456a",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'garbagemoval.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--b2ef7e1b-a0c7-46fd-a7b8-71b1aa231401",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'constrtionfirst.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--30742093-c819-48e1-9b55-5d96b98ff664",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'wardeli.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--be77ab4d-085f-4fee-af4b-60ab7689cbea",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'caspercan.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--25230736-4573-4d2f-9f84-968826dffe82",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'masterunix.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--2e790270-22f1-442a-849b-739e2e211c00",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'brendonline.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--3276d18f-63a6-44c6-976b-0593e8382441",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'septcntr.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5d5f5761-4732-44fc-b1fd-d8ee4ac868b2",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'unitedfrom.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--0abb516f-bfe4-4bae-8458-dea1d6638824",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'kolinileas.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--d10d9de9-7a80-492f-876a-76e55dae75e0",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'animalsfast.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--fb3b5a50-9b99-43a7-81b3-813904d20ed1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'auuditoe.com']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7ca5878e-24da-4008-94ab-93d99656d17e",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'investmentrealtyhp.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8489bd31-9bc3-4bbb-9cec-394b55b02f65",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'clearsystemwo.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--5556fbe0-41de-4494-952d-33161a6c1700",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'audsystemecll.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--16073012-9536-4855-99f6-9438bbf0a181",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'welausystem.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--63e4b0e6-402a-4a81-99b3-f2a12afb0bb1",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'treeauwin.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--cc4e121f-af6b-45d3-a098-31952d6f4478",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'reelsysmoona.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--81871a5c-32bd-4592-88ed-854551cd2ab7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'investmendvisor.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--c9c0f67c-e955-4989-b7b1-93191b6891b3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'wellsystemte.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--8f538b35-2792-4319-bba4-e900015e23c7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'steamteamdev.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--1d10d2a8-e290-4ac4-a7a4-d50ca0365d3a",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[domain-name:value = 'startupbizaud.net']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--63267da5-5fc7-411d-885e-17b7a9230d62",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = '723d1cf3d74fb3ce95a77ed9dff257a78c8af8e67a82963230dd073781074224') AND (file:hashes.MD5 = '6441D7260944BCEDC5958C5C8A05D16D' OR file:hashes.'SHA-1' = '46257982840493ECA90E051FF1749E7040895584' OR file:hashes.'SHA-256' = '723D1CF3D74FB3CE95A77ED9DFF257A78C8AF8E67A82963230DD073781074224')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--4504b617-7676-4d86-ab5e-78a39e488f38",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '116.203.186.178']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--9573dc78-8a5c-469a-988d-8dd1c7957198",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = 'minipath.exe') AND file:size = 1499648 AND (file:hashes.MD5 = 'B365FAEBAF416681B5F376C8AA4F4470' OR file:hashes.'SHA-1' = '591D363928F0D5F4629196D60FD899469267DA09' OR file:hashes.'SHA-256' = 'FFF35C2DA67EEF6F1A10C585B427AC32E7F06F4E4460542207ABCD62264E435F')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--30baaad0-6807-4c1e-8ce8-bef9d1c4c2e9",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = 'UpdateReminder.exe') AND (file:hashes.MD5 = 'A292FEE8D8DB83711E72C06D6F82562D' OR file:hashes.'SHA-1' = '82F88C1AF036181EE4E92A2F9338C152D1FF0C58' OR file:hashes.'SHA-256' = 'DF5B004BE71717362E6B1AD22072F9EE4113B95B5D78C496A90857977A9FB415')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--755b709b-51b5-4da1-97fc-a8d6913bffc5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:hashes.MD5 = 'BC95F228B11FA3B4E91C30D98F9F3BFF' OR file:hashes.'SHA-1' = '25CE6C74A6F39289717522CAD5EACDF5B9F4BAE8' OR file:hashes.'SHA-256' = '882019D1024778E13841DB975D5E60AAAE1482FCF86BA669E819A68CE980D7D3')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--f018aff1-3abd-4a36-8c8c-58dc77ab8cc7",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = '51eb749d6cbd08baf9d43c2f83abd9d4d86eb5206f62ba43b768251a98ce9d3e') AND (file:hashes.MD5 = 'E83D6092439A90AF2B4B1DB2AD3A9C5A' OR file:hashes.'SHA-1' = '4DA6FEF533B37A12ED1E357DF66802DE29C1AB5C' OR file:hashes.'SHA-256' = '51EB749D6CBD08BAF9D43C2F83ABD9D4D86EB5206F62BA43B768251A98CE9D3E')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--ee1f3da8-4ba1-431d-97f3-b52d65329146",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = '350ba7fca67721c74385faff083914ecdd66ef107a765dfb7ac08b38d5c9c0bd') AND (file:hashes.MD5 = '0BF7BC20496143A9F028E77AB47B4698' OR file:hashes.'SHA-1' = 'AA54013AEB502B4A936331DEB76A6411F1F1ADE7' OR file:hashes.'SHA-256' = '350BA7FCA67721C74385FAFF083914ECDD66EF107A765DFB7AC08B38D5C9C0BD')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--7131fc5b-94ea-4228-9082-02a23381ae0b",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = '07117c02a09410f47a326b52c7f17407e63ba5e6ff97277446efc75b862d2799') AND (file:hashes.MD5 = 'AFA27795C0C86B6AFEB138D0FB09506B' OR file:hashes.'SHA-1' = 'D32E44F7E04A8C84E7159ED020DCF26B6E51416E' OR file:hashes.'SHA-256' = '07117C02A09410F47A326B52C7F17407E63BA5E6FF97277446EFC75B862D2799')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--48c41dc1-b609-43aa-9b57-50c0298bfb1b",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = 'e28188e516db1bda9015c30de59a2e91996b67c2e2b44989a6b0f562577fd757') AND (file:hashes.MD5 = '59DB7BD22D4EC503B768ECE646205C27' OR file:hashes.'SHA-1' = 'FF57CDA4829978D8B6F7F1F31356F291B37ACAA6' OR file:hashes.'SHA-256' = 'E28188E516DB1BDA9015C30DE59A2E91996B67C2E2B44989A6B0F562577FD757')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--55b53ba2-cdd5-4537-b9bd-b8ead3e6871f",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2017-10-19T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '46.161.27.151']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--60e77a85-c102-42de-bacd-d6c42500255d",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = '9a55f55886285eef7ffabdd55c0232d1458175b1d868c03d3e304ce7d98980bc') AND (file:hashes.MD5 = 'C115BBBDB1A61F8C553D74802BFD78FB' OR file:hashes.'SHA-1' = '1F439569E3C1C14EA9F02235F8F45C49E2764160' OR file:hashes.'SHA-256' = '9A55F55886285EEF7FFABDD55C0232D1458175B1D868C03D3E304CE7D98980BC')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e618c316-45e9-4f50-a865-6e9f29615c45",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2021-06-24T00:00:00Z",
+            "pattern": "[(file:name = '96339a7e87ffce6ced247feb9b4cb7c05b83ca315976a9522155bad726b8e5be' OR file:name = 'c:windowssystem32mrpy2bfa7.dll') AND file:size = 209170 AND (file:hashes.MD5 = '7688C1B7A1124C1CD9413F4B535B2F44' OR file:hashes.'SHA-1' = '8CCAC360E2CA37B2FA9F5FA81B22114FB8936120' OR file:hashes.'SHA-256' = '96339A7E87FFCE6CED247FEB9B4CB7C05B83CA315976A9522155BAD726B8E5BE')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--e5fafba0-8dc5-400a-88ce-496cf3abc57d",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2021-06-24T00:00:00Z",
+            "pattern": "[(file:name = 'ae7c868713e1d02b4db60128c651eb1e3f6a33c02544cc4cb57c3aa6c6581b6e.bin' OR file:name = 'ae7c868713e1d02b4db60128c651eb1e3f6a33c02544cc4cb57c3aa6c6581b6e') AND file:size = 556576 AND (file:hashes.MD5 = '53FDEB923B1890D29B8F29DA77995938' OR file:hashes.'SHA-1' = 'A996CCD0D58125BF299E89F4C03FF37AFDAB33FC' OR file:hashes.'SHA-256' = 'AE7C868713E1D02B4DB60128C651EB1E3F6A33C02544CC4CB57C3AA6C6581B6E')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--2958a2fd-274d-4912-a7b5-81f1403e87a5",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2021-06-24T00:00:00Z",
+            "pattern": "[(file:name = '5d2204f3a20e163120f52a2e3595db19890050b2faa96c6cba6b094b0a52b0aa' OR file:name = '3f400f30415941348af21d515a2fc6a3') AND file:size = 576512 AND (file:hashes.MD5 = '3F400F30415941348AF21D515A2FC6A3' OR file:hashes.'SHA-1' = 'BD0BF9C987288CA434221D7D81C54A47E913600A' OR file:hashes.'SHA-256' = '5D2204F3A20E163120F52A2E3595DB19890050B2FAA96C6CBA6B094B0A52B0AA')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--cab9dc63-984a-4326-ace3-f0eb44aee236",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "File Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2022-04-01T00:00:00Z",
+            "pattern": "[(file:name = '17205c43189c22dfcb278f5cc45c2562f622b0b6280dcd43cc1d3c274095eb90.bin') AND (file:hashes.MD5 = '267D5C3137D313CE1A86C2F255A835E6' OR file:hashes.'SHA-1' = 'C7A37C0EDEFFD23777CCA44F9B49076BE1BD43E6' OR file:hashes.'SHA-256' = '17205C43189C22DFCB278F5CC45C2562F622B0B6280DCD43CC1D3C274095EB90')]",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--619849a0-a32b-462c-940a-553ea183c272",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2017-12-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '185.220.101.149']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--446abe23-d8cd-4257-b65d-d8249682174a",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "IPv4 Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2017-12-01T00:00:00Z",
+            "pattern": "[ipv4-addr:value = '185.220.100.240']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "id": "indicator--bb50f632-e1a6-46ee-8854-6c87a50c80c3",
+            "type": "indicator",
+            "spec_version": "2.1",
+            "pattern_type": "stix",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ],
+            "name": "FQDN Indicator",
+            "indicator_types": [
+                "malicious-activity"
+            ],
+            "valid_from": "2018-12-06T00:00:00Z",
+            "pattern": "[domain-name:value = 'xserver.jp']",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01"
+        },
+        {
+            "type": "relationship",
+            "spec_version": "2.1",
+            "id": "relationship--35429f35-5d97-45a7-9934-3ddbb71fd618",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "source_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "relationship_type": "located-at",
+            "target_ref": "location--0d598333-1b05-47e2-9438-da480f5ff76d",
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        },
+        {
+            "id": "report--7b8e96ee-6305-489b-acaa-82453783e6f9",
+            "type": "report",
+            "spec_version": "2.1",
+            "created": "2024-05-10T19:49:50.000Z",
+            "modified": "2024-05-10T19:49:50.000Z",
+            "name": "AA24-131A #StopRansomware: Black Basta",
+            "description": "The Federal Bureau of Investigation (FBI), Cybersecurity and Infrastructure Security Agency (CISA), Department of Health and Human Services (HHS), and Multi-State Information Sharing and Analysis Center (MS-ISAC) (hereafter referred to as the authoring organizations) are releasing this joint CSA to provide information on Black Basta, a ransomware variant whose actors have encrypted and stolen data from 12 out of 16 critical infrastructure sectors, including the Healthcare and Public Health (HPH) Sector.\r\n\r\nThis joint CSA provides TTPs and IOCs obtained from FBI investigations and third-party reporting. Black Basta is considered a ransomware-as-a-service (RaaS) variant and was first identified in April 2022. Some Black Basta affiliates have impacted a wide range of businesses and critical infrastructure in North America, Europe, and Australia. As of May 2024, Black Basta affiliates have impacted over 500 organizations globally.\r\n",
+            "published": "2024-05-10T00:00:00Z",
+            "created_by_ref": "identity--b3bca3c2-1f3d-4b54-b44f-dac42c3a8f01",
+            "object_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "attack-pattern--d5977c4b-d1ad-4f95-a814-3c6cc326e1e4",
+                "attack-pattern--45e13a9e-cd0c-4f25-8efc-1dba4d2a94b9",
+                "attack-pattern--7cc45930-905e-4726-aeef-67804e5122d4",
+                "attack-pattern--0f33624a-641c-4bb0-9208-a1cca3844e6d",
+                "attack-pattern--34d7fa14-695a-4072-aef2-6715e69fc826",
+                "attack-pattern--1b1cf167-98ec-433c-a7b9-d234765f0354",
+                "attack-pattern--daea6874-45e5-4aa1-b284-0d69d19a0759",
+                "attack-pattern--186cc694-b514-4d3d-a25d-533b84546a0e",
+                "attack-pattern--fb528209-9b6e-49d0-b4bc-513f9a52002d",
+                "indicator--f7b213b8-99e8-48d5-94fa-f19ccd7ea428",
+                "indicator--9769f8b0-8e85-495f-9b20-bdde5f246b85",
+                "indicator--8bf09c95-d58f-443d-a0c8-bc21f597c8e7",
+                "indicator--59738778-7414-4a4d-905e-673a6f8d5598",
+                "indicator--2e6bde48-edd0-4ac0-9a30-b52cb9d176c5",
+                "indicator--7710157e-bc4d-4886-9c0d-1da2c1df89b1",
+                "indicator--9e616b2e-d585-4e97-881c-00b2dc1750d5",
+                "indicator--47d392bc-dd8c-4bc7-8c5f-520d6c11a3b3",
+                "indicator--9be90b74-e0f3-48ad-b9c6-4258c678e8d7",
+                "indicator--c939e519-318d-4842-ab5a-023a17379a26",
+                "indicator--5caafd2c-7980-4ab0-98eb-b26ece39d29e",
+                "indicator--e0214ee6-c373-48e4-a263-770fce7c50fa",
+                "indicator--89d829c9-1b9b-4e39-9182-7dff215491b4",
+                "indicator--ec6a86d0-6105-4156-a80a-ce71cdbdda11",
+                "indicator--b9c1767e-d428-4c1d-82df-cd51a43c80c1",
+                "indicator--f71ee904-fd9a-44ac-9117-7ff955b7ad4d",
+                "indicator--7e7e134c-f41e-4c5f-9cef-bba59e18f425",
+                "indicator--e4c646a1-b348-4217-95aa-c11eb6fbf1ec",
+                "indicator--5ae7fc5b-2fd5-4e35-ad3c-e52457bd3ed3",
+                "indicator--93713814-1101-498d-a59d-ed20d31dbc18",
+                "indicator--558e3494-5935-4501-a8f3-1c87c8e209a2",
+                "indicator--c9212972-7d3b-4cd0-9990-d48dc6e44497",
+                "indicator--ed99045c-97c9-4add-a91f-f75e2d734a6c",
+                "indicator--1f6878da-6797-4a61-84cf-43b1a5f933b6",
+                "indicator--174949b2-9a20-480e-b752-d27eb33a2f69",
+                "indicator--8d0e58a1-c713-451a-9392-2b8ecb40a7db",
+                "indicator--c1751505-51d2-49cc-b9aa-b06c2c62da41",
+                "indicator--d300a1c9-ee90-406b-afdd-0eac32eb6ba3",
+                "indicator--c2d1a34f-b9c1-4599-8299-1957a93f65e8",
+                "indicator--29b3e6ba-c6e5-4332-90ca-d27d81828516",
+                "indicator--72c5d588-091d-4fe7-b028-03c116f9f21f",
+                "indicator--540b6f1c-1cfd-47c6-85af-8f3a207bc5ad",
+                "indicator--ad51259a-faf4-4922-96e0-2d061ac19027",
+                "indicator--a78d10e5-8bd9-40c0-b0bf-42bf6dd0a411",
+                "indicator--e6a447fe-210a-4960-a912-f55514bb3e86",
+                "indicator--1b88baf9-11cd-4ec1-826f-92d424df8903",
+                "indicator--41af0d41-b78c-4bdd-91c8-6b79d08bbb23",
+                "indicator--a9389816-8025-4130-b377-3968707eae72",
+                "indicator--911ceb90-dc0f-4452-8151-a493e814f1a0",
+                "indicator--fc4fb388-dfaa-4723-b563-e93a5647efd3",
+                "indicator--1d1e0a66-0c51-41fb-afbf-351c2cdc6f48",
+                "indicator--1825a58b-049d-43c1-a19b-8014eea3e48a",
+                "indicator--37258b7b-8902-4922-9bea-90e613c584e7",
+                "indicator--b870cfd9-6f66-4a84-8984-ef2e49364465",
+                "indicator--9db1430e-e2c1-46e3-8d01-ddd55ee1ae1b",
+                "indicator--1effbb7a-54bb-46d3-9d9c-402a5c7651b3",
+                "indicator--1f7f1ee7-9fd4-46ce-ac07-cfb660ebe8ae",
+                "indicator--fcd16d32-0a81-4fd5-b35a-83dd649998f0",
+                "indicator--760f2888-d5e1-46cb-a7a2-014559b2148d",
+                "indicator--3e8ea8d4-2545-43cc-91f7-271316152b68",
+                "indicator--cf96b3d8-a6a6-4007-bc19-8d3930febc50",
+                "indicator--58cb0791-cd8c-47ea-81f7-73190e4635a0",
+                "indicator--8d6e1b5e-9d4a-4eed-a26c-36ad7e5d020c",
+                "indicator--beeae9a5-8e96-4ac2-9a9d-80d7931e9bf3",
+                "indicator--d02980d8-f299-4c97-870f-e64e36b9c6a6",
+                "indicator--f1157052-6e0c-4045-b1e5-72587a76c822",
+                "indicator--cd6a461f-6e4c-49a6-a87b-c6013fb82f5e",
+                "indicator--2d167717-285a-41da-8b2e-4e84dfd6265e",
+                "indicator--7737e908-8874-4b9c-ae9f-513302b17a05",
+                "indicator--27534578-c356-4aa7-ab4f-33e53a62be03",
+                "indicator--10562157-45ed-49ab-83d4-fc03c9f8862e",
+                "indicator--e5f98aed-c271-4770-b522-0b1fac0bd86f",
+                "indicator--26047a30-17a0-4595-be53-3761dc870122",
+                "indicator--801259db-e771-4d1b-8152-396922b8abd1",
+                "indicator--c268f14a-89db-41fc-aecd-37be3ed1150d",
+                "indicator--bf064e47-8130-4821-8d15-0525a5aa17e6",
+                "indicator--26f7d44c-147f-483f-8ab4-70a31c7ddb99",
+                "indicator--520c5ec6-6fd2-4eb6-abb6-4b514013422a",
+                "indicator--efd30c1d-af93-42c9-b5d0-0364e73911f9",
+                "indicator--e0b95220-4629-4c60-9cc1-f54945117f60",
+                "indicator--08a30300-097d-407b-bea8-2e50a8855038",
+                "indicator--7d94ecd7-3d30-4f5e-8524-536eeca64ddb",
+                "indicator--0afa0f8e-b648-4097-a8ff-1991e80e2505",
+                "indicator--bd3b2757-73ed-417a-9d8f-b17f53e54f0d",
+                "indicator--801a992b-94da-4e7a-a3b4-03518485ccc9",
+                "indicator--a389ead2-5fe3-4454-9ad5-2039d03deeb4",
+                "indicator--4f11deb8-e76f-4a5a-bd28-6914e5ea6f8a",
+                "indicator--fd42ac23-4fd1-4593-8c1e-87efdcec42d2",
+                "indicator--fadac27e-1833-4cdf-a75a-452531795530",
+                "indicator--6e484ea9-e9ef-4e09-951e-dfb9b94966c7",
+                "indicator--f99cb41a-a748-4280-9d02-ede5fb9a1bda",
+                "indicator--5745fa91-bced-48b3-a6c8-fd87c5da4c59",
+                "indicator--8f9eb80c-f46c-43b7-8b46-ebc235b2a4a3",
+                "indicator--749ca53d-d25f-4e5a-bc85-136aa7bf18bd",
+                "indicator--8ce8a15e-0815-40e5-90b5-f28aac48ea3e",
+                "indicator--e0290fa6-ff6c-4851-a092-c046ded09f1c",
+                "indicator--7d37dc1b-2f2b-4647-b65d-b65a580509e5",
+                "indicator--7f35359b-30e1-4822-93fa-8ecb0cc9b0ac",
+                "indicator--8b0f1662-71f9-460d-894d-ada473759473",
+                "indicator--160f6236-73ce-4bad-ba98-7ec074e938d9",
+                "indicator--fae92179-fd4e-489f-bdb7-956a37f90120",
+                "indicator--defcef1c-df9f-47dc-adb0-8e46e89b96f7",
+                "indicator--23e0516f-4692-4ae5-93d1-a3109cea80d4",
+                "indicator--cfafb122-5f92-452d-a085-8899a89162f9",
+                "indicator--34442a15-ac33-462b-be1b-c002d1c7c1e1",
+                "indicator--bca8d209-63de-4158-8cdb-ce31e9356c46",
+                "indicator--ddf6c925-aa2c-4744-b65a-b75dcde083f2",
+                "indicator--a3930cdb-1a38-4cf0-9dd6-a453e86e5222",
+                "indicator--d8ed5dfe-689f-4bb2-8e82-0bed50dbbad7",
+                "indicator--cacba20f-97f3-477a-ae81-0c5896c63d18",
+                "indicator--03ce8b25-b261-4b60-9010-de6d9a0b7837",
+                "indicator--3b79e1d9-edcb-4c6f-ba18-7160cfc7e1e8",
+                "indicator--1c91fe5d-eb13-47fc-a5c1-c6d0cdf107e4",
+                "indicator--632652e0-e487-4cc0-9c0a-349b1f5a6e13",
+                "indicator--ae9b3942-4f96-4aed-8710-4fcf5dcee506",
+                "indicator--631be8bd-5f12-482f-86f5-099d3f2064a4",
+                "indicator--75132e83-de17-48e9-9623-2334f9462905",
+                "indicator--b5518a45-27f7-4185-81c8-1014c146dee3",
+                "indicator--da78676b-87c4-4e3b-8e16-98aaa553f4ab",
+                "indicator--ec25233b-cb4f-43f0-9050-0719f094af3c",
+                "indicator--3af5f73a-0b69-41ee-9619-ae0a3404418b",
+                "indicator--43cbe3c7-3cf0-4d16-922f-a30240e63c6c",
+                "indicator--80d4d649-3c0c-4302-982f-11390deed147",
+                "indicator--25e60f0e-80ef-4660-ac67-a4e8d8cc90b1",
+                "indicator--e2f9fb94-6145-4fb9-bdc4-b5731a5f6532",
+                "indicator--5110530a-784d-4bcb-9071-a59328a118ba",
+                "indicator--3784ad36-09a6-4cd1-af2d-15432b585cf5",
+                "indicator--6cb7606d-59d9-4959-a965-995cbc5490c6",
+                "indicator--a01fe486-8a28-43c4-a9c4-edfa316e6454",
+                "indicator--f71c695c-6641-4eb1-a1c4-e7274b67b69c",
+                "indicator--97f59a1e-61e3-469b-82d3-853272117f52",
+                "indicator--4f4cfdb9-30bf-4b6c-842f-2a543fefe6a7",
+                "indicator--1dfd8bc4-b494-40e0-8d67-2daa8ff8e9bf",
+                "indicator--5eb95714-9ebf-453c-8f4a-2ffa6f998cba",
+                "indicator--d170d828-3a51-4f00-b354-333a34a290d4",
+                "indicator--d2d8d5ca-b71a-47b4-99e5-69c31fe2f159",
+                "indicator--fcb565cb-6cdb-473a-b917-4dc818743dff",
+                "indicator--af62d0c3-b61b-4981-9d0c-b39a5521d256",
+                "indicator--d94b4c92-21fd-418a-925e-2247279c7853",
+                "indicator--5f677529-96ca-473a-90e3-f07982a5416f",
+                "indicator--8027eb24-b938-4332-a6ae-d239044a890c",
+                "indicator--f91f0306-0d2c-4a0f-aa80-4a10f9ddd37f",
+                "indicator--9901c9f2-abf0-4e48-bbcc-2a30eb28c5e9",
+                "indicator--4ff5cb4a-da00-4d04-b4ca-ccec96f9bad7",
+                "indicator--9a786c6b-280d-4608-bc14-5f331c885fa6",
+                "indicator--579ffa9a-43c4-49fb-9dce-3faa336e76a4",
+                "indicator--2a1103a3-ef2d-47e0-9a87-e32abfaa2f24",
+                "indicator--5a458442-3372-4a43-8bd8-92e7b7767acf",
+                "indicator--b1a07c75-6d65-4e17-8f8c-d1be8f3fe2af",
+                "indicator--b17bc91b-b615-40f7-a570-94aa89566469",
+                "indicator--8fcd0984-9e33-4716-9aff-c3869ecef6f7",
+                "indicator--262abb22-b0fc-4112-8538-4c07ede42110",
+                "indicator--27bcf2c2-e756-4c3d-8378-2bc85c52ce30",
+                "indicator--555bef5a-0c26-410a-86fc-a281a1d6c3e5",
+                "indicator--492693fb-1dd4-4da4-b00d-fb0459f76d02",
+                "indicator--f6844964-7706-45f8-84be-2c59cf31d184",
+                "indicator--d9fe6ac5-b7c2-4f12-acf6-5c920f382c6f",
+                "indicator--9c7edd03-bbf8-4caa-b96e-7d19bd3a456a",
+                "indicator--b2ef7e1b-a0c7-46fd-a7b8-71b1aa231401",
+                "indicator--30742093-c819-48e1-9b55-5d96b98ff664",
+                "indicator--be77ab4d-085f-4fee-af4b-60ab7689cbea",
+                "indicator--25230736-4573-4d2f-9f84-968826dffe82",
+                "indicator--2e790270-22f1-442a-849b-739e2e211c00",
+                "indicator--3276d18f-63a6-44c6-976b-0593e8382441",
+                "indicator--5d5f5761-4732-44fc-b1fd-d8ee4ac868b2",
+                "indicator--0abb516f-bfe4-4bae-8458-dea1d6638824",
+                "indicator--d10d9de9-7a80-492f-876a-76e55dae75e0",
+                "indicator--fb3b5a50-9b99-43a7-81b3-813904d20ed1",
+                "indicator--7ca5878e-24da-4008-94ab-93d99656d17e",
+                "indicator--8489bd31-9bc3-4bbb-9cec-394b55b02f65",
+                "indicator--5556fbe0-41de-4494-952d-33161a6c1700",
+                "indicator--16073012-9536-4855-99f6-9438bbf0a181",
+                "indicator--63e4b0e6-402a-4a81-99b3-f2a12afb0bb1",
+                "indicator--cc4e121f-af6b-45d3-a098-31952d6f4478",
+                "indicator--81871a5c-32bd-4592-88ed-854551cd2ab7",
+                "indicator--c9c0f67c-e955-4989-b7b1-93191b6891b3",
+                "indicator--8f538b35-2792-4319-bba4-e900015e23c7",
+                "indicator--1d10d2a8-e290-4ac4-a7a4-d50ca0365d3a",
+                "indicator--63267da5-5fc7-411d-885e-17b7a9230d62",
+                "indicator--4504b617-7676-4d86-ab5e-78a39e488f38",
+                "indicator--9573dc78-8a5c-469a-988d-8dd1c7957198",
+                "indicator--30baaad0-6807-4c1e-8ce8-bef9d1c4c2e9",
+                "indicator--755b709b-51b5-4da1-97fc-a8d6913bffc5",
+                "indicator--f018aff1-3abd-4a36-8c8c-58dc77ab8cc7",
+                "indicator--ee1f3da8-4ba1-431d-97f3-b52d65329146",
+                "indicator--7131fc5b-94ea-4228-9082-02a23381ae0b",
+                "indicator--48c41dc1-b609-43aa-9b57-50c0298bfb1b",
+                "indicator--55b53ba2-cdd5-4537-b9bd-b8ead3e6871f",
+                "indicator--60e77a85-c102-42de-bacd-d6c42500255d",
+                "indicator--e618c316-45e9-4f50-a865-6e9f29615c45",
+                "indicator--e5fafba0-8dc5-400a-88ce-496cf3abc57d",
+                "indicator--2958a2fd-274d-4912-a7b5-81f1403e87a5",
+                "indicator--cab9dc63-984a-4326-ace3-f0eb44aee236",
+                "indicator--619849a0-a32b-462c-940a-553ea183c272",
+                "indicator--446abe23-d8cd-4257-b65d-d8249682174a",
+                "indicator--bb50f632-e1a6-46ee-8854-6c87a50c80c3",
+                "relationship--35429f35-5d97-45a7-9934-3ddbb71fd618"
+            ],
+            "object_marking_refs": [
+                "marking-definition--479081c8-3a60-4eb8-b410-96a30f395def",
+                "marking-definition--613f2e26-407d-48c7-9eca-b8e91df99dc9"
+            ]
+        }
+    ]
+}
