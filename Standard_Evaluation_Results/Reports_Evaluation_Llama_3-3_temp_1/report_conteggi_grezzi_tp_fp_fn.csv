@@ -1,0 +1,14 @@
+,TP,FP,FN
+identity,15,23,0
+indicator,184,235,374
+ipv4-addr,0,31,0
+directory,0,1,0
+url,0,32,0
+malware,2,16,13
+attack-pattern,31,97,249
+relationship,23,679,2744
+domain-name,0,42,0
+windows-registry-key,0,20,0
+mutex,0,11,0
+threat-actor,0,9,0
+vulnerability,0,3,0
