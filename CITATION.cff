@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+title: "STIX 2.1 Generator: Automatic Generation of STIX 2.1 Bundles using Large Language Models"
+message: "If you use this software, please cite it as below."
+type: software
+authors:
+  - family-names: "Triggiani"
+    given-names: "Giulio"
+    affiliation: "University of Salerno"
+repository-code: "https://github.com/GiulioTriggiani/STIX-2.1-Generator"
+url: "https://ti-mindmap-hub.com"
+abstract: >-
+  Master's thesis project for the automatic generation of STIX 2.1 bundles 
+  from unstructured threat intelligence reports using Large Language Models.
+  Developed at the University of Salerno (UNISA) under the supervision of 
+  Assoc. Prof. Arcangelo Castiglione and Ing. Antonio Formato.
+  The methodology has been integrated into TI Mindmap HUB, a research platform
+  exploring GenAI applications in Cyber Threat Intelligence.
+keywords:
+  - STIX
+  - Cyber Threat Intelligence
+  - Large Language Models
+  - Generative AI
+  - MITRE ATT&CK
+  - Threat Intelligence
+  - Natural Language Processing
+license: MIT
+version: "1.0.0"
+date-released: "2025-01-01"
+references:
+  - type: software
+    title: "TI Mindmap HUB"
+    authors:
+      - name: "TI Mindmap HUB"
+    url: "https://ti-mindmap-hub.com"
+    repository-code: "https://github.com/TI-Mindmap-HUB-Org/ti-mindmap-hub-research"
